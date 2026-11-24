@@ -117,7 +117,7 @@ get_header();
                 <div class="contact-info-list">
                   <div class="contact-info-row">
                     <span class="contact-row-label">موبایل مهندسی:</span>
-                    <span class="contact-row-val mono contact-copyable" data-copy="<?php echo esc_attr( md_get_contact( 'phone_mobile', '۰۹۱۵۰۰۰۰۰۰۰' ) ); ?>" data-tooltip="کلیک جهت کپی" dir="ltr" tabindex="0" role="button" aria-label="کپی شماره موبایل مهندسی"><?php echo esc_html( md_get_contact( 'phone_mobile', '۰۹۱۵۰۰۰۰۰۰۰' ) ); ?></span>
+                    <span class="contact-row-val mono contact-copyable" data-copy="<?php echo esc_attr( md_get_contact( 'phone_mobile', '۰۹۳۵۸۶۸۹۸۲۹' ) ); ?>" data-tooltip="کلیک جهت کپی" dir="ltr" tabindex="0" role="button" aria-label="کپی شماره موبایل مهندسی"><?php echo esc_html( md_get_contact( 'phone_mobile', '۰۹۳۵۸۶۸۹۸۲۹' ) ); ?></span>
                   </div>
                   <div class="contact-info-row">
                     <span class="contact-row-label">دفتر کارگاهی و هماهنگی:</span>
@@ -169,13 +169,19 @@ get_header();
                 <h3 class="contact-card-title">کانال‌های پیام‌رسان تخصصی</h3>
                 <p class="contact-card-text">جهت ارسال فایل‌های سنگین CAD، مدل‌های 3D و ویدیوهای ارتعاشات دستگاه:</p>
                 <div class="contact-info-list">
+                  <?php
+                    $contact_tg_val   = function_exists( 'md_get_social' ) ? md_get_social( 'telegram_channel', 'machinedesign_ir' ) : 'machinedesign_ir';
+                    $contact_tg_disp  = '@' . ltrim( $contact_tg_val, '@' );
+                    $contact_ble_val  = function_exists( 'md_get_social' ) ? md_get_social( 'bale_channel', 'machinedesign_ir' ) : 'machinedesign_ir';
+                    $contact_ble_disp = '@' . ltrim( $contact_ble_val, '@' );
+                  ?>
                   <div class="contact-info-row">
                     <span class="contact-row-label">کانال رسمی تلگرام:</span>
-                    <span class="contact-row-val mono contact-copyable" data-copy="@machinedesign_ir" data-tooltip="کلیک جهت کپی" dir="ltr" tabindex="0" role="button" aria-label="کپی شناسه کانال تلگرام">@machinedesign_ir</span>
+                    <span class="contact-row-val mono contact-copyable" data-copy="<?php echo esc_attr( $contact_tg_disp ); ?>" data-tooltip="کلیک جهت کپی" dir="ltr" tabindex="0" role="button" aria-label="کپی شناسه کانال تلگرام"><?php echo esc_html( $contact_tg_disp ); ?></span>
                   </div>
                   <div class="contact-info-row">
                     <span class="contact-row-label">کانال در پیام‌رسان بله:</span>
-                    <span class="contact-row-val mono contact-copyable" data-copy="@machinedesign_ir" data-tooltip="کلیک جهت کپی" dir="ltr" tabindex="0" role="button" aria-label="کپی شناسه کانال بله">@machinedesign_ir</span>
+                    <span class="contact-row-val mono contact-copyable" data-copy="<?php echo esc_attr( $contact_ble_disp ); ?>" data-tooltip="کلیک جهت کپی" dir="ltr" tabindex="0" role="button" aria-label="کپی شناسه کانال بله"><?php echo esc_html( $contact_ble_disp ); ?></span>
                   </div>
                 </div>
               </div>
