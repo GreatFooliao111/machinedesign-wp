@@ -212,7 +212,11 @@ function md_render_optional_gutenberg_slot() {
 	if ( ! is_singular( 'page' ) ) {
 		return;
 	}
-	$raw_content = get_post_field( 'post_content', get_queried_object_id() );
+	$pid = (int) get_queried_object_id();
+	if ( $pid <= 0 || '1' !== (string) get_post_meta( $pid, '_md_enable_gutenberg_slot', true ) ) {
+		return;
+	}
+	$raw_content = get_post_field( 'post_content', $pid );
 	if ( empty( trim( wp_strip_all_tags( (string) $raw_content ) ) ) && false === strpos( (string) $raw_content, '<!-- wp:' ) ) {
 		return;
 	}
@@ -222,7 +226,11 @@ function md_render_optional_gutenberg_slot() {
 }
 
 /**
- * Helper: Calculate estimated reading time in Persian digits.
+ * Helper: Calculate dynamic reading time for a post (Persian UTF-8 aware).
+ * Restored for front-page.php and insights archive cards.
+ *
+ * @param WP_Post|int|null $post Optional post object or ID.
+ * @return string
  */
 if ( ! function_exists( 'md_get_reading_time' ) ) {
 	function md_get_reading_time( $post = null ) {
@@ -230,20 +238,45 @@ if ( ! function_exists( 'md_get_reading_time' ) ) {
 		if ( ! $post ) {
 			return '۵ دقیقه مطالعه';
 		}
-
-		$content = trim( strip_tags( $post->post_content ) );
+		$content = trim( wp_strip_all_tags( (string) $post->post_content ) );
 		if ( empty( $content ) ) {
 			return '۳ دقیقه مطالعه';
 		}
-
-		$words = preg_split( '/\s+/u', $content, -1, PREG_SPLIT_NO_EMPTY );
+		$words      = preg_split( '/\s+/u', $content, -1, PREG_SPLIT_NO_EMPTY );
 		$word_count = is_array( $words ) ? count( $words ) : 0;
-		$minutes = max( 1, (int) ceil( $word_count / 180 ) );
+		$minutes    = max( 1, (int) ceil( $word_count / 180 ) );
 
 		$persian_digits = array( '۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹' );
-		$english_digits = array( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' );
-		$minutes_fa = str_replace( $english_digits, $persian_digits, (string) $minutes );
+		$latin_digits   = array( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' );
+		$minutes_fa     = str_replace( $latin_digits, $persian_digits, (string) $minutes );
 
 		return $minutes_fa . ' دقیقه مطالعه';
 	}
+}
+
+/**
+ * Compatibility shim for any legacy template-parts referencing hello_elementor_get_setting().
+ */
+if ( ! function_exists( 'hello_elementor_get_setting' ) ) {
+	function hello_elementor_get_setting( $setting_id ) {
+		return '';
+	}
+}
+
+/**
+ * Render a sleek sticky in-page section jump bar for long pillar landing pages.
+ *
+ * @param array<string, string> $items Associative array of '#section-id' => 'Persian Label'.
+ */
+function md_render_pillar_jump_nav( $items = array() ) {
+	if ( empty( $items ) ) {
+		return;
+	}
+	echo '<nav class="md-pillar-jump-nav" aria-label="ناوبری سریع بخش‌های صفحه"><div class="container md-jump-nav-inner"><ul class="md-jump-nav-list">';
+	foreach ( $items as $href => $label ) {
+		$is_cta = ( '#rfq-section' === $href );
+		$cls    = $is_cta ? 'md-jump-link is-cta' : 'md-jump-link';
+		echo '<li><a href="' . esc_attr( $href ) . '" class="' . esc_attr( $cls ) . '">' . esc_html( $label ) . '</a></li>';
+	}
+	echo '</ul></div></nav>';
 }

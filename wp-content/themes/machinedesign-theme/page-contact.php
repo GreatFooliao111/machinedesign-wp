@@ -69,60 +69,13 @@ get_header();
       </div>
 
       <!-- Left Column: Delta Robot 3D Interactive Stage -->
-      <div class="page-hero-visual-col">
-        <div
-          class="delta-robot-stage"
-          data-delta-stage
-          tabindex="0"
-          role="img"
-          aria-label="مکانیزم سه‌بعدی تعاملی استعلام و ارتباطات فنی ماشین دیزاین"
-        >
-          <!-- Ambient Volumetric Backlight -->
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-
-          <!-- Physics-Driven Cast Shadow -->
-          <div class="delta-robot-shadow" data-delta-shadow aria-hidden="true"></div>
-
-          <!-- 3D Animated Transparent WebM Mechanism -->
-          <div class="delta-robot-anim-wrap" data-delta-robot>
-            <video
-              class="delta-robot-img delta-robot-video"
-              autoplay
-              loop
-              muted
-              playsinline
-              aria-label="مکانیزم متحرک ربات دلتا صنعتی با تلرانس میکرونی و خدمات جامع مهندسی"
-            >
-              <source src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/delta_robot_final_opt.webm' ) ); ?>" type="video/webm">
-            </video>
-          </div>
-
-          <!-- Detached Floating HUD Glass Badge -->
-          <div class="delta-robot-hud" data-delta-hud dir="ltr">
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">RESPONSE SLA</span>
-              <span class="delta-robot-hud-value">WITHIN 24 HOURS</span>
-            </div>
-            <div class="delta-robot-hud-sep" aria-hidden="true"></div>
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">TELEMETRY</span>
-              <span class="delta-robot-hud-value">DIRECT RFQ ENGINE</span>
-            </div>
-            <div class="delta-robot-hud-tag">
-              <span class="delta-robot-hud-led" aria-hidden="true"></span>
-              <span>VERIFIED DESK</span>
-            </div>
-          </div>
-        </div>
+      <div class="page-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'contact' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'contact' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. MAIN DUAL-COLUMN SPLIT: CARDS (RIGHT) & RFQ FORM (LEFT) - LIGHT THEME

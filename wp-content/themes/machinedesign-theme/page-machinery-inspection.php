@@ -64,53 +64,8 @@ get_header();
       </div>
 
       <!-- Left Column: 3D Interactive Stage Engine (Off-DOM Canvas Mechanism & Detached HUD) -->
-      <div class="pillar-hero-visual-col">
-        <div
-          class="delta-robot-stage"
-          data-delta-stage
-          tabindex="0"
-          role="img"
-          aria-label="مکانیزم سه‌بعدی تعاملی کارشناسی و تست دقیق ماشین‌آلات صنعتی"
-        >
-          <!-- Ambient Volumetric Backlight -->
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-
-          <!-- Physics-Driven Opposite Cast Shadow -->
-          <div class="delta-robot-shadow" data-delta-shadow aria-hidden="true"></div>
-
-          <!-- 3D Animated Transparent WebM Mechanism (Auto-converted to Canvas) -->
-          <div class="delta-robot-anim-wrap" data-delta-robot>
-            <video
-              class="delta-robot-img delta-robot-video"
-              autoplay
-              loop
-              muted
-              playsinline
-              poster="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar1-3d-mechanism.png' ) ); ?>"
-              aria-label="کارشناسی فنی و تست انطباق ماشین‌آلات صنعتی"
-            >
-              <source src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/delta_robot_final_opt.webm' ) ); ?>" type="video/webm">
-              <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar1-3d-mechanism.png' ) ); ?>" alt="مکانیزم سه‌بعدی کارشناسی خرید ماشین‌آلات" class="delta-robot-img">
-            </video>
-          </div>
-
-          <!-- Detached Floating HUD Glass Badge (Independent Differential Parallax) -->
-          <div class="delta-robot-hud" data-delta-hud dir="ltr">
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">AUDIT ORIGIN</span>
-              <span class="delta-robot-hud-value">CHINA &amp; DUBAI</span>
-            </div>
-            <div class="delta-robot-hud-sep" aria-hidden="true"></div>
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">TEST PROTOCOL</span>
-              <span class="delta-robot-hud-value">ISO &amp; DIN FAT</span>
-            </div>
-            <div class="delta-robot-hud-tag">
-              <span class="delta-robot-hud-led" aria-hidden="true"></span>
-              <span>INSPECTION READY</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'machinery-inspection' ); } ?>
       </div>
 
     </div>
@@ -183,6 +138,8 @@ get_header();
     </div>
   </div>
 </section>
+<?php if ( function_exists( 'md_render_pillar_jump_nav' ) ) { md_render_pillar_jump_nav( array( '#comparison-section' => 'مقایسه ریسک', '#curriculum-section' => '۴ بردار بازرسی', '#case-study-proof' => 'کالبدشکافی عیب', '#workflow-stages' => 'مسیر کارشناسی', '#deliverables-faq' => 'دستاوردها و FAQ', '#rfq-section' => 'درخواست کارشناسی ←' ) ); } ?>
+
 
 <!-- ========================================================================
      2. COMPARISON & PROBLEM SECTION (خرید سنتی واسطه‌ای vs کارشناسی ماشین دیزاین)

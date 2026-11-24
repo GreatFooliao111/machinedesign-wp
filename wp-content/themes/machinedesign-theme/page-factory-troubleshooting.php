@@ -64,60 +64,13 @@ get_header();
       </div>
 
       <!-- Left Column: Delta Robot 3D Interactive Stage (Transparent WebM & Differential HUD) -->
-      <div class="pillar-hero-visual-col">
-        <div
-          class="delta-robot-stage"
-          data-delta-stage
-          tabindex="0"
-          role="img"
-          aria-label="مکانیزم متحرک صنعتی با قابلیت پایش وضعیت ارتعاشات و عیب‌یابی ریشه‌ای"
-        >
-          <!-- Ambient Volumetric Backlight -->
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-
-          <!-- Physics-Driven Opposite Cast Shadow -->
-          <div class="delta-robot-shadow" data-delta-shadow aria-hidden="true"></div>
-
-          <!-- 3D Animated Transparent WebM Mechanism -->
-          <div class="delta-robot-anim-wrap" data-delta-robot>
-            <video
-              class="delta-robot-img delta-robot-video"
-              autoplay
-              loop
-              muted
-              playsinline
-              aria-label="مکانیزم متحرک ربات دلتا صنعتی با تلرانس میکرونی"
-            >
-              <source src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/delta_robot_final_opt.webm' ) ); ?>" type="video/webm">
-            </video>
-          </div>
-
-          <!-- Detached Floating HUD Glass Badge (Independent Differential Parallax) -->
-          <div class="delta-robot-hud" data-delta-hud dir="ltr">
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">CONDITION MONITORING</span>
-              <span class="delta-robot-hud-value">VIBRATION FFT &amp; SPECTRUM</span>
-            </div>
-            <div class="delta-robot-hud-sep" aria-hidden="true"></div>
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">RESPONSE TIME</span>
-              <span class="delta-robot-hud-value">EMERGENCY DISPATCH</span>
-            </div>
-            <div class="delta-robot-hud-tag">
-              <span class="delta-robot-hud-led" aria-hidden="true"></span>
-              <span>ISO 10816 / ISO 20816 VERIFIED</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'factory-troubleshooting' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'factory-troubleshooting' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. INDUSTRIAL METRICS STRIP
@@ -177,6 +130,8 @@ get_header();
     </div>
   </div>
 </section>
+<?php if ( function_exists( 'md_render_pillar_jump_nav' ) ) { md_render_pillar_jump_nav( array( '#troubleshooting-scopes' => 'حوزه‌های عیب‌یابی', '#emergency-dispatch' => 'اعزام اضطراری', '#rfq-section' => 'درخواست اعزام کارشناس ←' ) ); } ?>
+
 
 <!-- ========================================================================
      3. 4 KEY TROUBLESHOOTING SCOPES

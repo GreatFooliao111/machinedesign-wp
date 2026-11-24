@@ -49,60 +49,13 @@ get_header();
       </div>
 
       <!-- Left Column: Delta Robot 3D Interactive Stage (Animated AVIF & Differential HUD) -->
-      <div class="page-hero-visual-col">
-        <div
-          class="delta-robot-stage"
-          data-delta-stage
-          tabindex="0"
-          role="img"
-          aria-label="مکانیزم متحرک ربات دلتا صنعتی با تلرانس میکرونی و خدمات جامع مهندسی"
-        >
-          <!-- Ambient Volumetric Backlight -->
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-
-          <!-- Physics-Driven Opposite Cast Shadow -->
-          <div class="delta-robot-shadow" data-delta-shadow aria-hidden="true"></div>
-
-          <!-- 3D Animated Transparent WebM Delta Robot Mechanism -->
-          <div class="delta-robot-anim-wrap" data-delta-robot>
-            <video
-              class="delta-robot-img delta-robot-video"
-              autoplay
-              loop
-              muted
-              playsinline
-              aria-label="مکانیزم متحرک ربات دلتا صنعتی با تلرانس میکرونی و خدمات جامع مهندسی"
-            >
-              <source src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/delta_robot_final_opt.webm' ) ); ?>" type="video/webm">
-            </video>
-          </div>
-
-          <!-- Detached Floating HUD Glass Badge (Independent Differential Parallax) -->
-          <div class="delta-robot-hud" data-delta-hud dir="ltr">
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">HIGH-SPEED KINEMATICS</span>
-              <span class="delta-robot-hud-value">PARALLEL DELTA ROBOT</span>
-            </div>
-            <div class="delta-robot-hud-sep" aria-hidden="true"></div>
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">PRECISION</span>
-              <span class="delta-robot-hud-value">ISO-9001 CAD</span>
-            </div>
-            <div class="delta-robot-hud-tag">
-              <span class="delta-robot-hud-led" aria-hidden="true"></span>
-              <span>ENGINEERING HUB</span>
-            </div>
-          </div>
-        </div>
+      <div class="page-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'services' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'services' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. INDUSTRIAL METRICS STRIP
@@ -695,7 +648,7 @@ get_header();
 .md-nda-cta .md-nda-badge {
   display: inline-flex;
   align-items: center;
-  color: #A3E635 !important;
+  color: #D97706 !important;
   background: rgba(163, 230, 53, 0.12);
   border: 1px solid rgba(163, 230, 53, 0.3); /* taste-skill-ignore */
   padding: 4px 10px;
@@ -762,8 +715,8 @@ get_header();
   stroke: currentColor;
 }
 .md-nda-cta .md-nda-btn-call:hover {
-  border-color: #A3E635 !important;
-  color: #A3E635 !important;
+  border-color: #D97706 !important;
+  color: #D97706 !important;
 }
 @media (min-width: 1024px) {
   .md-nda-cta {

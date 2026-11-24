@@ -236,6 +236,7 @@ function md_render_hero_media_metabox( $post ) {
 	wp_nonce_field( 'md_save_hero_media_nonce', 'md_hero_media_nonce' );
 	$image_id  = (int) get_post_meta( $post->ID, '_md_hero_image_id', true );
 	$image_url = $image_id ? wp_get_attachment_image_url( $image_id, 'medium' ) : '';
+	$enable_slot = (string) get_post_meta( $post->ID, '_md_enable_gutenberg_slot', true );
 	?>
 	<div id="md-hero-media-wrap" style="direction:rtl;">
 		<p style="font-size:12px;color:#555;margin-top:0;">
@@ -251,6 +252,11 @@ function md_render_hero_media_metabox( $post ) {
 		<input type="hidden" id="md_hero_image_id" name="md_hero_image_id" value="<?php echo esc_attr( $image_id ); ?>" />
 		<button type="button" class="button button-primary" id="md-hero-upload-btn" style="width:100%;margin-bottom:6px;">انتخاب / تغییر تصویر سه‌بعدی</button>
 		<button type="button" class="button" id="md-hero-remove-btn" style="width:100%;<?php echo $image_id ? '' : 'display:none;'; ?>">بازگشت به رندر پیش‌فرض</button>
+		<hr style="margin:12px 0;" />
+		<label style="display:flex;align-items:flex-start;gap:6px;font-size:12px;line-height:1.6;">
+			<input type="checkbox" name="md_enable_gutenberg_slot" value="1" <?php checked( $enable_slot, '1' ); ?> />
+			<span>نمایش بلوک‌های گوتنبرگ اضافی در پایین این برگه (اختیاری)</span>
+		</label>
 	</div>
 	<script>
 	(function($){
@@ -304,6 +310,11 @@ function md_save_hero_media_metabox( $post_id ) {
 		update_post_meta( $post_id, '_md_hero_image_id', absint( $_POST['md_hero_image_id'] ) );
 	} else {
 		delete_post_meta( $post_id, '_md_hero_image_id' );
+	}
+	if ( ! empty( $_POST['md_enable_gutenberg_slot'] ) ) {
+		update_post_meta( $post_id, '_md_enable_gutenberg_slot', '1' );
+	} else {
+		delete_post_meta( $post_id, '_md_enable_gutenberg_slot' );
 	}
 }
 add_action( 'save_post_page', 'md_save_hero_media_metabox' );

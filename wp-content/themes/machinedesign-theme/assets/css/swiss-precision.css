@@ -253,3 +253,243 @@ textarea:focus-visible {
     padding: 0.55rem 0.75rem;
   }
 }
+
+/* ==========================================================================
+   v2.1 Visual Audit Polish — 20-Page QA Refinements
+   ========================================================================== */
+
+/* 1. Single-Column 3D Hero Stage Framing inside 2-Column Hero Grids */
+.md-hero-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.md-hero-visual-col .md-hero-stage {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* 2. Persian Multi-Line Heading Rhythm (Prevents tight glyph clipping) */
+.section-title,
+.pillar-hero-title,
+.page-hero-title,
+.hero-content h1 {
+  line-height: 1.42;
+}
+
+/* 3. WCAG AA High-Contrast Copper Accent on Light/White Sections */
+.about-section .stat-number,
+.about-section .metric-value,
+.services-section .section-subtitle,
+.blog-section .section-subtitle,
+.blog-section .md-card-cta,
+.team-section .stat-number {
+  color: #B45309;
+}
+
+/* 4. Unified Footer Bottom Bar Links (Zero Leftover Green) */
+.site-footer .footer-bottom a,
+.site-footer .footer-legal-links a {
+  color: var(--md-text-secondary);
+  transition: color 180ms var(--md-ease-precision);
+}
+
+.site-footer .footer-bottom a:hover,
+.site-footer .footer-legal-links a:hover {
+  color: var(--md-accent-primary-hover);
+}
+
+/* 5. Clean Blog & Project Card Thumbnail Fallback Surface */
+.md-card-thumb-wrap {
+  background-color: var(--md-bg-surface);
+  border-bottom: 1px solid var(--md-border-hairline);
+}
+
+.md-card-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   v2.2 UI Polish — Visual Rhythm, Sticky Jump Nav, Unified Team Profile & Slim Header
+   ========================================================================== */
+
+/* 1. Slimmer, Decluttered Header for Maximum Above-the-Fold Impact */
+.top-bar {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0.78rem;
+}
+
+.navbar-main {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 2. Eliminate Harsh Black-to-Pure-White Checkerboard Shock */
+/* 2a. Dark Matte Architectural Cards on Front-Page Hero Challenge Strip */
+.challenges-section .challenge-card,
+.pain-points-section .challenge-card,
+.hero-challenges-grid .challenge-card {
+  background-color: var(--md-bg-surface);
+  border: 1px solid var(--md-border-hairline);
+  border-top: 2px solid var(--md-accent-primary);
+  color: var(--md-text-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.challenges-section .challenge-card h3,
+.challenges-section .challenge-card h4,
+.pain-points-section .challenge-card h3 {
+  color: var(--md-text-primary);
+}
+
+.challenges-section .challenge-card p,
+.pain-points-section .challenge-card p {
+  color: var(--md-text-secondary);
+}
+
+.challenges-section .challenge-card a,
+.pain-points-section .challenge-card a {
+  color: var(--md-accent-primary-hover);
+}
+
+/* 2b. Soft Engineered Platinum (#F3F5F8) instead of blinding #FFFFFF on light bands */
+.about-section,
+.services-section,
+.blog-section,
+.machinery-categories-section,
+.deliverables-section,
+.pillar-mentor-section,
+.pillar-faq-section,
+.pillar-vs-section,
+.curriculum-tabbed-section,
+.deliv-faq-split-section {
+  background-color: #F3F5F8;
+  border-top: 1px solid #DDE3EC;
+}
+
+/* 3. Sticky In-Page Section Jump Bar (6 Long Pillar Pages) */
+.md-pillar-jump-nav {
+  position: sticky;
+  top: 68px;
+  z-index: 45;
+  background: rgba(11, 13, 17, 0.94);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--md-border-hairline);
+  border-bottom: 1px solid var(--md-border-hairline);
+}
+
+.md-jump-nav-inner {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.md-jump-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.md-jump-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.65rem 0;
+  white-space: nowrap;
+}
+
+.md-jump-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.9rem;
+  border-radius: var(--md-radius-sm);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--md-text-secondary);
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: color 180ms var(--md-ease-precision), background-color 180ms var(--md-ease-precision), border-color 180ms var(--md-ease-precision);
+}
+
+.md-jump-link:hover {
+  color: var(--md-text-primary);
+  background-color: var(--md-bg-elevated);
+  border-color: var(--md-border-hairline);
+}
+
+.md-jump-link.is-cta {
+  margin-inline-start: auto;
+  background-color: var(--md-accent-primary-soft);
+  border-color: var(--md-accent-primary);
+  color: var(--md-accent-primary-hover);
+  font-weight: 700;
+}
+
+.md-jump-link.is-cta:hover {
+  background-color: var(--md-accent-primary);
+  color: #0B0D11;
+}
+
+/* 4. Unified Swiss-German Dark Architecture for single-team_member.php */
+.founder-portfolio-page {
+  background-color: var(--md-bg-canvas);
+  color: var(--md-text-primary);
+  padding: 2.5rem 0 4.5rem;
+}
+
+.founder-portfolio-page .founder-top-nav {
+  background-color: var(--md-bg-surface);
+  border: 1px solid var(--md-border-hairline);
+  border-radius: var(--md-radius-md);
+  color: var(--md-text-secondary);
+}
+
+.founder-portfolio-page .org-current {
+  color: var(--md-text-primary);
+}
+
+.founder-portfolio-page .founder-status-badge {
+  background-color: var(--md-accent-tech-soft);
+  color: var(--md-accent-tech);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.founder-portfolio-page .bento-card,
+.founder-portfolio-page .founder-card,
+.founder-portfolio-page .founder-profile-card,
+.founder-portfolio-page .founder-manifesto-card,
+.founder-portfolio-page .founder-pillars-card,
+.founder-portfolio-page .founder-skills-card,
+.founder-portfolio-page .founder-projects-card,
+.founder-portfolio-page .founder-metric-card {
+  background-color: var(--md-bg-surface);
+  border: 1px solid var(--md-border-hairline);
+  border-radius: var(--md-radius-md);
+  color: var(--md-text-primary);
+  box-shadow: none;
+}
+
+.founder-portfolio-page h1,
+.founder-portfolio-page h2,
+.founder-portfolio-page h3,
+.founder-portfolio-page h4 {
+  color: var(--md-text-primary);
+}
+
+.founder-portfolio-page p,
+.founder-portfolio-page li {
+  color: var(--md-text-secondary);
+}
+
+.founder-portfolio-page .skill-bar-track {
+  background-color: var(--md-bg-elevated);
+}
+
+.founder-portfolio-page .skill-bar-fill {
+  background-color: var(--md-accent-primary);
+}

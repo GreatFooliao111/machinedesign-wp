@@ -69,42 +69,13 @@ $mold_clean = md_tel_uri( $mold_display );
       </div>
 
       <!-- Left Column: High-Precision Rotary Drum HUD Schematic -->
-      <div class="pillar-hero-visual-col">
-        <div class="delta-robot-stage" tabindex="0" role="img" aria-label="شماتیک دیجیتال قالب استوانه‌ای روتاری برنجی و غلتک تقابلی فولادی">
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-          
-          <div class="inspection-hud-board" dir="ltr">
-            <div class="hud-board-head">
-              <span class="mono hud-board-title">● ROTARY DRUM FORMING DIE</span>
-              <span class="mono hud-board-meta">SYNCHRO: 1:1 RATIO</span>
-            </div>
-
-            <div class="hud-board-grid">
-              <div class="hud-board-cell">
-                <span class="mono hud-cell-label">DRUM ALLOY</span>
-                <span class="mono hud-cell-value">BRONZE / BRASS</span>
-              </div>
-              <div class="hud-board-cell">
-                <span class="mono hud-cell-label">COUNTER ROLLER</span>
-                <span class="mono hud-cell-value hud-cell-accent">STAINLESS 304</span>
-              </div>
-            </div>
-
-            <div class="hud-board-foot">
-              <span class="mono hud-board-meta">DRAFT ANGLE: OPTIMIZED</span>
-              <span class="mono hud-board-meta hud-cell-accent">TESTED WITH DOUGH</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'mold-design' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'mold-design' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. KEY METRICS STRIP

@@ -50,7 +50,7 @@ $projects_count_fa = function_exists( 'md_persian_num' )
     : sprintf( '%02d', count( $project_slides ) );
 ?>
 
-<main class="founder-portfolio-page" id="founder-main">
+<div class="founder-portfolio-page" id="founder-main">
   <div class="founder-bento-container">
 
     <!-- ====================================================================

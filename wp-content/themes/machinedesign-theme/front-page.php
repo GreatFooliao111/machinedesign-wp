@@ -122,7 +122,7 @@ get_header();
         <!-- Visual Column -->
         <div class="about-visual-col">
           <div class="about-image-frame">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=85" alt="کارگاه ساخت ماشین‌آلات صنعتی ماشین دیزاین">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heroes/hero-production-line.webp' ); ?>" alt="کارگاه ساخت ماشین‌آلات صنعتی ماشین دیزاین">
           </div>
           <div class="about-floating-badge">
             <span class="badge-number">۱۵+</span>
@@ -372,7 +372,7 @@ get_header();
     align-items: center;
     background: rgba(163, 230, 53, 0.12);
     border: 1px solid rgba(163, 230, 53, 0.35); /* taste-skill-ignore */
-    color: #A3E635;
+    color: #D97706;
     letter-spacing: 0;
     font-size: 0.82rem;
     font-weight: 700;
@@ -403,7 +403,7 @@ get_header();
     backdrop-filter: blur(8px); /* taste-skill-ignore */
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(148, 163, 184, 0.2); /* taste-skill-ignore */
-    border-right: 3px solid #A3E635;
+    border-right: 3px solid #D97706;
     padding: 14px 16px;
     border-radius: 6px;
     display: flex;
@@ -418,7 +418,7 @@ get_header();
     font-family: var(--font-tech, 'Courier New', monospace);
     font-size: 0.86rem;
     font-weight: 700;
-    color: #A3E635;
+    color: #D97706;
     display: block;
     text-align: right;
     direction: ltr;
@@ -529,7 +529,7 @@ get_header();
   </style>
 
   <section class="workshop-banner-section md-standards-sec">
-    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=2000&q=80" alt="استانداردهای مهندسی ساخت ماشین دیزاین" class="workshop-bg-img">
+    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heroes/hero-machine-design.webp' ); ?>" alt="استانداردهای مهندسی ساخت ماشین دیزاین" class="workshop-bg-img">
     <div class="md-standards-overlay" aria-hidden="true"></div>
     
     <div class="container" style="position:relative; z-index:2;">
@@ -630,7 +630,7 @@ get_header();
                 $img_url = get_the_post_thumbnail_url( $pid, 'large' );
             } else {
                 $custom_img = get_post_meta( $pid, '_md_project_image_url', true );
-                $img_url = ! empty( $custom_img ) ? $custom_img : 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80';
+                $img_url = ! empty( $custom_img ) ? $custom_img : get_template_directory_uri() . '/assets/images/heroes/hero-machine-design.webp';
             }
 
             $kpi = get_post_meta( $pid, '_md_project_kpi', true );
@@ -900,9 +900,9 @@ get_header();
                 $img_url = get_the_post_thumbnail_url( $aid, 'large' );
             } else {
                 $default_imgs = array(
-                    'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-                    'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80',
-                    'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80',
+                    get_template_directory_uri() . '/assets/images/heroes/hero-machine-design.webp',
+                    get_template_directory_uri() . '/assets/images/heroes/hero-fea-analysis.webp',
+                    get_template_directory_uri() . '/assets/images/heroes/hero-production-line.webp',
                 );
                 $img_url = $default_imgs[ $articles_query->current_post % 3 ];
             }

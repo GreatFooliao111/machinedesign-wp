@@ -64,60 +64,13 @@ get_header();
       </div>
 
       <!-- Left Column: Delta Robot 3D Interactive Stage (Animated AVIF & Differential HUD) -->
-      <div class="pillar-hero-visual-col">
-        <div
-          class="delta-robot-stage"
-          data-delta-stage
-          tabindex="0"
-          role="img"
-          aria-label="مکانیزم متحرک ربات دلتا صنعتی با تلرانس میکرونی و قابلیت ساخت DFMA"
-        >
-          <!-- Ambient Volumetric Backlight -->
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-
-          <!-- Physics-Driven Opposite Cast Shadow -->
-          <div class="delta-robot-shadow" data-delta-shadow aria-hidden="true"></div>
-
-          <!-- 3D Animated Transparent WebM Delta Robot Mechanism -->
-          <div class="delta-robot-anim-wrap" data-delta-robot>
-            <video
-              class="delta-robot-img delta-robot-video"
-              autoplay
-              loop
-              muted
-              playsinline
-              aria-label="مکانیزم متحرک ربات دلتا صنعتی با تلرانس میکرونی"
-            >
-              <source src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/delta_robot_final_opt.webm' ) ); ?>" type="video/webm">
-            </video>
-          </div>
-
-          <!-- Detached Floating HUD Glass Badge (Independent Differential Parallax) -->
-          <div class="delta-robot-hud" data-delta-hud dir="ltr">
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">HIGH-SPEED KINEMATICS</span>
-              <span class="delta-robot-hud-value">PARALLEL DELTA ROBOT</span>
-            </div>
-            <div class="delta-robot-hud-sep" aria-hidden="true"></div>
-            <div class="delta-robot-hud-col">
-              <span class="delta-robot-hud-label">TOLERANCE</span>
-              <span class="delta-robot-hud-value">±0.0015 mm</span>
-            </div>
-            <div class="delta-robot-hud-tag">
-              <span class="delta-robot-hud-led" aria-hidden="true"></span>
-              <span>DFMA VERIFIED</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'machine-design' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'machine-design' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. INDUSTRIAL METRICS STRIP
@@ -177,6 +130,8 @@ get_header();
     </div>
   </div>
 </section>
+<?php if ( function_exists( 'md_render_pillar_jump_nav' ) ) { md_render_pillar_jump_nav( array( '#machinery-types' => 'دسته‌بندی تجهیزات', '#dfma-philosophy' => 'رویکرد DFMA', '#workflow-stages' => 'فرآیند اجرا', '#deliverables' => 'اسناد تحویلی', '#rfq-section' => 'ثبت استعلام فنی ←' ) ); } ?>
+
 
 <!-- ========================================================================
      3. MACHINERY CATEGORIES & SPECS (دسته‌بندی ماشین‌آلات)

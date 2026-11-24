@@ -2784,7 +2784,7 @@ header.site-header,
 }
 
 .finder-link-action:hover {
-  color: #65a30d;
+  color: #D97706;
 }
 
 /* NDA & RFQ Conversion Banner */
@@ -3468,7 +3468,7 @@ header.site-header,
   position: absolute;
   right: 0;
   top: 0;
-  color: #65a30d;
+  color: #D97706;
   font-weight: 900;
   font-size: 0.88rem;
 }

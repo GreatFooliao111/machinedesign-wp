@@ -69,42 +69,13 @@ $rev_clean = md_tel_uri( $rev_display );
       </div>
 
       <!-- Left Column: High-Precision HUD Schematic Visual Stage -->
-      <div class="pillar-hero-visual-col">
-        <div class="delta-robot-stage" tabindex="0" role="img" aria-label="شماتیک دیجیتال اسکن اپتیکال سه‌بعدی و ابرنقاط مهندسی معکوس">
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-          
-          <div class="inspection-hud-board" dir="ltr">
-            <div class="hud-board-head">
-              <span class="mono hud-board-title">● 3D OPTICAL RECONSTRUCTION</span>
-              <span class="mono hud-board-meta">TOL: ±0.02 mm</span>
-            </div>
-
-            <div class="hud-board-grid">
-              <div class="hud-board-cell">
-                <span class="mono hud-cell-label">POINT CLOUD DENSITY</span>
-                <span class="mono hud-cell-value">1.8M PTS/SEC</span>
-              </div>
-              <div class="hud-board-cell">
-                <span class="mono hud-cell-label">METALLURGY MATCH</span>
-                <span class="mono hud-cell-value hud-cell-accent">SPECTRO QUANTOM</span>
-              </div>
-            </div>
-
-            <div class="hud-board-foot">
-              <span class="mono hud-board-meta">ISO 1101 GD&amp;T VALIDATED</span>
-              <span class="mono hud-board-meta hud-cell-accent">READY FOR CNC</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'reverse-engineering' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'reverse-engineering' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. KEY METRICS STRIP

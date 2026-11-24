@@ -69,42 +69,13 @@ $fea_clean = md_tel_uri( $fea_display );
       </div>
 
       <!-- Left Column: FEA Stress HUD Schematic Stage -->
-      <div class="pillar-hero-visual-col">
-        <div class="delta-robot-stage" tabindex="0" role="img" aria-label="شماتیک دیجیتال تحلیل تنش فون‌مایزز و المان محدود">
-          <div class="delta-robot-glow" aria-hidden="true"></div>
-          
-          <div class="inspection-hud-board" dir="ltr">
-            <div class="hud-board-head">
-              <span class="mono hud-board-title">● ANSYS FEA SOLVER</span>
-              <span class="mono hud-board-meta">NONLINEAR CONTACTS</span>
-            </div>
-
-            <div class="hud-board-grid">
-              <div class="hud-board-cell">
-                <span class="mono hud-cell-label">VON MISES STRESS</span>
-                <span class="mono hud-cell-value">142.6 MPa (SAFE)</span>
-              </div>
-              <div class="hud-board-cell">
-                <span class="mono hud-cell-label">SAFETY FACTOR</span>
-                <span class="mono hud-cell-value hud-cell-accent">FoS = 2.45 &gt; 2.0</span>
-              </div>
-            </div>
-
-            <div class="hud-board-foot">
-              <span class="mono hud-board-meta">FATIGUE LIFE: 10^7 CYCLES</span>
-              <span class="mono hud-board-meta hud-cell-accent">RESONANCE FREE</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'fea-analysis' ); } ?>
       </div>
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'fea-analysis' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. KEY METRICS STRIP

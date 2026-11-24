@@ -320,11 +320,7 @@ $spec_map = array(
 
     </div>
   </div>
-
-    <div class="container md-hero-standalone-visual">
-      <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'projects' ); } ?>
-    </div>
-  </section>
+</section>
 
 <!-- ========================================================================
      2. LIGHT CATALOG SECTION (SEARCH, DROPDOWNS, GRID & PAGINATION)
