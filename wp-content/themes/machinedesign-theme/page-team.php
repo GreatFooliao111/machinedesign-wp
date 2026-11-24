@@ -172,7 +172,7 @@ foreach ( $roster_config as $cfg ) {
         'name'        => $profile['name'] ?? 'مهندس متخصص',
         'jobTitle'    => $profile['role_badge'] ?? 'متخصص طراحی ماشین دیزاین',
         'description' => $profile['subtitle'] ?? 'عضو دپارتمان مهندسی ماشین دیزاین',
-        'image'       => $profile['photo_url'] ?? home_url( '/wp-content/uploads/2026/07/founder-portrait-placeholder.webp' ),
+        'image'       => $profile['photo_url'] ?? get_template_directory_uri() . '/assets/images/team-avatar-placeholder.svg',
         'url'         => home_url( '/team-member/' . $cfg['slug'] . '/' ),
         'worksFor'    => [
             '@type' => 'Organization',
@@ -382,7 +382,7 @@ $schema_json = wp_json_encode( [
 
           $member_name    = $profile_data['name'] ?? 'مهندس متخصص';
           $member_name    = preg_replace( '/وطن[\s\x{200c}]+دوست/u', 'وطن' . "\xE2\x80\x8C" . 'دوست', $member_name );
-          $photo_url      = $profile_data['photo_url'] ?? home_url( '/wp-content/uploads/2026/07/team-avatar-placeholder.svg' );
+          $photo_url      = $profile_data['photo_url'] ?? get_template_directory_uri() . '/assets/images/team-avatar-placeholder.svg';
           $role_badge     = $profile_data['role_badge'] ?? 'متخصص طراحی و ساخت مهندسی';
           $subtitle       = $profile_data['subtitle'] ?? 'کارشناس ارشد مهندسی مکانیک';
           $exp_years      = $profile_data['experience_years'] ?? '+۱۵';

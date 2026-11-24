@@ -25,7 +25,7 @@ $member_data = function_exists( 'md_get_team_member_profile_data' )
 // 3. Extract & Sanitize
 $member_name          = $member_data['name'] ?? 'عضو تیم مهندسی';
 $member_name          = preg_replace( '/وطن[\s\x{200c}]+دوست/u', 'وطن' . "\xE2\x80\x8C" . 'دوست', $member_name );
-$member_photo_url     = $member_data['photo_url'] ?? home_url( '/wp-content/uploads/2026/07/founder-portrait-placeholder.webp' );
+$member_photo_url     = $member_data['photo_url'] ?? get_template_directory_uri() . '/assets/images/team-avatar-placeholder.svg';
 $role_badge           = $member_data['role_badge'] ?? 'متخصص طراحی و مهندسی ماشین دیزاین';
 $member_subtitle      = $member_data['subtitle'] ?? 'مهندس مکانیک و طراح ماشین‌آلات صنعتی';
 $org_hierarchy_raw    = $member_data['org_hierarchy'] ?? 'ماشین دیزاین / تیم مهندسی / متخصص فنی';
