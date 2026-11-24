@@ -12,7 +12,7 @@
 | :--- | :--- | :--- |
 | **WordPress Core** | `7.0.9` | Local runtime running on XAMPP. Core files are intentionally excluded from Git. |
 | **PHP Runtime** | `8.2.12 (CLI / ZTS)` | Compatible with PHP 8.1+ modern typing and WordPress 6.x/7.x APIs. |
-| **Active Theme** | `hello-elementor` | Located at `wp-content/themes/hello-elementor/`. **Heavily customized code-first theme** with 12,700+ lines of custom CSS (`style.css`), 16+ custom page templates, and native PHP modules. Does **not** require the proprietary Elementor builder to function. |
+| **Active Theme** | `machinedesign-theme` | Located at `wp-content/themes/machinedesign-theme/`. **MachineDesign Precision v2.0.0**: Standalone decoupled update-proof theme with Swiss-German Precision design system, self-hosted Persian/Mono fonts (`Vazirmatn`, `JetBrains Mono`), 8 industrial 3D WebP heroes, 4 Gutenberg patterns, and native Rank Math SEO bridge. (Legacy `hello-elementor` is preserved on local disk as a rollback safeguard). |
 | **In-House Plugins** | `machinedesign-rfq-manager` | Custom engineering RFQ (Request for Quotation) and NDA inquiry handler. Located at `wp-content/plugins/machinedesign-rfq-manager/`. |
 | **Must-Use Plugins** | `design-gallery.php` | Located at `wp-content/mu-plugins/design-gallery.php`. System-wide asset enqueuing and HUD component registration. |
 | **Spec-Kit Governance** | Spec-Kit v1.2.3 / Constitution v2.1 | Located in `.specify/` and `specs/`. Enforces Gate 0 anti-slop rules and strict design specifications. |
@@ -46,20 +46,22 @@ machinedesign/
 │   │       ├── machinedesign-rfq-manager.php
 │   │       └── ...
 │   └── themes/
-│       └── hello-elementor/                # Active customized code-first theme
+│       └── machinedesign-theme/            # Active MachineDesign Precision v2.0 theme
 │           ├── front-page.php              # Homepage template (Hero, 6 Pillars, Projects, Insights, RFQ)
 │           ├── header.php                  # RTL semantic header with navigation & CTA
 │           ├── footer.php                  # Industrial footer with channel synergy & legal links
 │           ├── functions.php               # Theme bootstrapper, asset enqueuing & module loaders
-│           ├── style.css                   # Master stylesheet (Cyber-Mechanical Dark theme, #8ce70c)
+│           ├── style.css                   # Master stylesheet (MachineDesign Precision v2.0)
 │           ├── theme.json                  # Block editor styling & palette configuration
+│           ├── patterns/                   # 4 Native Gutenberg Block Patterns
 │           ├── single.php                  # Single blog post template
 │           ├── single-team_member.php      # Single team member profile template
 │           ├── includes/
+│           │   ├── hero-media.php          # 3D Hero Media Engine + WP-Admin Meta Box
 │           │   ├── cpt-project.php         # Custom Post Type: 'project' + taxonomy 'project_category'
 │           │   ├── cpt-team.php            # Custom Post Type: 'team_member' + skills & projects meta
 │           │   ├── theme-options.php       # Native WP Admin Theme Options panel (5 tabs)
-│           │   ├── seo-schema-bridge.php   # JSON-LD structured data injector
+│           │   ├── seo-schema-bridge.php   # Rank Math SEO & JSON-LD schema bridge
 │           │   └── ...
 │           ├── template-parts/             # Reusable header, footer, and loop parts
 │           └── page-*.php                  # Custom page templates for all engineering pillars

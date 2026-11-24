@@ -1,0 +1,255 @@
+/* ==========================================================================
+   MachineDesign Precision v2.0 — Swiss-German Industrial Design System
+   Inspired by Braun / Siemens / Trumpf architectural minimalism.
+   Zero neon/cyber-green glow. Zero generic purple AI gradients.
+   ========================================================================== */
+
+:root {
+  /* Architectural Matte Graphite Surfaces */
+  --md-bg-canvas: #0B0D11;
+  --md-bg-surface: #12161E;
+  --md-bg-elevated: #1A202B;
+  --md-bg-panel: #151A24;
+
+  /* Precision 1px Hairline Borders */
+  --md-border-hairline: #262E3D;
+  --md-border-strong: #374357;
+
+  /* Industrial Signal & Technical Accents */
+  --md-accent-primary: #D97706;
+  --md-accent-primary-hover: #F59E0B;
+  --md-accent-primary-soft: rgba(217, 119, 6, 0.14);
+  --md-accent-tech: #38BDF8;
+  --md-accent-tech-soft: rgba(56, 189, 248, 0.12);
+
+  /* High-Contrast Typography Hierarchy */
+  --md-text-primary: #F3F5F8;
+  --md-text-secondary: #9BA7B8;
+  --md-text-muted: #64748B;
+
+  /* Structural Geometry & Motion */
+  --md-radius-sm: 4px;
+  --md-radius-md: 6px;
+  --md-radius-lg: 8px;
+  --md-ease-precision: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Legacy CSS Variable Remapping (Prevents any leftover neon-lime leaks) */
+  --accent-primary: var(--md-accent-primary);
+  --accent-neon: var(--md-accent-primary);
+  --neon-lime: var(--md-accent-primary);
+  --primary-color: var(--md-accent-primary);
+  --brand-primary: var(--md-accent-primary);
+  --bg-dark: var(--md-bg-canvas);
+  --bg-card: var(--md-bg-surface);
+  --border-subtle: var(--md-border-hairline);
+}
+
+/* Base Canvas & RTL Typography Discipline */
+html {
+  background-color: var(--md-bg-canvas);
+  color: var(--md-text-primary);
+  scroll-behavior: smooth;
+}
+
+body.axima-flagship-body {
+  background-color: var(--md-bg-canvas);
+  color: var(--md-text-primary);
+  font-family: 'Vazirmatn', 'IRANSansX', Tahoma, system-ui, -apple-system, sans-serif;
+  line-height: 1.78;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Technical Monospace, Standards & Numeric Symmetry */
+.mono,
+code,
+.spec-code,
+.top-bar-phone,
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+  font-family: 'JetBrains Mono', 'Vazirmatn', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="tel"],
+input[type="email"] {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: plaintext;
+}
+
+/* Swiss-German Architectural Surfaces (Matte, Crisp 1px Hairlines, No Glows) */
+.site-header {
+  background: rgba(11, 13, 17, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--md-border-hairline);
+}
+
+.top-bar {
+  background-color: #080A0D;
+  border-bottom: 1px solid var(--md-border-hairline);
+  color: var(--md-text-secondary);
+}
+
+.site-footer {
+  background-color: #080A0D;
+  border-top: 1px solid var(--md-border-hairline);
+}
+
+/* High-Authority Primary CTA Buttons (Signal Amber + Obsidian Text for WCAG AAA Contrast) */
+.btn-primary,
+.btn-neon,
+.btn-cta,
+.header-cta-btn,
+button[type="submit"].rfq-submit-btn {
+  background-color: var(--md-accent-primary);
+  color: #0B0D11;
+  border: 1px solid var(--md-accent-primary);
+  border-radius: var(--md-radius-sm);
+  font-weight: 700;
+  box-shadow: none;
+  transition: background-color 200ms var(--md-ease-precision), transform 180ms var(--md-ease-precision), border-color 200ms var(--md-ease-precision);
+}
+
+.btn-primary:hover,
+.btn-neon:hover,
+.btn-cta:hover,
+.header-cta-btn:hover,
+button[type="submit"].rfq-submit-btn:hover {
+  background-color: var(--md-accent-primary-hover);
+  border-color: var(--md-accent-primary-hover);
+  color: #0B0D11;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.22);
+}
+
+/* Secondary Technical Outline Buttons */
+.btn-outline-white,
+.btn-secondary {
+  background-color: transparent;
+  color: var(--md-text-primary);
+  border: 1px solid var(--md-border-strong);
+  border-radius: var(--md-radius-sm);
+  transition: border-color 200ms var(--md-ease-precision), color 200ms var(--md-ease-precision), background-color 200ms var(--md-ease-precision);
+}
+
+.btn-outline-white:hover,
+.btn-secondary:hover {
+  border-color: var(--md-accent-tech);
+  color: var(--md-accent-tech);
+  background-color: var(--md-accent-tech-soft);
+}
+
+/* ==========================================================================
+   Universal Dynamic 3D Hero Stage Component (.md-hero-stage)
+   ========================================================================== */
+.md-hero-stage {
+  margin: 0;
+  position: relative;
+  border-radius: var(--md-radius-md);
+  border: 1px solid var(--md-border-hairline);
+  background: var(--md-bg-surface);
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.md-hero-stage-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  background: var(--md-bg-canvas);
+}
+
+.md-hero-stage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms var(--md-ease-precision);
+}
+
+.md-hero-stage:hover .md-hero-stage-img {
+  transform: scale(1.02);
+}
+
+.md-hero-stage-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 13, 17, 0.06) 0%, rgba(11, 13, 17, 0.55) 100%);
+  pointer-events: none;
+}
+
+.md-hero-stage-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: rgba(11, 13, 17, 0.92);
+  border-top: 1px solid var(--md-border-hairline);
+  font-size: 0.75rem;
+  color: var(--md-text-secondary);
+  letter-spacing: 0.06em;
+}
+
+.md-hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--md-accent-primary);
+  flex-shrink: 0;
+}
+
+/* Full-width Hero Visual Wrapper for Pages without 2-Column Hero Grid */
+.md-hero-standalone-visual {
+  margin-top: 2rem;
+  max-width: 1120px;
+}
+
+/* Gutenberg Native Extension Slot */
+.md-gutenberg-extension-slot {
+  padding: 3.5rem 0;
+  background: var(--md-bg-canvas);
+  border-top: 1px solid var(--md-border-hairline);
+}
+
+.md-gutenberg-extension-slot .entry-content > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Accessible Focus States (WCAG 2.2 AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--md-accent-tech);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile RTL Symmetry Guard */
+@media (max-width: 768px) {
+  .pillar-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .md-hero-stage-caption {
+    font-size: 0.7rem;
+    padding: 0.55rem 0.75rem;
+  }
+}

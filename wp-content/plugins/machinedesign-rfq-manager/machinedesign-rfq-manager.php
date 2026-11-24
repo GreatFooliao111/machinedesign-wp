@@ -204,6 +204,25 @@ class MachineDesign_RFQ_Manager {
      * Handle AJAX Submission from both Pillar pages and Front Page
      */
     public function handle_rfq_submission() {
+        // 1. Optional Honeypot anti-spam check
+        if ( ! empty( $_POST['md_hp_website'] ) ) {
+            wp_send_json_error( array( 'message' => 'درخواست نامعتبر است.' ), 400 );
+        }
+
+        // 2. Nonce verification when provided by md_vars.nonce
+        if ( isset( $_POST['nonce'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'md_rfq_nonce' ) ) {
+            wp_send_json_error( array( 'message' => 'نشست امنیتی منقضی شده است؛ لطفاً صفحه را رفرش کنید.' ), 403 );
+        }
+
+        // 3. Per-IP Rate Limiting (max 6 RFQs per 10 minutes)
+        $ip_raw   = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : 'unknown';
+        $rate_key = 'md_rfq_rate_' . md5( $ip_raw );
+        $attempts = (int) get_transient( $rate_key );
+        if ( $attempts >= 6 ) {
+            wp_send_json_error( array( 'message' => 'تعداد درخواست‌های شما بیش از حد مجاز است. لطفاً ۱۰ دقیقه دیگر تلاش کنید.' ), 429 );
+        }
+        set_transient( $rate_key, $attempts + 1, 10 * MINUTE_IN_SECONDS );
+
         // Collect & sanitize inputs
         $name         = isset( $_POST['rfq_name'] ) ? sanitize_text_field( wp_unslash( $_POST['rfq_name'] ) ) : '';
         $phone        = isset( $_POST['rfq_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['rfq_phone'] ) ) : '';
@@ -368,6 +387,28 @@ class MachineDesign_RFQ_Manager {
             $body   .= "\nلینک مشاهده و مدیریت در وردپرس:\n" . admin_url( 'post.php?post=' . $post_id . '&action=edit' ) . "\n";
 
             wp_mail( $admin_email, $subject, $body );
+        }
+
+                // Non-blocking Telegram Alert (uses MD_TELEGRAM_BOT_TOKEN from wp-config.php if defined)
+        if ( defined( 'MD_TELEGRAM_BOT_TOKEN' ) && MD_TELEGRAM_BOT_TOKEN && function_exists( 'md_get_option' ) && '1' === (string) md_get_option( 'rfq_telegram_enabled', '0' ) ) {
+            $tg_chat_id = md_get_option( 'rfq_telegram_chat_id', '' );
+            if ( ! empty( $tg_chat_id ) ) {
+                $tg_msg = "استعلام فنی جدید (MachineDesign)\n"
+                    . "نام: " . ( $name ? $name : 'نامشخص' ) . "\n"
+                    . "تماس: " . $clean_phone . "\n"
+                    . "خدمت: " . ( $service_type ? $service_type : 'عمومی' );
+                wp_remote_post(
+                    'https://api.telegram.org/bot' . rawurlencode( MD_TELEGRAM_BOT_TOKEN ) . '/sendMessage',
+                    array(
+                        'blocking' => false,
+                        'timeout'  => 4,
+                        'body'     => array(
+                            'chat_id' => $tg_chat_id,
+                            'text'    => $tg_msg,
+                        ),
+                    )
+                );
+            }
         }
 
         wp_send_json_success( array(
