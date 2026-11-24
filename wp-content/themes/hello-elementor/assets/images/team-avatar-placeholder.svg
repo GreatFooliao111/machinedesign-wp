@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1420"/>
+      <stop offset="100%" stop-color="#162030"/>
+    </linearGradient>
+    <pattern id="cadGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(140, 231, 12, 0.05)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ce70c" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  <rect width="100%" height="100%" fill="url(#cadGrid)"/>
+
+  <!-- CAD Caliper / Crosshair Marks -->
+  <path d="M 20 40 L 20 20 L 40 20" fill="none" stroke="rgba(140, 231, 12, 0.3)" stroke-width="2"/>
+  <path d="M 380 40 L 380 20 L 360 20" fill="none" stroke="rgba(140, 231, 12, 0.3)" stroke-width="2"/>
+  <path d="M 20 460 L 20 480 L 40 480" fill="none" stroke="rgba(140, 231, 12, 0.3)" stroke-width="2"/>
+  <path d="M 380 460 L 380 480 L 360 480" fill="none" stroke="rgba(140, 231, 12, 0.3)" stroke-width="2"/>
+
+  <!-- Center Circle Target -->
+  <circle cx="200" cy="210" r="120" fill="none" stroke="rgba(140, 231, 12, 0.12)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="200" cy="210" r="70" fill="none" stroke="rgba(140, 231, 12, 0.2)" stroke-width="1.5"/>
+
+  <!-- Engineer Silhouette -->
+  <!-- Head -->
+  <circle cx="200" cy="180" r="48" fill="#1e293b" stroke="url(#neonGlow)" stroke-width="2"/>
+  <!-- Shoulder / Torso Arc -->
+  <path d="M 120 340 C 120 270, 150 250, 200 250 C 250 250, 280 270, 280 340 Z" fill="#1e293b" stroke="url(#neonGlow)" stroke-width="2"/>
+
+  <!-- Caliper lines -->
+  <line x1="200" y1="70" x2="200" y2="110" stroke="rgba(140, 231, 12, 0.4)" stroke-width="1.5"/>
+  <line x1="200" y1="360" x2="200" y2="400" stroke="rgba(140, 231, 12, 0.4)" stroke-width="1.5"/>
+  <line x1="60" y1="210" x2="100" y2="210" stroke="rgba(140, 231, 12, 0.4)" stroke-width="1.5"/>
+  <line x1="300" y1="210" x2="340" y2="210" stroke="rgba(140, 231, 12, 0.4)" stroke-width="1.5"/>
+
+  <!-- Typography: CAD Specification -->
+  <text x="200" y="420" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8ce70c" text-anchor="middle" letter-spacing="2">TEAM PORTRAIT // PENDING</text>
+  <text x="200" y="440" font-family="'Vazirmatn', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">تصویر پرتره در پنل وردپرس تنظیم نشده است</text>
+</svg>

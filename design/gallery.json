@@ -1,0 +1,43 @@
+{
+  "project": "ماشین دیزاین (MachineDesign.ir)",
+  "brief": "پورتال جامع مهندسی، طراحی ماشین‌آلات صنعتی، خطوط تولید و R&D بر پایه معماری صنعتی Axima",
+  "phase": "approved",
+  "startedAt": "2026-10-15T08:00:00Z",
+  "siteUrl": "http://localhost/machinedesign",
+  "tokens": {
+    "colors": {
+      "primary": "#121824",
+      "accent": "#8ce70c",
+      "dark": "#0a0e17",
+      "light": "#f8fafc",
+      "white": "#ffffff",
+      "muted": "#64748b"
+    },
+    "typography": {
+      "heading": "Vazirmatn, system-ui, sans-serif",
+      "body": "Vazirmatn, system-ui, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "spacing": {
+      "contentWidth": "800px",
+      "wideWidth": "1280px"
+    }
+  },
+  "references": [
+    {
+      "url": "https://7oroof.com/demos/axima/",
+      "title": "Axima Factory & Industry Architecture",
+      "notes": "الگوی صنعتی دوطبقه، ساختار ماژولار، کارت‌های شناور، فرم درخواست قیمت و تایپوگرافی سنگین B2B"
+    }
+  ],
+  "artifacts": {
+    "styles": [
+      {
+        "file": "styles/v1-industrial-dark.html",
+        "version": 1,
+        "label": "سبک صنعتی پیشرو (Industrial Slate + Lime Accent)",
+        "colors": ["#121824", "#8ce70c", "#ffffff"]
+      }
+    ]
+  }
+}

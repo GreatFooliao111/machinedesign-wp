@@ -1,0 +1,32 @@
+# BEGIN WordPress
+# دستورالعمل‌های (خطوط) بین "BEGIN WordPress" و "END WordPress"
+# به طور پویا تولید شده‌اند، و فقط باید به وسیلهٔ صافی‌های وردرپرس ویرایش شوند.
+# هر تغییری در دستورالعمل‌های بین این نشان‌گرها بازنویشی خواهند شد.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /machinedesign/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /machinedesign/index.php [L]
+</IfModule>
+
+# END WordPress
+
+# === PHP Performance Settings ===
+<IfModule mod_php8.c>
+  php_value memory_limit 512M
+  php_value max_execution_time 300
+  php_value max_input_time 300
+  php_value upload_max_filesize 64M
+  php_value post_max_size 64M
+</IfModule>
+
+# === Modern Media MIME Type Support (AVIF, AVIS, WebM) ===
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/avif-sequence .avis
+  AddType video/webm .webm
+</IfModule>
+

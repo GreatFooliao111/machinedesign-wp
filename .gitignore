@@ -1,0 +1,61 @@
+# ==============================================================================
+# MACHINEDESIGN.IR — CODE-FIRST REPOSITORY .GITIGNORE
+# ==============================================================================
+
+# 1. WordPress Core (Preserves custom theme & plugin code only)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/wordpress/
+
+# 2. Secrets, Environment & Sensitive Configs
+wp-config.php
+wp-config-*.php
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# 3. Media, Uploads, Caches, Logs & Dumps
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/wpo-cache/
+/wp-content/wflogs/
+/wp-content/upgrade/
+/wp-content/ai1wm-backups/
+/wp-content/updraft/
+/wp-content/backup-db/
+/wp-content/advanced-cache.php
+/wp-content/languages/
+/wp-content/novamira-sandbox/
+*.sql
+*.wpress
+*.log
+*.bak
+*.bak*
+*.zip
+*.tar.gz
+error_log
+
+# 4. Third-Party & Inactive Plugins / Themes
+/wp-content/themes/industrial-engineering-theme/
+/wp-content/plugins/seo-by-rank-math/
+/wp-content/plugins/novamira/
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-content/index.php
+
+# 5. Local Dev Scratch, Verification Screenshots & OS Clutter
+*.png
+node_modules/
+vendor/
+.npm/
+.cache/
+.DS_Store
+Thumbs.db
+desktop.ini
