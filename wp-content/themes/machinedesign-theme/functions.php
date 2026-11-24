@@ -220,3 +220,30 @@ function md_render_optional_gutenberg_slot() {
 	the_content();
 	echo '</div></section>';
 }
+
+/**
+ * Helper: Calculate estimated reading time in Persian digits.
+ */
+if ( ! function_exists( 'md_get_reading_time' ) ) {
+	function md_get_reading_time( $post = null ) {
+		$post = get_post( $post );
+		if ( ! $post ) {
+			return '۵ دقیقه مطالعه';
+		}
+
+		$content = trim( strip_tags( $post->post_content ) );
+		if ( empty( $content ) ) {
+			return '۳ دقیقه مطالعه';
+		}
+
+		$words = preg_split( '/\s+/u', $content, -1, PREG_SPLIT_NO_EMPTY );
+		$word_count = is_array( $words ) ? count( $words ) : 0;
+		$minutes = max( 1, (int) ceil( $word_count / 180 ) );
+
+		$persian_digits = array( '۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹' );
+		$english_digits = array( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' );
+		$minutes_fa = str_replace( $english_digits, $persian_digits, (string) $minutes );
+
+		return $minutes_fa . ' دقیقه مطالعه';
+	}
+}
