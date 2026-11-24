@@ -31,7 +31,8 @@ machinedesign/
 │       ├── design-taste-frontend/          # Visual design system & inspection rules
 │       ├── machinedesign-project-manager/  # Project delivery orchestrator
 │       ├── speckit-*/                      # Spec-Kit command skills (analyze, plan, tasks, implement, etc.)
-│       └── wp-platform-architect/          # Full-stack WordPress architecture skill
+│       ├── wp-brand-architect/             # Wheeler & Meyerson (6e) Brand Identity & Architecture Engine (12 modules)
+│       └── wp-platform-architect/          # Full-stack WordPress architecture skill (v2.1.0, Module 08)
 ├── .specify/                               # Spec-Kit SDD engine & constitution
 │   ├── memory/constitution.md              # Supreme system directive (Gate 0 anti-slop, token safety)
 │   └── scripts/powershell/                 # Automation scripts (check-prerequisites, setup-plan, etc.)

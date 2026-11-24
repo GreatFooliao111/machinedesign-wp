@@ -1,7 +1,7 @@
 ---
 name: wp-platform-architect
-description: Master Systems-Thinking & North-Star Skill Family for WordPress, industrial web design, and full-stack front-end engineering. Governs theme development (hello-elementor), Gutenberg blocks, Gate 0 anti-slop visual standards, REST APIs, and official Automattic skill routing with deterministic local XAMPP toolchain integration.
-version: 2.0.0
+description: Master Systems-Thinking & North-Star Skill Family for WordPress, industrial web design, and full-stack front-end engineering. Governs theme development (hello-elementor), brand identity architecture (Wheeler & Meyerson 6e), Gutenberg blocks, Gate 0 anti-slop visual standards, REST APIs, and official Automattic skill routing with deterministic local XAMPP toolchain integration.
+version: 2.1.0
 ---
 
 # WordPress Platform Architect & Industrial Design System (`wp-platform-architect`)
@@ -19,12 +19,13 @@ version: 2.0.0
 
 * **نوع بازی (The Game):** ترکیبی از *Productivity* (توسعه سریع و بدون باگ) و *Transaction* (تبدیل ورودی‌های صنعتی به درخواست‌های معتبر استعلام قیمت RFQ).
 * **لحظه تبادل ارزش کلیدی (Key Value Exchange):** لحظه‌ای که یک فیچر، تمپلیت یا سکشن جدید، در کمتر از ۵ ثانیه تاییدیه ۴ گانه (`php -l` + تعادل آکولاد + 0-FAIL لینتر + 0.00px انحراف تراز پیکسلی در ۳ ویوپورت) را دریافت کرده و بدون رگرسیون در وبسایت لوکال زنده می‌شود.
-* **شاخص هدایتگر هوش مصنوعی (AI Guiding Metric):** **`Zero-Rollback Delivery Rate`** (نرخ تحویل قطعی تسک‌ها بدون نیاز به بازگشت یا اصلاح دستی) با حفظ پایدار **Gate 0 = 0 FAIL**.
+* **شاخص هدایتگر هوش مصنوعی (AI Guiding Metric):** **`Zero-Rollback Delivery Rate`** (نرخ تحویل قطعی تسک‌ها بدون نیاز به بازگشت یا اصلاح دستی) با حفظ پایدار **Gate 0 = 0 FAIL** و **`Brand Coherence Score >= 4/5`** در ۹ ایده‌آل بنیادین ویلر.
 * **محرک‌های عملیاتی (Actionable Inputs):**
   1. *تراز پیکسلی دقیق:* انحراف خط مبنای ستون‌های موازی دقیقاً `0.00px`.
   2. *پایداری موبایل:* صفر پیکسل سرریز افقی (`0px overflow`) در عرض‌های ۱۴۴۰، ۷۶۸ و ۳۹۰ پیکسل.
   3. *احترام به سلیقه کاربر در رنگ‌ها:* **حفظ کامل پس‌زمینه‌های سفید تاییدشده توسط کاربر (تعلیق قطعی تسک T036).**
   4. *دی‌اینلاین‌سازی و استانداردسازی توکن‌ها:* عدم استفاده از استایل‌های اینلاین تزئینی و استفاده منحصربه‌فرد از توکن‌های `:root`.
+  5. *توالی شناخت بصری و ۹ ایده‌آل برند:* هدایت ادراک بصری بر پایه فرم هندسی، سپس رنگ، سپس محتوا (Shape -> Color -> Content) بر اساس رفرنس‌های `wp-brand-architect`.
 * **شاخص سلامت سیستم (System Health):** اجرای کامل ارزیابی‌های لوکال در کمتر از ۵ ثانیه و بدون خطای PHP یا Warningهای مسدودکننده.
 
 ---
@@ -70,6 +71,9 @@ version: 2.0.0
   * **قانون حیاتی دیتابیس:** *هرگز متن فارسی را مستقیماً از طریق خط فرمان `mysql.exe` کوئری یا UPDATE نکنید* (باعث تبدیل کاراکترها به `????` می‌شود). همواره از اسکریپت‌های موقت PHP با لود `wp-load.php` و اجرای `SET NAMES utf8mb4` و متد `$wpdb->update` استفاده کنید.
 * **ابزارهای Gate 0 و CDP:** اجرای اسکریپت‌های Node.js از طریق مسیرهای مستقیم با اسلش رو به جلو (`C:/...`).
 
+### ۴.۳ ارکستراسیون هویت برند و بریج به کد (Brand Architecture Bridge)
+تمامی امور مرتبط با تدوین استراتژی برند، جایگاه‌یابی، نام‌گذاری، ممیزی ۹ ایده‌آل ویلر، بریف برند و مشتق‌سازی سیستم بصری به اسکیل همراه و تخصصی `/wp-brand-architect` و ماژول ۰۸ (`modules/08-brand-identity-and-design-system.md`) ارجاع می‌گردند.
+
 ---
 
 ## ۵. لایه پنجم: گاردرِیل‌ها و اقدامات مجاز (Guardrails & Action Menu)
@@ -106,3 +110,4 @@ version: 2.0.0
 * `modules/05-local-xampp-runtime.md`: دستورالعمل‌های خط فرمان ویندوز، شل MSYS، و اجرای دترمینستیک اسکریپت‌ها.
 * `modules/06-triage-and-routing.md`: درخت تصمیم‌گیری و طبقه‌بندی پروژه‌ها و ارجاع سریع به جریان کار مناسب.
 * `modules/07-novamira-mcp-bridge.md`: پروتکل دست‌تکانی JSON-RPC، احراز هویت و اجرای دترمینستیک ابیلیتی‌های Novamira MCP.
+* `modules/08-brand-identity-and-design-system.md`: استراتژی هویت برند بر پایه متدولوژی ویلر-میرسون، ارزیابی ۹ ایده‌آل و تبدیل به توکن‌های CSS و بلوک‌های وردپرس.
