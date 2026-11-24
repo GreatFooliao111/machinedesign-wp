@@ -4623,11 +4623,11 @@ textarea.rfq-input-field {
 
 
 .curriculum-tabbed-section .services-section-header h2 {
-  color: #ffffff;
+  color: #0B0D11;
 }
 
 .curriculum-tabbed-section .services-section-header p {
-  color: #94a3b8;
+  color: #475569;
 }
 
 .curriculum-tab-nav {
@@ -4635,7 +4635,7 @@ textarea.rfq-input-field {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin: 44px 0 32px 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid #DDE3EC;
   padding-bottom: 14px;
   width: 100%;
   box-sizing: border-box;

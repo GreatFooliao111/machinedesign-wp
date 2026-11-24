@@ -1154,3 +1154,21 @@ header#header .navbar-main {
   min-height: 280px;
   padding: 2rem !important;
 }
+
+/* ==========================================================================
+   v2.4.1 Interactive 4-Module Tabbed Section Contrast Harmonization
+   Pillars: Corporate Training & Machinery Inspection (.curriculum-tabbed-section)
+   ========================================================================== */
+.curriculum-tabbed-section .services-section-header h2,
+section#curriculum-section .services-section-header h2 {
+  color: #0B0D11 !important;
+}
+
+.curriculum-tabbed-section .services-section-header p,
+section#curriculum-section .services-section-header p {
+  color: #475569 !important;
+}
+
+.curriculum-tabbed-section .curriculum-tab-nav {
+  border-bottom: 2px solid #DDE3EC !important;
+}
