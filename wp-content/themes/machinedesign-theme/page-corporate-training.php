@@ -362,7 +362,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۱">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module1-schematic.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module1-schematic.webp' ); ?>" 
                  alt="نقشه‌خوانی صنعتی پیشرفته، علائم جوشکاری و استانداردسازی نقشه‌ها" 
                  loading="lazy" 
                  width="280" 
@@ -406,7 +406,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۲">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module2-schematic.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module2-schematic.webp' ); ?>" 
                  alt="مدل‌سازی پیشرفته SolidWorks بر اساس فرآیند ساخت و ورق‌کاری DFMA" 
                  loading="lazy" 
                  width="280" 
@@ -450,7 +450,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۳">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module3-schematic.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module3-schematic.webp' ); ?>" 
                  alt="تلرانس‌گذاری ابعادی و هندسی کاربردی کف کارگاه GD&T" 
                  loading="lazy" 
                  width="280" 
@@ -494,7 +494,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۴">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module4-schematic.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar5-module4-schematic.webp' ); ?>" 
                  alt="شبیه‌سازی و تحلیل تنش کاربردی المان محدود Production FEA" 
                  loading="lazy" 
                  width="280" 

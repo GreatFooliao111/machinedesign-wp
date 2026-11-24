@@ -335,7 +335,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۱">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module1-china-audit.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module1-china-audit.webp' ); ?>" 
                  alt="شماتیک بازرسی و تست ماشین‌آلات در کارخانجات چین" 
                  loading="lazy" 
                  width="280" 
@@ -379,7 +379,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۲">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module2-used-machinery.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module2-used-machinery.webp' ); ?>" 
                  alt="شماتیک عیب‌یابی و تست ارتعاشات ماشین‌آلات دست‌دوم" 
                  loading="lazy" 
                  width="280" 
@@ -423,7 +423,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۳">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module3-dubai-freezone.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module3-dubai-freezone.webp' ); ?>" 
                  alt="شماتیک بازرسی ماشین‌آلات وارداتی از دبی و مناطق آزاد" 
                  loading="lazy" 
                  width="280" 
@@ -467,7 +467,7 @@ get_header();
             </div>
           </div>
           <div class="tab-pane-image-slot" aria-label="تصویر شماتیک ماژول ۴">
-            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module4-rfq-contract.png' ); ?>" 
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/pillar6-module4-rfq-contract.webp' ); ?>" 
                  alt="شماتیک تدوین RFQ و قرارداد مهندسی خرید ماشین‌آلات" 
                  loading="lazy" 
                  width="280" 
