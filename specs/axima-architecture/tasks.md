@@ -1,8 +1,8 @@
 # لیست تسک‌های پیاده‌سازی معماری صنعتی Axima (Tasks)
 
 - [x] **فاز ۱: آماده‌سازی استایل‌شیت و توکن‌های طراحی Axima**
-  - [x] تدوین `wp-content/themes/hello-elementor/assets/css/machinedesign-axima.css`
-  - [x] اعمال پالت رنگی Industrial Slate (`#121824`)، White/Light Surfaces، و Lime Accent (`#8ce70c`)
+  - [x] تدوین `wp-content/themes/machinedesign-theme/assets/css/machinedesign-axima.css`
+  - [x] اعمال پالت رنگی Industrial Slate (`#121824`)، White/Light Surfaces، و Lime Accent (`#D97706`)
   - [x] طراحی کامپوننت‌های تاپ‌بار، هیدر دوطبقه، کارت‌های خدمات، گرید نمونه‌کارها و فرم دوگانه
 
 - [x] **فاز ۲: پیاده‌سازی ساختار لندینگ پیج در `front-page.php`**

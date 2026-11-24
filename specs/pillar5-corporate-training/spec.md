@@ -5,9 +5,9 @@
 - **نامک / آدرس (Slug / URL):** `/services/corporate-training/`
 - **شناسه برگه وردپرس:** 13
 - **برگه والد (Parent):** برگه خدمات (`/services/` - ID: 3)
-- **فایل الگوی اختصاصی:** `wp-content/themes/hello-elementor/page-corporate-training.php`
+- **فایل الگوی اختصاصی:** `wp-content/themes/machinedesign-theme/page-corporate-training.php`
 - **کلاس‌های هویتی بدنه:** `services-subpage pillar-corporate-training rtl`
-- **دیزاین سیستم:** Cyber-Mechanical Dark (`#0a0e17`, `#121824`)، سبز نئون سازمانی (`#8ce70c`)، خاکستری صنعتی (`#1e293b`)، فونت وزیرمتن و قلم Orbitron / JetBrains Mono برای متادیتاها.
+- **دیزاین سیستم:** Cyber-Mechanical Dark (`#0a0e17`, `#121824`)، امبر سیگنال سازمانی (`#D97706`)، خاکستری صنعتی (`#1e293b`)، فونت وزیرمتن و قلم JetBrains Mono / JetBrains Mono برای متادیتاها.
 
 ---
 
@@ -81,7 +81,7 @@
   2. قرارداد محرمانگی نقشه‌ها (NDA)
   3. پیش‌نیاز سطح علمی پرسنل
   4. نحوه پشتیبانی ۳ ماهه پس از دوره
-- پالت رنگ هاور: حاشیه سبز نئون (`#8ce70c`)، پس‌زمینه سفید خالص (`#ffffff`)، متن سورمه‌ای تیره (`#0f172a`).
+- پالت رنگ هاور: حاشیه امبر سیگنال (`#D97706`)، پس‌زمینه سفید خالص (`#ffffff`)، متن سورمه‌ای تیره (`#0f172a`).
 
 ### سکشن ۷: فرم استعلام با کارت اعتبار مدرس (Instructor Authority Card & Intake Form)
 - پس‌زمینه تیره صنعتی عمیق (`#0a0e17`) با گرادیان رادیال.
@@ -108,5 +108,5 @@
 ---
 
 ## ۵. استقرار و فایل‌های دارایی (Deployment & Assets)
-- تم وردپرس نهایی در قالب فایل زیپ در مسیر `D:\Machinedesign.ir\cpanel-deploy\hello-elementor-machinedesign.zip` پکیج‌بندی و آماده آپلود به هاست cPanel است.
-- تمامی دارایی‌های تصویری در مسیر `wp-content/themes/hello-elementor/assets/images/` گنجانده شده‌اند.
+- تم وردپرس نهایی در قالب فایل زیپ در مسیر `D:\Machinedesign.ir\cpanel-deploy\machinedesign-theme-deploy.zip` پکیج‌بندی و آماده آپلود به هاست cPanel است.
+- تمامی دارایی‌های تصویری در مسیر `wp-content/themes/machinedesign-theme/assets/images/` گنجانده شده‌اند.

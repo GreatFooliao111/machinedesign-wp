@@ -10,7 +10,7 @@
 | شناسه فیچر | نام و حوزه عملیاتی | وضعیت | اسناد و مشخصات | مسیر فایل‌های اجرایی |
 | :---: | :--- | :---: | :---: | :--- |
 | **`000`** | **نظام ضد کلیشه و اسلاپ هوش مصنوعی (Gate 0 Anti-Slop Engine)** | فعال و الزامی | [Constitution Art. 2](constitution.md#۲-اصل-بنیادین-صفر-نظام-ضد-کلیشه-و-منع-مطلق-اسلاپ-هوش-مصنوعی-gate-0-anti-slop--anti-cliché-law) | `taste-lint.bat`, `taste-inspect.bat`, `package.json` |
-| **`001`** | **مرکز جامع تماس و استعلام صنعتی (Contact & RFQ Hub)** | آماده استقرار | [Spec & Plan](001-contact-and-rfq-hub/spec.md) | `wp-content/themes/hello-elementor/page-contact.php` |
+| **`001`** | **مرکز جامع تماس و استعلام صنعتی (Contact & RFQ Hub)** | آماده استقرار | [Spec & Plan](001-contact-and-rfq-hub/spec.md) | `wp-content/themes/machinedesign-theme/page-contact.php` |
 | **`002`** | **پلتفرم وب مهندسی و کادر ۱۶ نفره (Web Platform & Team Roster)** | تکمیل و دیپلوی | [Spec & Plan](002-web-platform-and-team/spec.md) | `page-team.php` و ریتم متناوب در `style.css` |
 | **`003`** | **موتور رادار ترند و گراف آینده‌پژوهی صنعتی (Trend Radar & Neo4j v4.1)** | فعال در پروداکشن | [Spec & Plan](003-industrial-trend-radar/spec.md) | `trend_radar/`, Cloudflare Worker و Neo4j AuraDB |
 | **`004`** | **موتور محتوا و شبکه‌های اجتماعی (Social Media & Content Engine)** | فعال در پروداکشن | [Spec & Plan](004-social-media-content-engine/spec.md) | `machinedesign-social-assets\` و Buffer MCP |

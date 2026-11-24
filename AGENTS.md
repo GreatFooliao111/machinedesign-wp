@@ -10,11 +10,12 @@
      - NEVER build or approve any webpage, UI section, or component without strictly passing Gate 0 (`design-taste-frontend` / tasteskill v2).
      - Strict prohibition of generic AI defaults: NO centered hero headlines with 3 floating icon cards, NO AI purple/blue gradient soup, NO unsupported resting box-shadows, NO 1px outlined box soup, NO emoji UI icons, NO clipped gradient text (`background-clip: text`), and NO meaningless marketing fluff.
      - Mandate the 5 pillars: (1) Subject Inventory (8-12 technical/workshop facts), (2) Idea Statement ("On this page, [unique mechanical asset] becomes [the interactive/visual device]"), (3) One Live Thing (tangible interactive component), (4) Static Scan pass via `npm run taste:lint` / `taste-lint.bat`, and (5) Real-browser multi-viewport verification via `npm run taste:inspect` / `taste-inspect.bat`.
-   - NEVER use inline CSS styles (`style="..."`) or arbitrary colors. Strictly use the defined CSS root variables:
-     - Primary/Slate: `--color-primary: #121824;`, `--color-primary-dark: #0a0e17;`, `--color-primary-light: #1c2536;`
-     - Brand Accent: `--color-accent: #8ce70c;`, `--color-accent-dim: rgba(140, 231, 12, 0.12);`, `--color-accent-border: rgba(140, 231, 12, 0.35);`
-     - Status/Safety: `--color-amber: #f59e0b;`, `--color-cyan: #06b6d4;`
-   - Typography: Strictly **Vazirmatn** for Persian text; **JetBrains Mono** (`.mono`) for DIN/ISO codes, numbers, and technical specifications.
+    - NEVER use inline CSS styles (`style="..."`) or arbitrary colors. Strictly use the defined Swiss-German Precision Industrial System (v2.4) CSS variables:
+      - Dark Architectural Surfaces: `--color-carbon: #0B0D11;`, `--color-slate: #12161E;`, `--color-titanium: #1A202B;`, `--color-border-dark: #262E3D;`
+      - Engineered Light Editorial Surfaces: `--color-canvas-light: #F4F6F9;`, `--color-card-light: #FFFFFF;`, `--color-border-light: #DDE3EC;`, `--color-ink: #0F172A;`
+      - Primary Brand Accent: `--color-accent: #D97706;` (Signal Amber CTA, hover `#F59E0B`, always paired with `#0B0D11` dark button text for WCAG AAA contrast) and `--color-copper: #B45309;` / `#92400E;` (Deep Copper text on light surfaces)
+      - Secondary Technical Accent: `--color-technical: #38BDF8;` (CAD Steel Blue on dark) and `--color-technical-light: #0369A1;` (on light) for ISO/DIN tags, status badges, and telemetry.
+    - Typography: Strictly self-hosted **Vazirmatn** Variable WOFF2 (`letter-spacing: 0`) for Persian UI/prose; self-hosted **JetBrains Mono** WOFF2 (`tabular-nums`, `.mono`) for DIN/ISO codes, tolerances, numbers, and technical specifications. Zero external Google Fonts CDN.
 
 2. **Autonomous Skill Orchestration Matrix (Zero-Prompt Skill Activation):**
    DO NOT ask the user if you should trigger these skills. Automatically activate them based on task domain:
@@ -23,7 +24,7 @@
    - **Page & Content Development:** Trigger `seo-content-brief` + `seo` by automatically reading keyword strategies from `D:\Machinedesign.ir\Autoclaw\Final_SEO_Strategy_Report_Local (2).csv` and `SEO_Content_Plan_Final.csv`. Auto-generate and inject Schema.org JSON-LD via `seo-schema`. Enforce single H1, heading semantics, and image alt tags via `seo-technical`.
    - **Code Implementation:** Trigger `ponytail` (Lazy senior dev mode: shortest working diff, zero bloat, no unnecessary abstractions).
    - **Project Management, Roadmap & Trello Delivery:** Trigger `machinedesign-project-manager` to prioritize features across the 3 pillars, resolve trade-offs, monitor cloud quotas (70% rule, <44 subrequests), enforce the SDD lifecycle, and synchronize milestones to Trello board (`MachineDesign.ir — Website Project` via `trello-use`).
-   - **Visual Assets & Marketing:** Trigger `machinedesign-artifact-designer` for pure vector SVGs, dark cyber-mechanical theme, and `#8ce70c` neon accent.
+   - **Visual Assets & Marketing:** Trigger `machinedesign-artifact-designer` for Swiss-German Precision v2.4 aesthetic, vector SVGs, and Signal Amber `#D97706` / CAD Steel Blue `#38BDF8` accents.
    - **Local Verification & QA:** Trigger XAMPP QA protocol: `php -l <file>` syntax check, localhost verification at `http://localhost/machinedesign/`, and zero-horizontal-overflow check (`hasHorizontalOverflow = False`).
 
 3. **Spec-Driven Development (SDD) Autonomous Workflow:**

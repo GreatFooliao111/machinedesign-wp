@@ -2,7 +2,7 @@
 
 ## ۱. فایل‌ها و ماژول‌های تحت تاثیر
 1. **تمپلیت جدید PHP:**
-   - مسیر: `wp-content/themes/hello-elementor/page-rd-prototyping.php`
+   - مسیر: `wp-content/themes/machinedesign-theme/page-rd-prototyping.php`
    - الگوی نام‌گذاری تمپلیت: `Template Name: Pillar 3: R&D & Prototyping`
 2. **استایل‌های اختصاصی در `style.css`:**
    - ادغام کلاس‌های اختصاصی ستون سوم (نظیر کارت‌های DFMEA، بج‌های هایلایت R&D، کارت‌های متدولوژی پروتوتایپ).
@@ -10,7 +10,7 @@
 3. **پایگاه داده وردپرس:**
    - تنظیم فیلد متای `_wp_page_template` برای برگه شناسه `124` به مقدار `page-rd-prototyping.php`.
 4. **پکیج استقرار هاست:**
-   - به‌روزرسانی `D:\Machinedesign.ir\cpanel-deploy\hello-elementor-machinedesign.zip`.
+   - به‌روزرسانی `D:\Machinedesign.ir\cpanel-deploy\machinedesign-theme-deploy.zip`.
 
 ---
 

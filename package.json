@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "MachineDesign.ir Web Platform & Anti-Cliché Engineering Toolchain",
   "scripts": {
-    "taste:lint": "node ./.agents/skills/design-taste-frontend/scripts/lint.mjs wp-content/themes/hello-elementor/",
+    "taste:lint": "node ./.agents/skills/design-taste-frontend/scripts/lint.mjs wp-content/themes/machinedesign-theme/",
     "taste:inspect": "node ./.agents/skills/design-taste-frontend/scripts/inspect.mjs",
     "taste:draw": "node ./.agents/skills/design-taste-frontend/scripts/draw.mjs",
     "taste:assets": "node ./.agents/skills/design-taste-frontend/scripts/assets.mjs",

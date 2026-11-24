@@ -6,12 +6,13 @@
   "siteUrl": "http://localhost/machinedesign",
   "tokens": {
     "colors": {
-      "primary": "#121824",
-      "accent": "#8ce70c",
-      "dark": "#0a0e17",
-      "light": "#f8fafc",
-      "white": "#ffffff",
-      "muted": "#64748b"
+      "primary": "#12161E",
+      "accent": "#D97706",
+      "accentSecondary": "#38BDF8",
+      "dark": "#0B0D11",
+      "light": "#F4F6F9",
+      "white": "#FFFFFF",
+      "muted": "#94A3B8"
     },
     "typography": {
       "heading": "Vazirmatn, system-ui, sans-serif",
@@ -35,8 +36,8 @@
       {
         "file": "styles/v1-industrial-dark.html",
         "version": 1,
-        "label": "سبک صنعتی پیشرو (Industrial Slate + Lime Accent)",
-        "colors": ["#121824", "#8ce70c", "#ffffff"]
+        "label": "سبک صنعتی سوئیسی-آلمانی (Swiss-German Precision Industrial v2.4)",
+        "colors": ["#0B0D11", "#12161E", "#D97706", "#38BDF8", "#F4F6F9", "#FFFFFF"]
       }
     ]
   }

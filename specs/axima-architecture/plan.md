@@ -1,13 +1,13 @@
 # طرح فنی بازمهندسی معماری صنعتی ماشین دیزاین (Plan)
 
 ## ۱. ساختار شیوه‌نامه و استایل‌شیت (CSS Architecture)
-- **فایل:** `wp-content/themes/hello-elementor/assets/css/machinedesign-axima.css`
+- **فایل:** `wp-content/themes/machinedesign-theme/assets/css/machinedesign-axima.css`
 - **متغیرها و توکن‌ها:**
   - رنگ‌های اصلی:
     - اصلی شرکتی: `#121824` (Industrial Deep Slate)
     - رنگ بدنه تیره ثانویه: `#1a2232`
     - رنگ لایت سطوح: `#f8fafd` و `#ffffff`
-    - رنگ تاکیدی برند: `#8ce70c` (Laser Lime)
+    - رنگ تاکیدی برند: `#D97706` (Signal Amber)
     - رنگ ثانویه هشدار/ایمنی صنعتی: `#f49b00` (Safety Amber)
     - حاشیه‌ها: `rgba(255, 255, 255, 0.08)` در بخش دارک، `#e2e8f0` در بخش لایت
   - تایپوگرافی:

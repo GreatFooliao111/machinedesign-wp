@@ -44,7 +44,7 @@
 - [ ] **Mandatory Initial Invocation**: Triggered at the beginning of EVERY new page decision or major redesign.
 - [ ] **Subject Inventory & Idea Statement**: Formulated the core sentence: `On this page, [unique MachineDesign mechanical asset/fact] becomes [the interactive/visual device]`.
 - [ ] **One Live Thing**: Defined one authentic interactive element the visitor can physically touch/operate (e.g. 3D mechanism parallax, interactive RFQ telemetry, tolerance calculator, kinetic stage).
-- [ ] **Anti-Slop Direction Draw**: Ran `draw.mjs` or adopted curated gallery blueprints with `--keep palette,type` (strictly preserving Cyber-Mechanical dark tokens `#121824`, neon `#8ce70c`, Vazirmatn & JetBrains Mono).
+- [ ] **Anti-Slop Direction Draw**: Ran `draw.mjs` or adopted curated gallery blueprints with `--keep palette,type` (strictly preserving Swiss-German Precision v2.4 tokens `#0B0D11`, `#12161E`, Signal Amber `#D97706`, CAD Steel Blue `#38BDF8`, Vazirmatn & JetBrains Mono).
 - [ ] **Argument Claims**: Mapped sections to specific technical proof points, eliminating boilerplate stock layouts (no meaningless icon rows or fake vanity metrics).
 
 ### 1. UI Section Scout Gate (section-scout-builder)
@@ -53,8 +53,8 @@
 - [ ] Transpiled cleanly into WordPress semantic PHP/CSS without raw `core/html` blocks.
 
 ### 2. Aesthetics & Contrast Math Gate (automattic-wp-architect + graphic-design-aesthetics)
-- [ ] WCAG 2.1 AA Contrast verified (Normal text ≥ 4.5:1; UI/Large text ≥ 3:1; NO lime `#8ce70c` text on white backgrounds).
-- [ ] 60-30-10 Color Hierarchy: 60% dark slate (`#121824`), 30% surfaces/borders (`#1c2536`, `#253147`), 10% lime accent (`#8ce70c`).
+- [ ] WCAG 2.1 AA Contrast verified (Normal text ≥ 4.5:1; UI/Large text ≥ 3:1; Signal Amber `#D97706` CTA buttons always paired with dark `#0B0D11` text for WCAG AAA compliance).
+- [ ] 60-30-10 Color Hierarchy: 60% architectural slate/carbon (`#0B0D11`, `#12161E`) or engineered platinum canvas (`#F4F6F9`), 30% surfaces/borders (`#1A202B`, `#262E3D` or white Bento cards `#FFFFFF` with `#DDE3EC` borders), 10% Signal Amber accent (`#D97706`).
 - [ ] 8-Point Spatial Grid: All gaps, margins, paddings are strict multiples of 4px/8px (`8px, 16px, 24px, 32px`).
 - [ ] Anti-AI Slop: Hero headline anchored in upper third (`clamp(4rem, 8vw, 7rem)`), no empty `100vh` flex voids.
 - [ ] Anti-Card-Soup & The Squint Test: Only 1 dominant focal point, no repetitive unnecessary card boxes.

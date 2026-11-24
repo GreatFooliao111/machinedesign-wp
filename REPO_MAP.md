@@ -12,8 +12,8 @@
 | :--- | :--- | :--- |
 | **WordPress Core** | `7.0.9` | Local runtime running on XAMPP. Core files are intentionally excluded from Git. |
 | **PHP Runtime** | `8.2.12 (CLI / ZTS)` | Compatible with PHP 8.1+ modern typing and WordPress 6.x/7.x APIs. |
-| **Active Theme** | `machinedesign-theme` | Located at `wp-content/themes/machinedesign-theme/`. **MachineDesign Precision v2.0.0**: Standalone decoupled update-proof theme with Swiss-German Precision design system, self-hosted Persian/Mono fonts (`Vazirmatn`, `JetBrains Mono`), 8 industrial 3D WebP heroes, 4 Gutenberg patterns, and native Rank Math SEO bridge. (Legacy `hello-elementor` is preserved on local disk as a rollback safeguard). |
-| **In-House Plugins** | `machinedesign-rfq-manager` | Custom engineering RFQ (Request for Quotation) and NDA inquiry handler. Located at `wp-content/plugins/machinedesign-rfq-manager/`. |
+| **Active Theme** | `machinedesign-theme` | Located at `wp-content/themes/machinedesign-theme/`. **MachineDesign Precision v2.4**: Standalone decoupled update-proof theme with Swiss-German Precision design system, self-hosted Persian/Mono fonts (`Vazirmatn`, `JetBrains Mono`), Universal Animated 3D Delta Robot Hero (`includes/hero-media.php` + `delta-robot-3d.js`) default across all 12 Main Header routes (with 1-click WP-Admin Media Library Meta Box & Featured Image overrides + 8 built-in Swiss-German WebP 3D renders), 4 native Gutenberg Block Patterns in `patterns/`, opt-in `_md_enable_gutenberg_slot`, and native Rank Math SEO bridge (`includes/seo-schema-bridge.php`). (Legacy starter theme is preserved on local disk as a rollback safeguard). |
+| **In-House Plugins** | `machinedesign-rfq-manager` | Custom engineering RFQ (Request for Quotation) and NDA inquiry handler with CSRF nonce check, honeypot anti-spam, per-IP rate limiting, and non-blocking Telegram Bot dispatch. Located at `wp-content/plugins/machinedesign-rfq-manager/`. |
 | **Must-Use Plugins** | `design-gallery.php` | Located at `wp-content/mu-plugins/design-gallery.php`. System-wide asset enqueuing and HUD component registration. |
 | **Spec-Kit Governance** | Spec-Kit v1.2.3 / Constitution v2.1 | Located in `.specify/` and `specs/`. Enforces Gate 0 anti-slop rules and strict design specifications. |
 | **Excluded Vendors** | `seo-by-rank-math`, `novamira` | Excluded via `.gitignore` to keep repository clean, lightweight, and focused purely on custom proprietary code. |
@@ -37,28 +37,29 @@ machinedesign/
 │   ├── memory/constitution.md              # Supreme system directive (Gate 0 anti-slop, token safety)
 │   └── scripts/powershell/                 # Automation scripts (check-prerequisites, setup-plan, etc.)
 ├── design/                                 # UI mockups, visual guidelines & asset references
+│   └── gallery.json                        # Design tokens & color system registry (v2.4)
 ├── scripts/                                # Verification and batch automation scripts
 ├── specs/                                  # Feature specifications, task breakdowns & plans
 ├── wp-content/
 │   ├── mu-plugins/
 │   │   └── design-gallery.php              # Must-use plugin for global styling & components
 │   ├── plugins/
-│   │   └── machinedesign-rfq-manager/      # Custom engineering RFQ submission & telemetry engine
+│   │   └── machinedesign-rfq-manager/      # Hardened engineering RFQ submission & telemetry engine
 │   │       ├── machinedesign-rfq-manager.php
 │   │       └── ...
 │   └── themes/
-│       └── machinedesign-theme/            # Active MachineDesign Precision v2.0 theme
+│       └── machinedesign-theme/            # Active MachineDesign Precision v2.4 theme
 │           ├── front-page.php              # Homepage template (Hero, 6 Pillars, Projects, Insights, RFQ)
 │           ├── header.php                  # RTL semantic header with navigation & CTA
 │           ├── footer.php                  # Industrial footer with channel synergy & legal links
 │           ├── functions.php               # Theme bootstrapper, asset enqueuing & module loaders
-│           ├── style.css                   # Master stylesheet (MachineDesign Precision v2.0)
-│           ├── theme.json                  # Block editor styling & palette configuration
+│           ├── style.css                   # Master stylesheet (MachineDesign Precision v2.4)
+│           ├── theme.json                  # Block editor styling & palette configuration (v3)
 │           ├── patterns/                   # 4 Native Gutenberg Block Patterns
-│           ├── single.php                  # Single blog post template
-│           ├── single-team_member.php      # Single team member profile template
+│           ├── single.php                  # Single blog post template (Engineered Platinum canvas)
+│           ├── single-team_member.php      # Single team member profile template (Bento Grid)
 │           ├── includes/
-│           │   ├── hero-media.php          # 3D Hero Media Engine + WP-Admin Meta Box
+│           │   ├── hero-media.php          # 3D Hero Media Engine + WP-Admin Meta Box + 8 Renders
 │           │   ├── cpt-project.php         # Custom Post Type: 'project' + taxonomy 'project_category'
 │           │   ├── cpt-team.php            # Custom Post Type: 'team_member' + skills & projects meta
 │           │   ├── theme-options.php       # Native WP Admin Theme Options panel (5 tabs)
@@ -85,14 +86,15 @@ Accessible in WP-Admin via **Settings → Theme Options** (or dedicated menu). A
 
 | Tab | Option Key | Field Label / Usage | Current Type |
 | :--- | :--- | :--- | :--- |
-| **1. Workshop & Contact** | `workshop_city` | کارگاه / شهر مستقر (e.g., مشهد / تهران) | Text |
+| **1. Workshop & Contact** | `workshop_city` | کارگاه / شهر مستقر (e.g., مشهد / برج سامان) | Text |
 | | `workshop_address` | آدرس دقیق کارگاه و دفتر فنی | Text / Textarea |
 | | `phone_primary` | شماره تلفن ثابت دفتر | Text |
 | | `phone_mobile` | شماره همراه مستقیم کارشناس | Text |
 | | `contact_email` | ایمیل رسمی ارتباطات | Email |
 | | `working_hours` | ساعات کاری و پذیرش پروژه‌ها | Text |
 | | `map_coordinates` | مختصات جغرافیایی نقشه | Text |
-| **2. Key Metrics & Stats** | `stat_engineers` | تعداد مهندسین و متخصصین ارشد | Number / Text |
+| **2. Key Metrics & Stats** | `stat_years_experience` | سابقه تخصصی مهندسی و ساخت (e.g. ۱۵+ سال) | Text |
+| | `stat_engineers` | تعداد مهندسین و متخصصین ارشد | Number / Text |
 | | `stat_projects` | پروژه‌های موفق اجرا شده | Number / Text |
 | | `stat_production_lines` | خطوط تولید راه‌اندازی شده | Number / Text |
 | | `stat_satisfaction` | درصد رضایت مشتریان صنعتی | Text (e.g. 98%) |
@@ -122,31 +124,35 @@ Accessible in WP-Admin via **Settings → Theme Options** (or dedicated menu). A
 
 #### A. Custom Post Type: `project` (`includes/cpt-project.php`)
 - **Post Type Slug:** `project`
-- **Taxonomy:** `project_category` (دسته بندی پروژه‌ها: ماشین‌آلات بسته‌بندی، خطوط صنایع غذایی، مکانیزم‌های خاص، مهندسی معکوس)
+- **Taxonomy:** `project_category` (دسته‌بندی پروژه‌ها منطبق بر ۶ ستون خدمات: ماشین‌آلات بسته‌بندی، خطوط صنایع غذایی، مکانیزم‌های خاص، مهندسی معکوس، اتوماسیون صنعتی، قطعه‌سازی دقیق)
 - **Supported Fields:** `title`, `editor`, `thumbnail`, `excerpt`
 - **Custom Meta Keys:**
   - `_md_project_kpi`: شاخص کلیدی عملکرد پروژه (e.g., "افزایش ۱۲۰٪ نرخ بسته‌بندی", "دقت ۵ میکرون")
   - `_md_project_spec`: خلاصه مشخصات فنی و متالورژی ساخت
+  - `_md_project_client`: کارفرما یا صنعت هدف (اختیاری)
 
 #### B. Custom Post Type: `team_member` (`includes/cpt-team.php`)
 - **Post Type Slug:** `team_member`
 - **Supported Fields:** `title`, `editor`, `thumbnail`, `excerpt`
-- **Custom Meta Keys:**
-  - `_md_member_role`: عنوان و نقش سازمانی
+- **Custom Meta Keys & Controls:**
+  - `_md_member_role`: عنوان و نقش سازمانی مهندس
   - `_md_member_experience`: سال‌های سابقه تخصصی
+  - `_md_team_metric_1` to `_md_team_metric_4`: ۴ متریک سفارشی عملکرد فنی
+  - `_md_team_pillars_heading`: عنوان اختصاصی ستون‌های تحت مدیریت
   - `_md_skill1_name` to `_md_skill5_name`: نام مهارت‌های ۵ گانه مهندسی
   - `_md_skill1_pct` to `_md_skill5_pct`: درصد تسلط بر مهارت‌ها (۰ تا ۱۰۰)
   - `_md_p1_title` to `_md_p4_title`: نام پروژه‌های شاخص اجرا شده
   - `_md_p1_cat` to `_md_p4_cat`: دسته‌بندی پروژه‌های شاخص
-  - `_md_p1_img` to `_md_p4_img`: URL تصویر پروژه شاخص
+  - `_md_p1_img` to `_md_p4_img`: شناسه رسانه / URL تصویر اسلاید پروژه‌ها (با مدیا آپلودر وردپرس)
+  - **حفاظت از داده‌های موسس:** پروفایل‌های بنتو فاقد نشت داده‌های خام خصوصی هستند و داده‌ها منحصراً از فیلدهای متای اختصاصی لود می‌شوند.
 
 ---
 
-### 3.3. Page Templates & Hardcoded Copy Status (Refactoring Roadmap)
+### 3.3. Page Templates & Dynamic Editability State (v2.4 Reality)
 
-Currently, the following 19 custom page templates in `wp-content/themes/hello-elementor/` bypass `the_content()` and output PHP/HTML layouts directly:
+Currently, the following 19 custom page templates in `wp-content/themes/machinedesign-theme/` output semantic PHP/HTML layouts and support optional Gutenberg content slots:
 
-1. `front-page.php` — صفحه اصلی (Hero, 6 Service Pillars, Dynamic Projects WP_Query, Dynamic Articles WP_Query, RFQ Section)
+1. `front-page.php` — صفحه اصلی (Universal 3D Delta Robot Hero, 6 Service Pillars, Dynamic Projects WP_Query, Dynamic Articles WP_Query, RFQ Section)
 2. `page-services.php` — صفحه اصلی معرفی خدمات ۶ گانه
 3. `page-machine-design.php` — ستون ۱: طراحی ماشین‌آلات و خطوط تولید
 4. `page-factory-troubleshooting.php` — ستون ۲: عیب‌یابی خطوط تولید، بالانس دینامیکی و آنالیز ارتعاشات
@@ -156,8 +162,8 @@ Currently, the following 19 custom page templates in `wp-content/themes/hello-el
 8. `page-machinery-inspection.php` — ستون ۶: کارشناسی خرید ماشین‌آلات داخلی و خارجی
 9. `page-about.php` — درباره ماشین دیزاین و بیانیه ماموریت
 10. `page-contact.php` — تماس با ما، موقعیت کارگاه و فرم RFQ
-11. `page-projects.php` — آرشیو کامل پروژه‌ها با قابلیت فیلتر
-12. `page-team.php` — معرفی اعضای تیم فنی و متخصصین
+11. `page-projects.php` — آرشیو کامل پروژه‌ها با قابلیت فیلتر بر اساس ۶ ستون
+12. `page-team.php` — معرفی اعضای تیم فنی و متخصصین (شبکه بنتو)
 13. `page-profile-hossein.php` — پروفایل شخصی مهندس حسین وطن‌دوست
 14. `page-cad-cam-modeling.php` — خدمات مدل‌سازی CAD و ماشین‌کاری CAM
 15. `page-fea-analysis.php` — تحلیل اجزای محدود (FEA) و شبیه‌سازی مکانیکی
@@ -166,10 +172,12 @@ Currently, the following 19 custom page templates in `wp-content/themes/hello-el
 18. `page-insights.php` — مقالات تحلیلی، ترندهای صنعتی و پایگاه دانش
 19. `page-nda-protocol.php` — پروتکل‌های تضمین محرمانگی و امنیت مالکیت فکری
 
-#### Architectural Recommendation for AI Architect:
-- **Phase 1 (Theme Options Binding):** Bind hardcoded phone numbers, emails, addresses, stats, and social channel URLs across all `page-*.php` templates to `machinedesign_theme_options` using helper functions (`get_option('machinedesign_theme_options')`).
-- **Phase 2 (Gutenberg Block Patterns):** Deconstruct hardcoded page sections into modular Gutenberg Block Patterns (located in `patterns/`), allowing clients and editors to customize copy and layout directly in the native block editor while preserving the Cyber-Mechanical Dark design system.
-- **Phase 3 (Full Dynamic CPT Loop):** Expand the `project` and `insights` dynamic loops implemented in `front-page.php` across category archives and single templates.
+#### Architectural Features of v2.4:
+- **Theme Options Dynamic Binding:** تمام مقادیر تماس، آدرس کارگاه، آمارها و پیوندهای شبکه‌های اجتماعی از `machinedesign_theme_options` بارگذاری می‌شوند.
+- **Universal Animated 3D Delta Robot Hero:** هیروی متحرک سه‌بعدی دلتا روبات با `delta-robot-3d.js` به صورت پیش‌فرض در تمام ۱۲ روت اصلی فعال است، با قابلیت جایگزینی تک‌کلیکی از متاباکس مدیریت وردپرس و تصویر شاخص + ۸ رندر وب‌پی داخلی صنعتی.
+- **Gutenberg Slot Integration:** پشتیبانی از اسلات اختیاری گوتنبرگ (`md_render_optional_gutenberg_slot()`) و ۴ الگوی بلوک اختصاصی در `patterns/`.
+- **Rank Math SEO Bridge:** پل ارتباطی هوشمند در `includes/seo-schema-bridge.php` جهت تولید خودکار اسکیماهای JSON-LD برای سازمان، خدمات ۶ گانه و برگه تماس.
+- **Hardened RFQ Engine:** امنیت کامل با Nonce، فیلد Honeypot، محدودیت نرخ درخواست بر پایه IP و ارسال غیرمسدودکننده به ربات تلگرام.
 
 ---
 
@@ -177,17 +185,16 @@ Currently, the following 19 custom page templates in `wp-content/themes/hello-el
 
 - **Taste & Visual Linting:**
   ```bash
-  npm run taste:lint       # Validates zero AI-slop and CSS compliance
+  npm run taste:lint       # Validates zero AI-slop and CSS compliance against theme
   npm run taste:inspect    # Visual inspection and headless browser check
   ```
-- **Design System Palette:**
-  - Background Base: `#0F172A` / `#0A0F1D` (Deep Navy / Industrial Dark)
-  - Card & Container Surface: `#131C31` with `rgba(140, 231, 12, 0.22)` neon border
-  - Primary Accent: `#8CE70C` (Cyber Neon Lime / High Contrast)
-  - Primary Text: `#FFFFFF` / High-Contrast Headings
-  - Muted Text: `#94A3B8` / `#CBD5E1`
-  - Typography: Vazirmatn (Farsi RTL) & Orbitron / JetBrains Mono (Technical LTR numbers & codes)
+- **Design System Palette (Swiss-German Precision Industrial System v2.4):**
+  - **Dark Architectural Surfaces:** `#0B0D11` (Anodized Carbon Matte), `#12161E` (Machined Slate), `#1A202B` (Brushed Titanium), `#262E3D` (`1px` Hairline Border).
+  - **Engineered Light Editorial Surfaces:** `#F4F6F9` / `#F3F5F8` (Engineered Platinum canvas) + `#FFFFFF` crisp paper/Bento cards with `1px solid #DDE3EC` borders and `#0F172A` / `#1E293B` ink text.
+  - **Primary Brand Accent:** `#D97706` (Signal Amber CTA, hover `#F59E0B`, paired with `#0B0D11` dark button text for WCAG AAA contrast) and `#B45309` / `#92400E` (Deep Copper text accent on light surfaces).
+  - **Secondary Technical Accent:** `#38BDF8` (CAD Steel Blue on dark) and `#0369A1` (on light) for ISO/DIN tags, status badges, and telemetry.
+  - **Typography:** Self-hosted `Vazirmatn` Variable WOFF2 (`assets/fonts/Vazirmatn-Variable.woff2`, `letter-spacing: 0`) for Persian UI/prose and self-hosted `JetBrains Mono` WOFF2 (`Regular` & `Bold`, `tabular-nums`) for technical specs, tolerances, and ISO/DIN codes.
 - **Exclusions Policy:**
   - `wp-config.php`, `.env*`, and database dumps (`*.sql`) are strictly ignored.
-  - `wp-content/uploads/` is excluded; media should be managed via standard WordPress Media Library or S3/CDN in production.
+  - `wp-content/uploads/` is excluded; media is managed via standard WordPress Media Library.
   - Third-party vendor folders (`node_modules/`, `vendor/`) are excluded to preserve repository cleanliness.

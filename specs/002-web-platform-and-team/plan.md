@@ -19,7 +19,7 @@
 ## ۲. معماری فایل‌ها و ساختار کد
 
 ```text
-wp-content/themes/hello-elementor/
+wp-content/themes/machinedesign-theme/
 ├── page-team.php              # تمپلیت اختصاصی صفحه تیم با ساختار بنتو و فیلتر کلاینت‌ساید
 ├── single-team_member.php     # تمپلیت تک‌پست پورتفولیوی اختصاصی هر مهندس
 ├── style.css                  # استایل‌های متناوب (سکشن‌های زوج روشن / فرد تیره)
@@ -33,11 +33,11 @@ wp-content/themes/hello-elementor/
 - **سکشن‌های ۱ و ۳ (تیره):**
   - پس‌زمینه: `#0a0e17` و `#0d121c`
   - کارت‌ها: `#121824`
-  - رنگ تاکیدی: `#8ce70c`
+  - رنگ تاکیدی: `#D97706`
   - متن: `#f8fafc` و `#94a3b8`
 - **سکشن‌های ۲ و ۴ (روشن):**
   - پس‌زمینه: `#f8fafc`
-  - کارت‌ها: `#ffffff` با بوردر `#e2e8f0` و هاور `#8ce70c`
+  - کارت‌ها: `#ffffff` با بوردر `#e2e8f0` و هاور `#D97706`
   - تیترها: `#0f172a`
   - تگ‌های دپارتمان: `#15803d` روی پس‌زمینه لیمویی محو `rgba(140, 231, 12, 0.12)`
   - دکمه‌ها: سرمه‌ای صنعتی `#0f172a` با متن نئون
@@ -46,5 +46,5 @@ wp-content/themes/hello-elementor/
 
 ## ۴. پایپ‌لاین انتشار و همگام‌سازی
 
-- فایل‌های قالب فشرده در `D:\Machinedesign.ir\cpanel-deploy\hello-elementor-machinedesign.zip`.
+- فایل‌های قالب فشرده در `D:\Machinedesign.ir\cpanel-deploy\machinedesign-theme-deploy.zip`.
 - دامپ دیتابیس MySQL شامل آیتم‌های منوی جدید در `D:\Machinedesign.ir\cpanel-deploy\machinedesign_wp.sql`.

@@ -40,7 +40,7 @@
 ### ۲.۲ فرمت مسیرها در شل Git-Bash
 * برنامه‌های اجرایی بومی ویندوز (`php.exe`، `node.exe`، `mysql.exe`) مسیرهای یونیکسی به سبک `/c/xampp/...` را به عنوان آرگومان ورودی متوجه نمی‌شوند.
 * همواره مسیرها را به فرمت ویندوزی با اسلش رو به جلو یا بک‌اسلش پاس دهید:
-  `C:/xampp/htdocs/machinedesign/wp-content/themes/hello-elementor/header.php`
+  `C:/xampp/htdocs/machinedesign/wp-content/themes/machinedesign-theme/header.php`
 
 ### ۲.۳ ساختار آدرس‌دهی صفحات ستون خدمات
 * صفحات ستون خدمات ۶ گانه همگی زیرمسیر `/services/<slug>/` هستند (مانند `/services/machine-design/` یا `/services/engineering-mentorship/`).
@@ -66,17 +66,17 @@
 cd /c/xampp/htdocs/machinedesign
 
 # بررسی خطای سینتکس یک فایل PHP
-/c/xampp/php/php.exe -l "C:/xampp/htdocs/machinedesign/wp-content/themes/hello-elementor/header.php"
+/c/xampp/php/php.exe -l "C:/xampp/htdocs/machinedesign/wp-content/themes/machinedesign-theme/header.php"
 
 # بررسی سینتکس تمام فایل‌های قالب
-find wp-content/themes/hello-elementor -name '*.php' | while read f; do /c/xampp/php/php.exe -l "$f" >/dev/null 2>&1 || echo "FAIL: $f"; done
+find wp-content/themes/machinedesign-theme -name '*.php' | while read f; do /c/xampp/php/php.exe -l "$f" >/dev/null 2>&1 || echo "FAIL: $f"; done
 
 # اجرای لینتر دروازه صفر (Gate 0)
-node ./.agents/skills/design-taste-frontend/scripts/lint.mjs wp-content/themes/hello-elementor
+node ./.agents/skills/design-taste-frontend/scripts/lint.mjs wp-content/themes/machinedesign-theme
 
 # بازرسی زنده رندر و تقارن با مرورگر واقعی
 node ./.agents/skills/design-taste-frontend/scripts/inspect.mjs http://localhost/machinedesign/ --widths 1440,768,390
 
 # بررسی تعادل آکولادهای CSS
-python -c "s=open('wp-content/themes/hello-elementor/style.css',encoding='utf-8').read(); print(s.count('{'), s.count('}'))"
+python -c "s=open('wp-content/themes/machinedesign-theme/style.css',encoding='utf-8').read(); print(s.count('{'), s.count('}'))"
 ```

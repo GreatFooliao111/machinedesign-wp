@@ -22,5 +22,5 @@
   - *شاخص پذیرش:* تولید اسکرین‌شات‌های بی‌نقص و بدون خطای تداخل یا ناهماهنگی در مانیتور دسکتاپ. (تکمیل شد)
 
 - [x] **تسک ۴: به‌روزرسانی بسته استقرار هاست در cPanel**
-  - ایجاد مجدد فایل فشرده `D:\Machinedesign.ir\cpanel-deploy\hello-elementor-machinedesign.zip`.
+  - ایجاد مجدد فایل فشرده `D:\Machinedesign.ir\cpanel-deploy\machinedesign-theme-deploy.zip`.
   - *شاخص پذیرش:* تاریخ و ساعت جدید (10:47 PM) و حجم معتبر فایل فشرده پوسته (1.84MB). (تکمیل شد)

@@ -38,7 +38,7 @@
 
 ## ۳. تمپلیت‌ها و تمپلیت پارت‌ها (Templates & Template Parts)
 
-* **سلسله‌مراتب تمپلیت‌ها در قالب `hello-elementor`:**
+* **سلسله‌مراتب تمپلیت‌ها در قالب `machinedesign-theme`:**
   * صفحه اصلی: `front-page.php`
   * صفحات ستون خدمات: `page-*.php` (در مسیر `/services/<slug>/`)
   * سربرگ و پابرگ سراسری: `header.php` و `footer.php`

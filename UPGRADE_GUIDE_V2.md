@@ -1,8 +1,8 @@
-# MachineDesign Precision v2.0 — Upgrade & Deployment Guide
+# MachineDesign Precision v2.4 — Upgrade & Deployment Guide
 
 ## What Was Upgraded
 1. **Standalone Update-Proof Theme (`wp-content/themes/machinedesign-theme/`)**:
-   - Decoupled from `hello-elementor` so WordPress theme updates never overwrite your site.
+   - Decoupled from legacy starter theme so WordPress theme updates never overwrite your site.
    - Stripped Elementor admin-home upsell banners and unnecessary scripts.
 2. **Swiss-German Precision Design System (`assets/css/swiss-precision.css` + `theme.json`)**:
    - Replaced legacy neon-lime/cyber palette with matte Anodized Carbon (`#0B0D11`), Machined Slate (`#12161E`), Signal Amber (`#D97706`), and CAD Steel Blue (`#38BDF8`).
@@ -22,6 +22,6 @@
 ## Quick Install on XAMPP
 1. Extract this ZIP into `C:\xampp\htdocs\machinedesign\` (merges cleanly into `wp-content/` and `scripts/`).
 2. Run `powershell -ExecutionPolicy Bypass -File scripts\fetch-fonts.ps1` to download self-hosted WOFF2 fonts locally.
-3. In WordPress Admin → **Appearance → Themes**, activate **MachineDesign Precision (v2.0.0)**.
+3. In WordPress Admin → **Appearance → Themes**, activate **MachineDesign Precision (v2.4.0)**.
 4. Go to **Settings → Permalinks** and click **Save Changes** (flushes rewrite rules).
 5. Verify PHP syntax with `C:\xampp\php\php.exe -l` and push `main` to GitHub.

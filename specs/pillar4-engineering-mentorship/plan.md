@@ -1,10 +1,10 @@
 # طرح فنی پیاده‌سازی ستون چهارم خدمات (Pillar 4: Technical Execution Plan)
 
 ## ۱. استراتژی فنی و تمپلیت وردپرس
-- **فایل تمپلیت جدید:** `page-engineering-mentorship.php` در ریشه پوسته فعال (`wp-content/themes/hello-elementor/`).
+- **فایل تمپلیت جدید:** `page-engineering-mentorship.php` در ریشه پوسته فعال (`wp-content/themes/machinedesign-theme/`).
 - **انتساب تمپلیت به برگه:** انتساب خودکار `_wp_page_template` به فایل `page-engineering-mentorship.php` برای برگه شناسه `125`.
 - **موتور استیج ۳ بعدی هیرو:** استفاده از ساختار دوسطحی Canvas با اسکریپت `delta-robot-3d.js` و حذف کامل هرگونه برچسب `<video>` خام در DOM به منظور پایبندی به استاندارد ضد IDM.
-- **دیزاین‌سیستم و استایل‌ها:** استفاده از توکن‌های استاندارد Cyber-Mechanical Dark (`#070a0f`, `#0b0f19`, `#121824`, `#8ce70c`)، تایپوگرافی RTL فونت وزیرمتن و فونت اعداد مونو JetBrains Mono در `style.css`.
+- **دیزاین‌سیستم و استایل‌ها:** استفاده از توکن‌های استاندارد Cyber-Mechanical Dark (`#070a0f`, `#0b0f19`, `#121824`, `#D97706`)، تایپوگرافی RTL فونت وزیرمتن و فونت اعداد مونو JetBrains Mono در `style.css`.
 - **فرم ثبت‌نام و تعیین سطح (Section 7):** پیاده‌سازی با تقارن پیکسلی کامل و چیپ‌های متقارن کف، اتصال ایجکس به افزونه `machinedesign-rfq-manager` با اکشن `machinedesign_rfq_submit` و ستون مبدا `training-mentorship`.
 
 ## ۲. سکشن‌های کدنویسی
@@ -22,4 +22,4 @@
 3. اندازه‌گیری تراز عمودی و انحراف Y در نوار متریک‌ها و ستون‌های فرم استعلام با اسکریپت پایتون.
 4. تست ثبت لید در فرم فرانت‌اند، بررسی صدور کد پیگیری `MD-EDU-2026-XXXX` و ذخیره صحیح در پنل مدیریت وردپرس.
 5. ثبت اسکرین‌شات‌ها و گزارش فنی در آرتیفکت جهت تایید کاربر.
-6. به‌روزرسانی پکیج استقرار `hello-elementor-machinedesign.zip`.
+6. به‌روزرسانی پکیج استقرار `machinedesign-theme-deploy.zip`.

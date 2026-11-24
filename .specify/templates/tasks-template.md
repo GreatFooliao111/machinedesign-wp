@@ -17,7 +17,7 @@ description: "Task list template for feature implementation"
 - **Phase 0: Anti-Cliché & Gate 0 Art Direction** (Subject Inventory [8-12 facts], Idea Statement, One Live Thing, `taste:draw`, zero AI defaults)
 - **Phase 1: Setup & SEO Context** (Verify Autoclaw keywords, H1/H2s, and target URL slug)
 - **Phase 2: UI Section Scout (if UI)** (Scout 3-4 open-source options -> Present to user -> Wait for approval)
-- **Phase 3: Implementation & Transpilation** (Semantic PHP/CSS, #8ce70c neon accent, Vazirmatn typography, Schema.org injection)
+- **Phase 3: Implementation & Transpilation** (Semantic PHP/CSS, #D97706 Signal Amber accent, Vazirmatn typography, Schema.org injection)
 - **Phase 4: Taste-Skill Anti-Slop Audit & Verification** (`npm run taste:lint` static scan, `npm run taste:inspect` multi-width visual check, zero FAILs)
 - **Phase 5: Localhost Verification & QA** (`php -l` syntax check, XAMPP test, zero horizontal scroll overflow)
 

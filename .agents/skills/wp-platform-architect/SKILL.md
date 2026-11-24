@@ -1,6 +1,6 @@
 ---
 name: wp-platform-architect
-description: Master Systems-Thinking & North-Star Skill Family for WordPress, industrial web design, and full-stack front-end engineering. Governs theme development (hello-elementor), brand identity architecture (Wheeler & Meyerson 6e), Gutenberg blocks, Gate 0 anti-slop visual standards, REST APIs, and official Automattic skill routing with deterministic local XAMPP toolchain integration.
+description: Master Systems-Thinking & North-Star Skill Family for WordPress, industrial web design, and full-stack front-end engineering. Governs theme development (machinedesign-theme Precision v2.4), brand identity architecture (Wheeler & Meyerson 6e), Gutenberg blocks, Gate 0 anti-slop visual standards, REST APIs, and official Automattic skill routing with deterministic local XAMPP toolchain integration.
 version: 2.1.0
 ---
 
@@ -79,7 +79,7 @@ version: 2.1.0
 ## ۵. لایه پنجم: گاردرِیل‌ها و اقدامات مجاز (Guardrails & Action Menu)
 
 * **منوی اقدامات مجاز سطح ۳ (اقدام خودکار بدون توقف):**
-  * اصلاح و ایجاد فایل‌های PHP در قالب فعال `wp-content/themes/hello-elementor/`.
+  * اصلاح و ایجاد فایل‌های PHP در قالب فعال `wp-content/themes/machinedesign-theme/`.
   * استخراج استایل‌های درون‌خطی و افزودن به `style.css`.
   * اجرای تست‌های سینتکس PHP و لینتر Gate 0.
   * ثبت کامیت‌های منظم در مخزن محلی Git پس از پاس شدن تست‌ها.
@@ -95,7 +95,7 @@ version: 2.1.0
 پیش از بسته شدن هر تسک و ادعای تکمیل کار، **چک‌لیست ۴ گانه ارزیابی** باید ۱۰۰٪ پاس شود:
 1. **بررسی سینتکس PHP:** اجرای `/c/xampp/php/php.exe -l <file.php>` بدون حتی ۱ خطا.
 2. **تعادل آکولادهای CSS:** اجرای دستور `python -c "s=open('.../style.css').read(); print(s.count('{'), s.count('}'))"` و تایید برابری دقیق.
-3. **لینتر گیت ۰:** اجرای `node ./.agents/skills/design-taste-frontend/scripts/lint.mjs wp-content/themes/hello-elementor` و حفظ خروجی **0 FAIL**.
+3. **لینتر گیت ۰:** اجرای `node ./.agents/skills/design-taste-frontend/scripts/lint.mjs wp-content/themes/machinedesign-theme` و حفظ خروجی **0 FAIL**.
 4. **رندر واقعی مرورگر:** تست زنده در سه عرض ۱۴۴۰، ۷۶۸ و ۳۹۰ پیکسل با صفر پیکسل سرریز افقی.
 
 ---

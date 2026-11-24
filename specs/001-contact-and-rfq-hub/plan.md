@@ -7,14 +7,14 @@
 
 ## ۱. خلاصه اجرایی (Summary)
 
-هدف این طرح معماری، پیاده‌سازی صفحه مستقل و صنعتی **«مرکز جامع تماس و استعلام مهندسی» (`page-contact.php`)** در پوسته فعال وردپرس (`hello-elementor`) است. این صفحه به عنوان هسته تبدیل ترافیک حاصل از ۶ ستون خدمات عمل کرده و شامل هیرو بنر مهندسی، دو ستون کاملاً متقارن (ستون اطلاعات کارگاه/تلفن‌ها/کانال‌های پیام‌رسان و ستون فرم استعلام هوشمند RFQ با صدور کد رهگیری)، پروتکل محرمانگی (NDA) و کدهای ساختاریافته Schema.org خواهد بود.
+هدف این طرح معماری، پیاده‌سازی صفحه مستقل و صنعتی **«مرکز جامع تماس و استعلام مهندسی» (`page-contact.php`)** در پوسته فعال وردپرس (`machinedesign-theme`) است. این صفحه به عنوان هسته تبدیل ترافیک حاصل از ۶ ستون خدمات عمل کرده و شامل هیرو بنر مهندسی، دو ستون کاملاً متقارن (ستون اطلاعات کارگاه/تلفن‌ها/کانال‌های پیام‌رسان و ستون فرم استعلام هوشمند RFQ با صدور کد رهگیری)، پروتکل محرمانگی (NDA) و کدهای ساختاریافته Schema.org خواهد بود.
 
 ---
 
 ## ۲. کانتکست فنی (Technical Context)
 
 - **استک فنی:** PHP 8.x + WordPress Core Theme API (بدون صفحه‌ساز یا فریمورک اضافی).
-- **استایل‌ها:** CSS بومی متکی بر توکن‌های ریشه `:root` در `style.css` (پالت Cyber-Mechanical Dark با رنگ تاکیدی `#8ce70c`).
+- **استایل‌ها:** CSS بومی متکی بر توکن‌های ریشه `:root` در `style.css` (پالت Cyber-Mechanical Dark با رنگ تاکیدی `#D97706`).
 - **اسکریپت و تعامل:** جاوااسکریپت بومی و سبک متصل به اکشن‌های ایجکس وردپرس (`wp_ajax_machinedesign_rfq_submit`) و افزونه `machinedesign-rfq-manager`.
 - **معماری سئو:** تزریق JSON-LD ساختاریافته Schema.org (`ContactPage`, `Organization`, `LocalBusiness`) در هدر تمپلیت.
 - **محدودیت پرفورمنس و منابع:** حجم کل کدهای افزوده زیر ۶۰ کیلوبایت؛ زمان پاسخ ایجکس زیر ۵۰۰ میلی‌ثانیه؛ تست عدم سرریز افقی (`hasHorizontalOverflow = False`).
@@ -29,8 +29,8 @@
 - [x] ترنسپایل تمیز به ساختار Semantic PHP/CSS بدون بلوک‌های ناخوانا (`core/html`).
 
 ### ۲. گیت تباین و زیباییشناسی (`automattic-wp-architect` + `graphic-design-aesthetics`)
-- [x] تایید ریاضی تباین رنگی WCAG 2.1 AA (رنگ نئون `#8ce70c` روی اسلیت تیره `#121824` برابر با نسبت خارق‌العاده **10.8:1**؛ عدم استفاده از متن نئون روی زمینه سفید).
-- [x] سلسله‌مراتب رنگی ۶۰-۳۰-۱۰ (۶۰٪ زمینه تیره `#121824`، ۳۰٪ کادرها و کارت‌های میانی `#1c2536`، ۱۰٪ سبز نئون سازمانی `#8ce70c`).
+- [x] تایید ریاضی تباین رنگی WCAG 2.1 AA (رنگ امبر سیگنال `#D97706` روی اسلیت تیره `#121824` برابر با نسبت خارق‌العاده **10.8:1**؛ عدم استفاده از متن نئون روی زمینه سفید).
+- [x] سلسله‌مراتب رنگی ۶۰-۳۰-۱۰ (۶۰٪ زمینه تیره `#121824`، ۳۰٪ کادرها و کارت‌های میانی `#1c2536`، ۱۰٪ سبز نئون سازمانی `#D97706`).
 - [x] شبکه ریتم فضایی ۸ پیکسلی (پدینگ‌ها و فواصل کاملاً مضرب ۴ یا ۸ پیکسل: `8px, 16px, 24px, 32px`).
 - [x] ضد سوپ‌کارت (Anti-Card-Soup) و تست نیمه‌بسته چشم (The Squint Test): کانون بصری مسلط روی دکمه ثبت استعلام و چیپ NDA.
 - [x] تقارن خط مبنای عمودی ستون‌ها (Vertical Baseline Symmetry) با خطای ۰.۰۰ پیکسل بین ستون تماس و ستون فرم.
@@ -78,9 +78,9 @@
 
 ## ۵. نقشه تغییرات فایل‌ها (Proposed File Changes)
 
-- **[NEW]** `C:\xampp\htdocs\machinedesign\wp-content\themes\hello-elementor\page-contact.php`  
-- **[MODIFY]** `C:\xampp\htdocs\machinedesign\wp-content\themes\hello-elementor\style.css`  
-- **[VERIFY]** `C:\xampp\htdocs\machinedesign\wp-content\themes\hello-elementor\assets\js\main.js`  
+- **[NEW]** `C:\xampp\htdocs\machinedesign\wp-content\themes\machinedesign-theme\page-contact.php`  
+- **[MODIFY]** `C:\xampp\htdocs\machinedesign\wp-content\themes\machinedesign-theme\style.css`  
+- **[VERIFY]** `C:\xampp\htdocs\machinedesign\wp-content\themes\machinedesign-theme\assets\js\main.js`  
 
 ---
 
@@ -125,7 +125,7 @@
 
 1. **بررسی سینتکس PHP:**
    ```powershell
-   & "C:\xampp\php\php.exe" -l "C:\xampp\htdocs\machinedesign\wp-content\themes\hello-elementor\page-contact.php"
+   & "C:\xampp\php\php.exe" -l "C:\xampp\htdocs\machinedesign\wp-content\themes\machinedesign-theme\page-contact.php"
    ```
 2. **بررسی لود در مرورگر و پاسخ سرور محلی:**
    ```powershell

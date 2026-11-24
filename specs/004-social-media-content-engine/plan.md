@@ -31,7 +31,7 @@ D:\Machinedesign.ir\machinedesign-social-assets\campaigns\launch-dumpling-series
 
 ```mermaid
 flowchart TD
-    A["ایده و قلاب محتوایی<br/>(hook-writer / machinedesign-social-workflow)"] --> B["تدوین پرامپت دقیق مسترشیت شبکه ۲x۲<br/>(با هویت نئون #8ce70c و بدون کشیدگی فونت)"]
+    A["ایده و قلاب محتوایی<br/>(hook-writer / machinedesign-social-workflow)"] --> B["تدوین پرامپت دقیق مسترشیت شبکه ۲x۲<br/>(با هویت نئون #D97706 و بدون کشیدگی فونت)"]
     B --> C["فراخوانی ساب‌ایجنت image-generator"]
     C --> D["تولید مسترشیت جامع Master Grid"]
     D --> E["اجرای slice_grid.py و برش به ۴ اسلاید ۱۰۸۰x۱۳۵۰"]

@@ -2,14 +2,14 @@
 
 **Input**: Design documents from `specs/001-contact-and-rfq-hub/`  
 **Prerequisites**: [plan.md](plan.md) (approved Option 1: Preline Split Layout), [spec.md](spec.md) (User Stories P1, P2, P3)  
-**Target File**: `C:\xampp\htdocs\machinedesign\wp-content\themes\hello-elementor\page-contact.php`
+**Target File**: `C:\xampp\htdocs\machinedesign\wp-content\themes\machinedesign-theme\page-contact.php`
 
 ---
 
 ## Standard MachineDesign Workflow Phases
 - **Phase 1: Setup & SEO Context** (Verify Autoclaw keywords, H1/H2s, and target URL slug)
 - **Phase 2: UI Section Scout (if UI)** (Option 1 Selected: Preline UI Split Cards & Form)
-- **Phase 3: Implementation & Transpilation** (Semantic PHP/CSS, #8ce70c neon accent, Vazirmatn typography, Schema.org injection)
+- **Phase 3: Implementation & Transpilation** (Semantic PHP/CSS, #D97706 neon accent, Vazirmatn typography, Schema.org injection)
 - **Phase 4: Localhost Verification & QA** (`php -l` syntax check, XAMPP test, zero horizontal scroll overflow)
 
 ## Format: `[ID] [P?] [Story] Description`
@@ -45,7 +45,7 @@
 - [x] T007 [US1] Build HTML markup for the RFQ form in `page-contact.php` (Name, Phone, Service Pillar dropdown with 6 pillars, Project Details textarea, Submit button).
 - [x] T008 [US1] Add HUD telemetry badge and success alert box (`#contact-rfq-notice`) for displaying the tracking code and 24h SLA.
 - [x] T009 [US1] Ensure JavaScript AJAX handler in `assets/js/main.js` or inline controller connects form submission to `admin-ajax.php` (`machinedesign_rfq_submit`).
-- [x] T010 [US1] Style input fields with dark surface `#121824`, subtle border, focus ring `#8ce70c`, and `.btn-accent` action button.
+- [x] T010 [US1] Style input fields with dark surface `#121824`, subtle border, focus ring `#D97706`, and `.btn-accent` action button.
 
 **Checkpoint**: User Story 1 is functional: users can fill the form, submit via AJAX, and see the tracking code without page reload.
 
@@ -90,4 +90,4 @@
 - **HTTP Response**: 200 OK at `http://localhost/machinedesign/contact/`.
 - **Horizontal Overflow**: `scrollWidth <= clientWidth` across 1440px, 768px, and mobile viewports (`hasHorizontalOverflow = false`).
 - **Baseline Symmetry**: 0.00px deviation between `.nda-chip` and `.tracking-chip` (`chipBottomDiff = 0px`, `containerBottomDiff = 0px`, `ndaHeight = 102px`, `trackingHeight = 102px`).
-- **Design System Compliance**: 100% compliant with Cyber-Mechanical Dark tokens, `--color-accent: #8ce70c;`, Vazirmatn typography, and JetBrains Mono technical specifications.
+- **Design System Compliance**: 100% compliant with Cyber-Mechanical Dark tokens, `--color-accent: #D97706;`, Vazirmatn typography, and JetBrains Mono technical specifications.

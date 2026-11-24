@@ -22,5 +22,5 @@
   - [x] تهیه اسکرین‌شات‌ها و ثبت در پوشه آرتیفکت
 
 - [x] **فاز ۵: بروزرسانی پکیج استقرار و گزارش نهایی**
-  - [x] بروزرسانی `hello-elementor-machinedesign.zip` در `cpanel-deploy`
+  - [x] بروزرسانی `machinedesign-theme-deploy.zip` در `cpanel-deploy`
   - [x] ثبت گزارش در آرتیفکت و ارائه نتیجه به کاربر
