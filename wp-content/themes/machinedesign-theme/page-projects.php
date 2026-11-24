@@ -303,19 +303,8 @@ $spec_map = array(
       </div>
 
       <!-- Left Column: Featured Project Real Visual Box -->
-      <div class="featured-hero-visual">
-        <div class="featured-visual-box">
-          <img
-            src="<?php echo esc_url( content_url( '/uploads/2026/07/about-industry-packaging-600x400.webp' ) ); ?>"
-            alt="خط بسته‌بندی پیلوپک پرسرعت صنایع غذایی"
-            class="featured-visual-img"
-            loading="eager"
-          />
-          <div class="featured-caption-bar">
-            <span class="caption-title">خط تحویل‌شده در کارگاه مشهد</span>
-            <span class="caption-badge">COMMISSIONED 180 PPM</span>
-          </div>
-        </div>
+      <div class="featured-hero-visual md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'projects' ); } ?>
       </div>
 
     </div>

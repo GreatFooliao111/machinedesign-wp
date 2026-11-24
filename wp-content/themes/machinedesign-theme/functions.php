@@ -163,7 +163,20 @@ function md_enqueue_assets() {
 	}
 
 	// Conditional 3D Stage Script (only on pages that actually render the 3D stage)
-	if ( is_front_page() || is_page_template( array( 'page-machine-design.php', 'page-rd-prototyping.php' ) ) ) {
+	$md_delta_templates = array(
+		'page-services.php',
+		'page-machine-design.php',
+		'page-factory-troubleshooting.php',
+		'page-rd-prototyping.php',
+		'page-engineering-mentorship.php',
+		'page-corporate-training.php',
+		'page-machinery-inspection.php',
+		'page-projects.php',
+		'page-about.php',
+		'page-insights.php',
+		'page-contact.php',
+	);
+	if ( is_front_page() || is_page_template( $md_delta_templates ) ) {
 		$delta_js_path = MD_THEME_PATH . '/assets/js/delta-robot-3d.js';
 		if ( file_exists( $delta_js_path ) ) {
 			wp_enqueue_script(

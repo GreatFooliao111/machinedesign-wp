@@ -25,6 +25,7 @@ get_header();
     <img src="<?php echo esc_url( $md_fp_hero['url'] ); ?>" alt="<?php echo esc_attr( $md_fp_hero['alt'] ); ?>" width="<?php echo esc_attr( $md_fp_hero['width'] ); ?>" height="<?php echo esc_attr( $md_fp_hero['height'] ); ?>" class="hero-bg-image" loading="eager" fetchpriority="high" decoding="async" />
 
     <div class="container">
+      <div class="md-front-hero-grid">
       <div class="hero-content">
         <div class="hero-badge fade-up stagger-1" dir="rtl">
           <span class="pulse-indicator" aria-hidden="true"></span>
@@ -45,6 +46,10 @@ get_header();
             <span>مشاهده ۶ ستون خدمات و پروژه‌ها</span>
           </a>
         </div>
+      </div>
+      <div class="md-front-hero-visual md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'front-page' ); } ?>
+      </div>
       </div>
     </div>
   </section>
@@ -370,8 +375,8 @@ get_header();
   .md-standards-sec .md-standards-badge {
     display: inline-flex;
     align-items: center;
-    background: rgba(163, 230, 53, 0.12);
-    border: 1px solid rgba(163, 230, 53, 0.35); /* taste-skill-ignore */
+    background: rgba(217, 119, 6, 0.12);
+    border: 1px solid rgba(217, 119, 6, 0.35); /* taste-skill-ignore */
     color: #D97706;
     letter-spacing: 0;
     font-size: 0.82rem;
@@ -434,7 +439,7 @@ get_header();
   .md-standards-sec .md-standards-cta-banner {
     margin-top: 48px;
     background: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(163, 230, 53, 0.28); /* taste-skill-ignore */
+    border: 1px solid rgba(217, 119, 6, 0.35); /* taste-skill-ignore */
     border-radius: 8px;
     padding: 24px 32px;
   }
@@ -463,8 +468,22 @@ get_header();
     text-decoration: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
-  .md-standards-sec .md-standards-cta-btn:hover {
-    opacity: 0.92;
+  .md-standards-sec .md-standards-cta-btn:hover,
+  .md-standards-sec .md-standards-cta-btn:focus-visible,
+  .md-standards-sec .md-standards-cta-btn:active {
+    background: #F59E0B !important;
+    color: #0B0D11 !important;
+    opacity: 1 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(217, 119, 6, 0.32) !important;
+  }
+  .md-standards-sec .md-standards-cta-btn:hover span,
+  .md-standards-sec .md-standards-cta-btn:focus-visible span,
+  .md-standards-sec .md-standards-cta-btn:active span,
+  .md-standards-sec .md-standards-cta-btn:hover svg,
+  .md-standards-sec .md-standards-cta-btn:focus-visible svg {
+    color: #0B0D11 !important;
+    stroke: #0B0D11 !important;
   }
   .md-standards-sec .md-standards-cta-btn span,
   .md-standards-sec .md-standards-cta-btn svg {

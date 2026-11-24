@@ -15,10 +15,9 @@ get_header();
 while ( have_posts() ) :
     the_post();
 
-    // 1. Reading Time Calculation
+    // 1. Reading Time Calculation (Persian UTF-8 aware)
     $content = get_post_field( 'post_content', get_the_ID() );
-    $word_count = str_word_count( strip_tags( $content ) );
-    $reading_time = max( 1, ceil( $word_count / 180 ) );
+    $reading_time_label = function_exists( 'md_get_reading_time' ) ? md_get_reading_time( get_the_ID() ) : '۵ دقیقه مطالعه';
 
     // 2. Extract Categories
     $categories = get_the_category();
@@ -65,7 +64,7 @@ while ( have_posts() ) :
       <div class="single-article-meta-row">
         <span class="category-chip mono"><?php echo esc_html( $primary_cat ); ?></span>
         <span class="standard-chip mono text-accent"><?php echo esc_html( $standard_code ); ?></span>
-        <span class="article-read-time mono text-muted"><?php echo esc_html( $reading_time ); ?> دقیقه مطالعه</span>
+        <span class="article-read-time mono text-muted"><?php echo esc_html( $reading_time_label ); ?></span>
         <span class="article-meta-sep text-muted">//</span>
         <span class="article-pub-date mono text-muted"><?php echo esc_html( get_the_date( 'j F Y' ) ); ?></span>
       </div>

@@ -249,19 +249,8 @@ $spec_map = array(
       </div>
 
       <!-- Left Column: Featured Guide Visual Box -->
-      <div class="featured-hero-visual">
-        <div class="featured-visual-box">
-          <img
-            src="<?php echo esc_url( content_url( '/uploads/2026/07/about-brand-story-1200x800.webp' ) ); ?>"
-            alt="الزامات ایمنی و استانداردهای ماشین‌آلات صنعتی"
-            class="featured-visual-img"
-            loading="eager"
-          />
-          <div class="featured-caption-bar">
-            <span class="caption-title">مستندات مرجع ایمنی ماشین دیزاین</span>
-            <span class="caption-badge">ISO 12100:2010</span>
-          </div>
-        </div>
+      <div class="featured-hero-visual md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'insights' ); } ?>
       </div>
 
     </div>

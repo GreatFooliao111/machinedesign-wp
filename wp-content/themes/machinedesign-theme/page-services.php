@@ -649,8 +649,8 @@ get_header();
   display: inline-flex;
   align-items: center;
   color: #D97706 !important;
-  background: rgba(163, 230, 53, 0.12);
-  border: 1px solid rgba(163, 230, 53, 0.3); /* taste-skill-ignore */
+  background: rgba(217, 119, 6, 0.12);
+  border: 1px solid rgba(217, 119, 6, 0.3); /* taste-skill-ignore */
   padding: 4px 10px;
   border-radius: 4px;
   font-family: var(--font-tech, monospace); /* taste-skill-ignore */

@@ -63,36 +63,8 @@ get_header();
       </div>
 
       <!-- Left Column: Visual 3D Mechanism (Interactive Parallax / Anti-IDM) -->
-      <div class="pillar-hero-visual-col">
-        <div class="pillar-hero-cad-frame" id="aboutHeroCadFrame">
-          <div class="cad-corner-crosshair top-right" aria-hidden="true"></div>
-          <div class="cad-corner-crosshair top-left" aria-hidden="true"></div>
-          <div class="cad-corner-crosshair bottom-right" aria-hidden="true"></div>
-          <div class="cad-corner-crosshair bottom-left" aria-hidden="true"></div>
-
-          <div class="cad-viewport-hud-telemetry" aria-hidden="true">
-            <span class="hud-item mono">CORE // DFMA-VDI2221</span>
-            <span class="hud-item mono">۱۰۰٪ تضمین حفظ اسرار و قرارداد رسمی حقوقی NDA</span>
-          </div>
-
-          <div class="pillar-3d-model-wrap" id="aboutHeroModelWrap">
-            <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar1-3d-mechanism.png' ) ); ?>"
-                 alt="مدل‌سازی مهندسی ماشین‌آلات صنعتی ماشین دیزاین"
-                 class="pillar-3d-render-img"
-                 id="aboutHeroImg"
-                 loading="eager"
-                 width="620"
-                 height="520">
-          </div>
-
-          <div class="cad-viewport-glass-badge">
-            <div class="hud-status-led" aria-hidden="true"></div>
-            <div class="badge-text-group">
-              <span class="badge-label mono">SYSTEM ARCHITECTURE</span>
-              <span class="badge-title">+۱۵ سال سابقه مستمر در طراحی و ساخت تجهیزات سفارشی</span>
-            </div>
-          </div>
-        </div>
+      <div class="pillar-hero-visual-col md-hero-visual-col">
+        <?php if ( function_exists( 'md_render_hero_3d_stage' ) ) { md_render_hero_3d_stage( 'about' ); } ?>
       </div>
 
     </div>
