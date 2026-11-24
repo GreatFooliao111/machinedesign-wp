@@ -23,7 +23,7 @@ function md_get_default_hero_renders() {
 	return array(
 		'front-page'              => array(
 			'file'          => 'hero-machine-design.webp',
-			'alt'           => 'مکانیزم سه‌بعدی ربات دلتا و طراحی ماشین‌آلات صنعتی ماشین دیزاین',
+			'alt'           => 'مکانیزم سه‌بعدی ربات دلتا، گیربکس صنعتی و طراحی ماشین‌آلات دقیق ماشین دیزاین',
 			'code'          => 'SYS-00 // INDUSTRIAL MECHANICS',
 			'hud_label'     => 'HIGH-SPEED KINEMATICS',
 			'hud_val'       => 'PARALLEL DELTA ROBOT',
@@ -56,7 +56,7 @@ function md_get_default_hero_renders() {
 		),
 		'factory-troubleshooting' => array(
 			'file'          => 'hero-troubleshooting.webp',
-			'alt'           => 'بالانس دینامیکی، آنالیز ارتعاشات FFT و پایش وضعیت یاتاقان‌های صنعتی',
+			'alt'           => 'عیب‌یابی الکتروموتور گیربکس‌دار، کاهنده سیاره‌ای، بالانس دینامیکی و آنالیز ارتعاشات FFT کارخانجات',
 			'code'          => 'PILLAR-02 // ISO 20816 DIAGNOSTICS',
 			'hud_label'     => 'VIBRATION & FFT',
 			'hud_val'       => 'DYNAMIC BALANCING',
@@ -78,7 +78,7 @@ function md_get_default_hero_renders() {
 		),
 		'engineering-mentorship'  => array(
 			'file'          => 'hero-cad-cam.webp',
-			'alt'           => 'آموزش و منتورشیپ تخصصی SolidWorks، طراحی مهندسی و تلرانس‌گذاری GD&T',
+			'alt'           => 'کله‌فرز دقیق CNC با اینسرت کارباید، منتورشیپ SolidWorks و تلرانس‌گذاری GD&T',
 			'code'          => 'PILLAR-04 // ENGINEERING MENTORSHIP',
 			'hud_label'     => 'MENTORSHIP TRACK',
 			'hud_val'       => 'SOLIDWORKS & ANSYS',
@@ -155,7 +155,7 @@ function md_get_default_hero_renders() {
 		),
 		'cad-cam-modeling'        => array(
 			'file'          => 'hero-cad-cam.webp',
-			'alt'           => 'مدل‌سازی دقیق CAD/CAM و ماشین‌کاری CNC پنج‌محوره قطعات صنعتی',
+			'alt'           => 'کله‌فرز دقیق CNC با اینسرت‌های کارباید، مدل‌سازی CAD/CAM و ماشین‌کاری پنج‌محوره',
 			'code'          => 'SPEC // CAD-CAM & ASME Y14.5',
 			'hud_label'     => 'PARAMETRIC CAD',
 			'hud_val'       => '3/5-AXIS CNC',
@@ -166,7 +166,7 @@ function md_get_default_hero_renders() {
 		),
 		'fea-analysis'            => array(
 			'file'          => 'hero-fea-analysis.webp',
-			'alt'           => 'تحلیل اجزای محدود FEA، توزیع تنش و شبیه‌سازی مکانیکی ایمپلر و سازه صنعتی',
+			'alt'           => 'تحلیل اجزای محدود FEA، مش‌بندی عددی و توزیع تنش فون‌مایزر روی ایمپلر استیل پمپ سانتریفیوژ',
 			'code'          => 'SPEC // FEA & STRUCTURAL SIMULATION',
 			'hud_label'     => 'FEA SOLVER',
 			'hud_val'       => 'ANSYS / ABAQUS',
@@ -177,7 +177,7 @@ function md_get_default_hero_renders() {
 		),
 		'mold-design'             => array(
 			'file'          => 'hero-mold-design.webp',
-			'alt'           => 'طراحی قالب‌های صنعتی چندحفره، سنبه‌ماتریس و سیستم‌های خنک‌کاری دقیق',
+			'alt'           => 'مجموعه قالب‌های صنعتی فولادی H13، پین‌های راهنما و طراحی قالب سنبه‌ماتریس دقیق',
 			'code'          => 'SPEC // PRECISION TOOLING & MOLDS',
 			'hud_label'     => 'TOOLING DESIGN',
 			'hud_val'       => 'MULTI-CAVITY DIE',
@@ -188,7 +188,7 @@ function md_get_default_hero_renders() {
 		),
 		'reverse-engineering'     => array(
 			'file'          => 'hero-reverse-engineering.webp',
-			'alt'           => 'اسکن سه‌بعدی نور آبی و مهندسی معکوس قطعات پیچیده صنعتی و چرخ‌دنده',
+			'alt'           => 'اسکنر نوری سه‌بعدی نور آبی در حال مهندسی معکوس چرخ‌دنده مخروطی مارپیچ صنعتی',
 			'code'          => 'SPEC // 3D METROLOGY & REVERSE ENG',
 			'hud_label'     => '3D OPTICAL SCAN',
 			'hud_val'       => 'BLUE-LIGHT METROLOGY',
