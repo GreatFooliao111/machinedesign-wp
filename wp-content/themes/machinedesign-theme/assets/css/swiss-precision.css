@@ -497,8 +497,18 @@ textarea:focus-visible {
 .btn-accent:hover span,
 .btn-primary span,
 .btn-primary:hover span,
+.btn-cta-main span,
+.btn-cta-main:hover span,
 .header-cta-btn span,
 .header-cta-btn:hover span {
+  color: #0B0D11 !important;
+}
+
+.btn-cta-main,
+.btn-cta-main:hover,
+.btn-cta-main:focus-visible {
+  background-color: var(--md-accent-primary, #D97706) !important;
+  border-color: var(--md-accent-primary, #D97706) !important;
   color: #0B0D11 !important;
 }
 

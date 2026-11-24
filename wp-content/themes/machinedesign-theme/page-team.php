@@ -536,14 +536,6 @@ $schema_json = wp_json_encode( [
   <div class="container">
     <div class="team-cta-box">
       
-      <!-- Verified Location Badge Grounding -->
-      <div class="team-location-verified-chip mono">
-        <span class="chip-pin-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-        <span>دفتر مرکزی و کارگاه تست زنده: <strong>مشهد، برج سامان</strong></span>
-        <span class="chip-divider" aria-hidden="true">|</span>
-        <span>پذیرش حضوری جهت آزمون کارگاهی خمیر و متریال کارفرما</span>
-      </div>
-
       <div class="cta-badge mono">READY TO COLLABORATE // ZERO REWORK</div>
       <h3 class="cta-title">پروژه صنعتی یا ایده ماشین‌آلات خود را با تیم ما در میان بگذارید</h3>
       <p class="cta-subtitle">
