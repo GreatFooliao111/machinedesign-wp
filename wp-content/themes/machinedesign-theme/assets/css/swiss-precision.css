@@ -1033,3 +1033,124 @@ textarea:focus-visible {
   background: #0F172A;
   color: #F8FAFC;
 }
+
+/* ==========================================================================
+   v2.4 Critical Restoration & Team Profile Polish
+   1. Restore Main Site Header (.site-header / .navbar-main) to Dark Anodized Carbon (#0B0D11)
+   2. Exact Vertical Centering for #founder-main > div > header (.founder-top-nav)
+   3. Purge residual green accents inside .founder-portfolio-page
+   ========================================================================== */
+
+/* 1. CRITICAL RESTORATION: Dark Swiss-German Main Header (#0B0D11) */
+.site-header,
+.site-header .navbar-main,
+header#header.site-header,
+header#header .navbar-main {
+  background-color: #0B0D11 !important;
+  background: rgba(11, 13, 17, 0.96) !important;
+  border-bottom: 1px solid #262E3D !important;
+  color: #F3F5F8 !important;
+}
+
+.site-header .brand-title {
+  color: #F3F5F8 !important;
+}
+
+.site-header .brand-tagline {
+  color: #9BA7B8 !important;
+}
+
+.site-header .nav-menu > li > a {
+  color: #E2E8F0 !important;
+}
+
+.site-header .nav-menu > li > a:hover,
+.site-header .nav-menu > li.current-menu-item > a {
+  color: #F59E0B !important;
+}
+
+.site-header .nav-menu .sub-menu {
+  background-color: #12161E !important;
+  border: 1px solid #262E3D !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5) !important;
+}
+
+.site-header .nav-menu .sub-menu li a {
+  color: #CBD5E1 !important;
+}
+
+.site-header .nav-menu .sub-menu li a:hover {
+  background-color: #1A202B !important;
+  color: #F59E0B !important;
+}
+
+.site-header .mobile-nav-toggle {
+  color: #F3F5F8 !important;
+}
+
+/* 2. Exact Vertical Centering of #founder-main > div > header (.founder-top-nav) */
+#founder-main > div > header,
+.founder-portfolio-page .founder-top-nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  min-height: 54px !important;
+  padding: 12px 20px !important;
+  margin-bottom: 24px !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #DDE3EC !important;
+  border-radius: 8px !important;
+}
+
+.founder-portfolio-page .founder-org-hierarchy,
+.founder-portfolio-page .founder-status-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.founder-portfolio-page .org-node,
+.founder-portfolio-page .org-current,
+.founder-portfolio-page .sep {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+}
+
+.founder-portfolio-page .org-current {
+  padding: 4px 10px !important;
+  line-height: 1.2 !important;
+  background-color: #FEF3C7 !important;
+  color: #92400E !important;
+  border: 1px solid #FDE68A !important;
+  border-radius: 4px !important;
+}
+
+.founder-portfolio-page .founder-status-badge {
+  padding: 4px 10px !important;
+  line-height: 1.2 !important;
+}
+
+/* 3. Harmonize residual green accents on Team Profile to Swiss-German Amber/Copper */
+.founder-portfolio-page .metric-strip-val-light,
+.founder-portfolio-page .pillar-item-title-light .num,
+.founder-portfolio-page .bento-card-header .title-en {
+  color: #B45309 !important;
+}
+
+.founder-portfolio-page .founder-thesis-quote {
+  border-right-color: #D97706 !important;
+}
+
+.md-empty-projects-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 280px;
+  padding: 2rem !important;
+}

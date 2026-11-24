@@ -96,6 +96,18 @@ function md_add_team_member_meta_boxes() {
 }
 add_action( 'add_meta_boxes', 'md_add_team_member_meta_boxes' );
 
+function md_enqueue_team_media_uploader( $hook ) {
+    if ( 'post.php' !== $hook && 'post-new.php' !== $hook ) {
+        return;
+    }
+    $screen = get_current_screen();
+    if ( $screen && 'team_member' === $screen->post_type ) {
+        wp_enqueue_media();
+    }
+}
+add_action( 'admin_enqueue_scripts', 'md_enqueue_team_media_uploader' );
+
+
 /**
  * 5. Render Meta Box Fields in WP Admin
  */
@@ -118,13 +130,15 @@ function md_render_team_member_meta_box( $post ) {
         $status_badge  = get_post_meta( $post->ID, '_md_member_status_badge', true ) ?: 'ENGINEERING TEAM // SPECIALIST // MASHHAD';
         $photo_badge   = get_post_meta( $post->ID, '_md_member_photo_badge', true ) ?: 'ACTIVE // STUDIO & WORKSHOP';
     }
-    $manifesto_p1    = get_post_meta( $post->ID, '_md_member_manifesto_p1', true ) ?: 'بیش از ۱۵ سال تمرکز میدانی بر طراحی ماشین‌آلات، عیب‌یابی ارتعاشات و ساخت تجهیزات سفارشی خطوط تولید، این باور بنیادین را در من تثبیت کرده است: مهندسی مکانیک حقیقی روی نرم‌افزار متولد نمی‌شود، بلکه در درک بی‌واسطه از فرآیندهای براده‌برداری، تراشکاری، تلرانس‌های ساخت و رفتار واقعی متریال در شرایط کاری سنگین شکل می‌گیرد.';
-    $manifesto_p2    = get_post_meta( $post->ID, '_md_member_manifesto_p2', true ) ?: 'رویکرد من در ماشین دیزاین بر همگرایی متدولوژی DFMA (طراحی مقید به ساخت و مونتاژ اقتصادی) و تحلیل مالی سرمایه‌گذاری (MBA) استوار است. بزرگ‌ترین دغدغه هر کارخانه‌دار، اتلاف سرمایه در آزمون و خطاهای کارگاهی و توقف‌های پرهزینه خط تولید است؛ ما با اعتبارسنجی دقیق سینماتیکی، شبیه‌سازی اجزای محدود (FEA) و برآورد واقعی بودجه ساخت (CAPEX/OPEX)، پیش از بریدن اولین قطعه فولاد، ابهام و ریسک مالی را به صفر می‌رسانیم.';
-    $manifesto_p3    = get_post_meta( $post->ID, '_md_member_manifesto_p3', true ) ?: 'خروجی نهایی ما صرفاً یک مدل سه‌بعدی نیست؛ نقشه‌های اجرایی کامپکت، استانداردسازی تلرانس‌های هندسی (GD&T بر پایه ASME Y14.5 و DIN ISO 2768) و تضمین انطباق کامل با دستورالعمل‌های ایمنی ماشین‌آلات (ISO 12100) است. تعهد من به عنوان طراح ارشد و موسس، هدایت بی‌واسطه پروژه تا رسیدن به یک دارایی صنعتی پایدار، کم‌استهلاک و سودآور برای خط تولید شماست.';
+    $manifesto_p1    = get_post_meta( $post->ID, '_md_member_manifesto_p1', true );
+    $manifesto_p2    = get_post_meta( $post->ID, '_md_member_manifesto_p2', true );
+    $manifesto_p3    = get_post_meta( $post->ID, '_md_member_manifesto_p3', true );
 
     // 4 Trust Metrics
     $start_year      = get_post_meta( $post->ID, '_md_metric_start_year', true ) ?: '2011';
+    $metric1_val     = get_post_meta( $post->ID, '_md_metric1_val', true );
     $metric1_label   = get_post_meta( $post->ID, '_md_metric1_label', true ) ?: 'سال تسلط میدانی بر طراحی ماشین‌آلات و سرپرستی کارگاهی';
+    $pillars_heading = get_post_meta( $post->ID, '_md_pillars_heading', true ) ?: 'ارکان چهارگانه رهبری فنی';
 
     $metric2_val     = get_post_meta( $post->ID, '_md_metric2_val', true ) ?: 'Grade A';
     $metric2_label   = get_post_meta( $post->ID, '_md_metric2_label', true ) ?: 'ارزیابی و انطباق DFMA (طراحی برای ساخت و مونتاژ اقتصادی)';
@@ -505,7 +519,40 @@ function md_render_team_member_meta_box( $post ) {
                 <input type="text" id="_md_p4_img" name="_md_p4_img" value="<?php echo esc_url( $p4_img ); ?>" dir="ltr">
             </div>
         </div>
+    
+    <div style="margin:14px 0;padding:12px 14px;background:#f8fafc;border:1px solid #cbd5e1;border-radius:6px;">
+        <h4 style="margin:0 0 10px 0;">تنظیمات تکمیلی داینامیک (عنوان رکن اول متریک + عنوان بخش ارکان)</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div>
+                <label style="display:block;font-weight:600;margin-bottom:4px;">مقدار/عنوان کارت متریک ۱ (اختیاری - جایگزین سال سابقه):</label>
+                <input type="text" name="_md_metric1_val" value="<?php echo esc_attr( get_post_meta( $post->ID, '_md_metric1_val', true ) ); ?>" placeholder="مثلاً: ۷+ یا ۱۵+" class="widefat" />
+            </div>
+            <div>
+                <label style="display:block;font-weight:600;margin-bottom:4px;">عنوان بخش ارکان چهارگانه تخصص:</label>
+                <input type="text" name="_md_pillars_heading" value="<?php echo esc_attr( get_post_meta( $post->ID, '_md_pillars_heading', true ) ?: 'ارکان چهارگانه رهبری فنی' ); ?>" class="widefat" />
+            </div>
+        </div>
     </div>
+    <script>
+    jQuery(function($){
+        $('input[name^="_md_p"][name$="_img"]').each(function(){
+            var $inp = $(this);
+            if ($inp.next('.md-team-media-btn').length) return;
+            var $btn = $('<button type="button" class="button md-team-media-btn" style="margin-top:6px;">انتخاب / آپلود تصویر از کتابخانه رسانه</button>');
+            $inp.after($btn);
+            $btn.on('click', function(e){
+                e.preventDefault();
+                var frame = wp.media({ title: 'انتخاب تصویر پروژه عضو تیم', button: { text: 'درج تصویر' }, multiple: false, library: { type: 'image' } });
+                frame.on('select', function(){
+                    var att = frame.state().get('selection').first().toJSON();
+                    $inp.val(att.url);
+                });
+                frame.open();
+            });
+        });
+    });
+    </script>
+</div>
     <?php
 }
 
@@ -535,7 +582,9 @@ function md_save_team_member_meta( $post_id ) {
         '_md_member_manifesto_p2',
         '_md_member_manifesto_p3',
         '_md_metric_start_year',
+        '_md_metric1_val',
         '_md_metric1_label',
+        '_md_pillars_heading',
         '_md_metric2_val',
         '_md_metric2_label',
         '_md_metric3_val',
@@ -794,7 +843,7 @@ function md_get_team_member_profile_data( $post_id_or_slug = null ) {
             ];
         }
     }
-    if ( empty( $projects ) ) {
+    if ( empty( $projects ) && $is_founder ) {
         $projects = [
             [
                 'title'    => 'خط رول‌کن دوار بدون مغزی (Coreless Turret Rewinder)',
@@ -840,7 +889,7 @@ function md_get_team_member_profile_data( $post_id_or_slug = null ) {
 
         'metrics' => [
             [
-                'val'   => $dynamic_years,
+                'val'   => get_post_meta( $id, '_md_metric1_val', true ) ?: $dynamic_years,
                 'label' => get_post_meta( $id, '_md_metric1_label', true ) ?: ( $is_founder 
                     ? 'سال تسلط میدانی بر طراحی ماشین‌آلات و سرپرستی کارگاهی' 
                     : 'سال سابقه طراحی مهندسی و نظارت بر ساخت تجهیزات' ),
@@ -875,6 +924,7 @@ function md_get_team_member_profile_data( $post_id_or_slug = null ) {
             'phone'     => get_post_meta( $id, '_md_member_phone', true ) ?: ( $is_founder ? '09358689829' : '' ),
         ],
 
+        'pillars_heading' => get_post_meta( $id, '_md_pillars_heading', true ) ?: 'ارکان چهارگانه رهبری فنی',
         'pillars'   => $pillars,
         'guarantee' => [
             'title' => get_post_meta( $id, '_md_guarantee_title', true ) ?: 'تضمین ساخت‌پذیری قطعات و انطباق استاندارد',

@@ -37,6 +37,7 @@ if ( function_exists( 'md_enforce_manifesto_balance' ) ) {
 }
 $metrics              = $member_data['metrics'] ?? [];
 $social               = $member_data['social'] ?? [];
+$pillars_heading      = $member_data['pillars_heading'] ?? 'ارکان چهارگانه رهبری فنی';
 $pillars              = $member_data['pillars'] ?? [];
 $guarantee            = $member_data['guarantee'] ?? [];
 $skills               = $member_data['skills'] ?? [];
@@ -196,7 +197,7 @@ $projects_count_fa = function_exists( 'md_persian_num' )
         <div>
           <div class="bento-card-header">
             <h2 class="bento-card-title">
-              <span class="title-fa">ارکان چهارگانه رهبری فنی</span>
+              <span class="title-fa"><?php echo esc_html( $pillars_heading ); ?></span>
               <span class="title-en mono" dir="ltr">// FOUR PILLARS</span>
             </h2>
             <span class="bento-card-index">۰۱</span>
@@ -252,6 +253,7 @@ $projects_count_fa = function_exists( 'md_persian_num' )
       </section>
 
       <!-- ================= CARD 4: FULL-BLEED INDUSTRIAL CAD SLIDER (7 COLS - FRAMELESS) ================= -->
+      <?php if ( ! empty( $project_slides ) ) : ?>
       <article class="bento-card bento-card-light bento-slider-card bento-slider-frameless" aria-label="ویترین تصویری پروژه‌های صنعتی">
         
         <!-- Floating HUD Corner Indicator -->
@@ -302,6 +304,14 @@ $projects_count_fa = function_exists( 'md_persian_num' )
 
         </div><!-- /.founder-slider-container -->
       </article>
+      <?php else : ?>
+      <article class="bento-card bento-card-light bento-slider-card md-empty-projects-card" aria-label="پروژه‌های شاخص مهندسی">
+        <div style="color:#64748B;font-size:0.95rem;text-align:center;">
+          <p style="margin:0 0 8px 0;font-weight:600;color:#1E293B;font-size:1.05rem;">پروژه‌های تخصصی در دست تدوین و انتشار</p>
+          <span style="font-size:0.875rem;line-height:1.6;">مستندات و سوابق پروژه‌های صنعتی این عضو تیم پس از ممیزی فنی و حقوقی بارگذاری خواهد شد.</span>
+        </div>
+      </article>
+      <?php endif; ?>
 
       <!-- ================= CARD 5: TECHNICAL & MANAGEMENT SKILLS MATRIX (5 COLS - LIGHT) ================= -->
       <article class="bento-card bento-card-light bento-skills-card" aria-label="نمودارهای سطح مهارت و شایستگی">
