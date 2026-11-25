@@ -307,8 +307,8 @@ get_header();
 
           <div class="visual-img-wrap">
             <img
-              src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/portfolio-fea-800x600.webp' ) ); ?>"
-              alt="مدل‌سازی و تحلیل تنش مکانیزم صنعتی با سالیدورکس و Ansys"
+              src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar4-mentorship-coaching.webp' ) ); ?>"
+              alt="منتورشیپ فردی طراحی ماشین، آموزش SolidWorks و بررسی نقشه اجرایی کارگاهی"
               class="split-feature-img"
               width="800"
               height="600"

@@ -4214,10 +4214,11 @@ textarea.rfq-input-field {
   border-radius: 6px;
 }
 
+.feature-desc h3,
 .feature-desc h4 {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-primary, #121824);
+  color: var(--color-ink, #0F172A);
   margin: 0 0 6px 0;
 }
 

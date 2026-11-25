@@ -244,10 +244,10 @@ get_header();
         <div class="services-intro-image-wrap">
           <div class="services-intro-image-frame">
             <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar1-machine-design-case.png' ) ); ?>" 
-                 alt="مهندسی و طراحی اجزای ماشین‌آلات و گیربکس صنعتی" 
+                 alt="طراحی ماشین‌آلات صنعتی، مکانیزم‌های دقیق و سیستم‌های خطوط تولید DFMA" 
                  loading="lazy" 
-                 width="600" 
-                 height="420">
+                 width="800" 
+                 height="600">
             <div class="cad-frame-crosshair cad-top-left" aria-hidden="true"></div>
             <div class="cad-frame-crosshair cad-top-right" aria-hidden="true"></div>
           </div>

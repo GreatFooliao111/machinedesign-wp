@@ -23,7 +23,7 @@ function md_get_default_hero_renders() {
 	return array(
 		'front-page'              => array(
 			'file'          => 'hero-machine-design.webp',
-			'alt'           => 'مکانیزم سه‌بعدی ربات دلتا، گیربکس صنعتی و طراحی ماشین‌آلات دقیق ماشین دیزاین',
+			'alt'           => 'مکانیزم سه‌بعدی ربات دلتا، عملگر دقیق رباتیک و طراحی ماشین‌آلات صنعتی ماشین دیزاین',
 			'code'          => 'SYS-00 // INDUSTRIAL MECHANICS',
 			'hud_label'     => 'HIGH-SPEED KINEMATICS',
 			'hud_val'       => 'PARALLEL DELTA ROBOT',
@@ -45,7 +45,7 @@ function md_get_default_hero_renders() {
 		),
 		'machine-design'          => array(
 			'file'          => 'hero-machine-design.webp',
-			'alt'           => 'طراحی ماشین‌آلات صنعتی، گیربکس‌های دقیق و خطوط تولید سفارشی',
+			'alt'           => 'طراحی ماشین‌آلات صنعتی، مکانیزم‌های سروو دقیق و خطوط تولید سفارشی',
 			'code'          => 'PILLAR-01 // DFMA & MACHINERY',
 			'hud_label'     => 'HIGH-SPEED KINEMATICS',
 			'hud_val'       => 'PARALLEL DELTA ROBOT',

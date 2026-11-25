@@ -247,11 +247,11 @@ get_header();
 
         <div class="services-intro-image-wrap">
           <div class="services-intro-image-frame">
-            <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar1-machine-design-case.png' ) ); ?>" 
-                 alt="تحلیل مهندسی ریسک و ساخت پروتوتایپ مکانیزم صنعتی" 
+            <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/07/pillar3-rd-3dprinter.webp' ) ); ?>" 
+                 alt="پرینتر سه‌بعدی صنعتی، ساخت نمونه اولیه سریع و تحقیق و توسعه مکانیک R&amp;D" 
                  loading="lazy" 
-                 width="600" 
-                 height="420">
+                 width="800" 
+                 height="600">
             <div class="cad-frame-crosshair cad-top-left" aria-hidden="true"></div>
             <div class="cad-frame-crosshair cad-top-right" aria-hidden="true"></div>
           </div>
