@@ -1,0 +1,17 @@
+{
+  "project": "MachineDesign.ir (TRUMPF Architectural Redesign)",
+  "version": "3.0.0",
+  "mode": "brownfield-zero-static",
+  "wp_root": "C:\\xampp\\htdocs\\machinedesign",
+  "site_url": "http://localhost/machinedesign",
+  "active_theme": "machinedesign-trumpf",
+  "core_plugin": "machinedesign-core",
+  "preserved_plugins": [
+    "machinedesign-rfq-manager",
+    "seo-by-rank-math",
+    "novamira"
+  ],
+  "team_display_limit": 4,
+  "delta_robot_placement": "mid-page-kinematics-lab",
+  "motion_catalogs_active": false
+}

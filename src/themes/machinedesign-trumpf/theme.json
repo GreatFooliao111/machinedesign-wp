@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "880px", "wideSize": "1360px" },
+    "color": {
+      "defaultPalette": false,
+      "custom": true,
+      "palette": [
+        { "slug": "surface", "color": "#FFFFFF", "name": "سفید گالری (پس‌زمینه اصلی)" },
+        { "slug": "surface-mist", "color": "#F2F4F7", "name": "خاکستری فولادی (بخش‌های متناوب)" },
+        { "slug": "surface-dark", "color": "#111318", "name": "گرافیت معماری (آزمایشگاه و فوتر)" },
+        { "slug": "primary", "color": "#0033CC", "name": "آبی مهندسی TRUMPF (اکسنت اصلی)" },
+        { "slug": "primary-hover", "color": "#002299", "name": "آبی عمیق (هاور)" },
+        { "slug": "amber-precision", "color": "#D97706", "name": "کهربایی صنعتی (NDA و وضعیت)" },
+        { "slug": "on-surface", "color": "#111318", "name": "جوهر اصلی" },
+        { "slug": "on-surface-variant", "color": "#3A414A", "name": "متن ثانویه" },
+        { "slug": "outline", "color": "#D8DEE6", "name": "خط مهندسی 1px" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        { "fontFamily": "\"Vazirmatn\", system-ui, sans-serif", "name": "Vazirmatn", "slug": "vazirmatn" },
+        { "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace", "name": "JetBrains Mono", "slug": "mono" }
+      ]
+    }
+  }
+}

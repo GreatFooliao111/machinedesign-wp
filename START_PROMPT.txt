@@ -1,0 +1,26 @@
+You are executing a purely MECHANICAL deployment of the pre-built **MachineDesign TRUMPF v3.0 Zero-Static Starter Kit** on local Windows XAMPP (`C:\xampp\htdocs\machinedesign`).
+
+DO NOT redesign the UI, DO NOT invent new layouts, and DO NOT rewrite the pre-built PHP/CSS/JS files. All design, hover physics, and page templates are already completed inside `src/`.
+
+Execute these exact 5 mechanical steps in order:
+
+1. **Backup Database First (External Path):**
+   - If XAMPP MySQL is running, export a safety backup OUTSIDE the repo:
+     `C:\xampp\mysql\bin\mysqldump.exe -u root machinedesign_local > C:\xampp\htdocs\machinedesign_backup_pre_v3.sql`
+
+2. **Link Core Plugin & TRUMPF Theme + Run PHP Lint:**
+   - Run: `powershell -ExecutionPolicy Bypass -File scripts\setup-xampp.ps1`
+   - Confirm 0 PHP syntax errors across all files in `src\plugins\machinedesign-core` and `src\themes\machinedesign-trumpf`.
+
+3. **Activate Plugin & Theme (Preserving All Existing Data):**
+   - Activate plugin `machinedesign-core/machinedesign-core.php` (keep `machinedesign-rfq-manager`, `seo-by-rank-math`, and `novamira` active!).
+   - Activate theme `machinedesign-trumpf` (`template` and `stylesheet` options in `wp_options`).
+   - Flush rewrite rules (clear `rewrite_rules` option or click Save Changes in WP-Admin -> Settings -> Permalinks).
+   - Assign page templates if needed: `/services/` -> `page-services.php`, `/projects/` -> `page-projects.php`, `/insights/` -> `page-insights.php`, `/about/` -> `page-about.php`, `/contact/` -> `page-contact.php`, and the 6 service pillar pages -> `page-service-pillar.php`.
+
+4. **Run Automated QA Smoke Tests:**
+   - Run: `python scripts\smoke-test.py http://localhost/machinedesign`
+   - Confirm every route returns `PASS [200]` with RTL active, 0 Tailwind CDN, and 0 PHP fatals.
+
+5. **Deliver `docs/QA_REPORT.md` & Push to GitHub (`origin/main`):**
+   - Fill out `docs/QA_REPORT_TEMPLATE.md` as `docs/QA_REPORT.md` with exact verification outputs, commit cleanly on `main` (excluding any `.sql` backups), and report completion.

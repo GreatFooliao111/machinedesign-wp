@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره ما، تیم مهندسی و میز استعلام مستقیم | ماشین دیزاین</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#0033CC',
+        'on-primary': '#FFFFFF',
+        'primary-hover': '#002299',
+        'on-primary-hover': '#FFFFFF',
+        'primary-tint': '#F0EFFF',
+        'on-primary-tint': '#001159',
+        'surface': '#FFFFFF',
+        'on-surface': '#111318',
+        'surface-mist': '#F2F4F7',
+        'on-surface-mist': '#111318',
+        'surface-dark': '#111318',
+        'on-surface-dark': '#FFFFFF',
+        'on-surface-variant': '#3A414A',
+        'on-surface-muted': '#5C5F61',
+        'outline': '#D8DEE6',
+        'outline-subtle': '#E2E6EB',
+        'amber-precision': '#D97706',
+        'amber-surface': '#FFEDE3',
+        'on-amber-surface': '#6E3900',
+      },
+      borderRadius: {
+        'none': '0px',
+        'DEFAULT': '0px',
+        'sm': '0px',
+        'md': '0px',
+        'lg': '0px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section-md': '64px',
+        'section-lg': '96px',
+        'section-xl': '120px',
+        'page-margin': '32px',
+      },
+      fontFamily: {
+        'display': ['"Vazirmatn"', 'sans-serif'],
+        'headline': ['"Vazirmatn"', 'sans-serif'],
+        'title': ['"Vazirmatn"', 'sans-serif'],
+        'body': ['"Vazirmatn"', 'sans-serif'],
+        'label': ['"Vazirmatn"', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '60px', letterSpacing: '0px', fontWeight: '800' }],
+        'display-lg-mobile': ['32px', { lineHeight: '42px', letterSpacing: '0px', fontWeight: '800' }],
+        'headline-lg': ['36px', { lineHeight: '48px', letterSpacing: '0px', fontWeight: '800' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '38px', letterSpacing: '0px', fontWeight: '800' }],
+        'headline-md': ['28px', { lineHeight: '38px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-lg': ['22px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-md': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-lg': ['18px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '300' }],
+        'body-md': ['16px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['14px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-md': ['13px', { lineHeight: '18px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'tab-switch': '200ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'tab-switch': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'tab-switch': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-[1024px] flex flex-col antialiased" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- PURE WHITE ARCHITECTURAL HEADER (76px) -->
+  <header class="bg-surface border-b border-outline-subtle sticky top-0 z-40 w-full">
+    <div class="max-w-[1440px] mx-auto px-gutter-xl h-[76px] flex items-center justify-between gap-gutter-lg">
+      <a href="../01-home-trumpf/HomeTrumpf.html" class="flex items-center gap-gutter-md shrink-0">
+        <div class="w-10 h-10 bg-on-surface text-surface flex items-center justify-center rounded-none font-mono text-mono-md font-semibold" dir="ltr">MD</div>
+        <div class="flex flex-col">
+          <span class="font-headline text-title-md text-on-surface leading-none">ماشین دیزاین</span>
+          <span class="font-mono text-mono-sm text-on-surface-muted mt-1" dir="ltr">MachineDesign.ir</span>
+        </div>
+      </a>
+
+      <nav aria-label="ناوبری اصلی" class="hidden lg:flex items-center gap-gutter-xl h-full">
+        <a href="../02-service-pillar/ServicePillar.html" class="h-full inline-flex items-center border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:border-primary font-label text-label-lg transition-colors duration-state-change">خدمات مهندسی</a>
+        <a href="../03-projects-hub/ProjectsHub.html" class="h-full inline-flex items-center border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:border-primary font-label text-label-lg transition-colors duration-state-change">صنایع</a>
+        <a href="../03-projects-hub/ProjectsHub.html" class="h-full inline-flex items-center border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:border-primary font-label text-label-lg transition-colors duration-state-change">پروژه‌ها</a>
+        <a href="../03-projects-hub/ProjectsHub.html" class="h-full inline-flex items-center border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:border-primary font-label text-label-lg transition-colors duration-state-change">کاتالوگ دیجیتال</a>
+        <a href="../04-editorial-single/EditorialSingle.html" class="h-full inline-flex items-center border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:border-primary font-label text-label-lg transition-colors duration-state-change">پایگاه دانش</a>
+        <a href="../05-about-team-rfq/AboutTeamRfq.html" class="h-full inline-flex items-center border-b-2 border-primary text-primary font-label text-label-lg">درباره ما</a>
+      </nav>
+
+      <div class="flex items-center gap-gutter-md shrink-0">
+        <!-- COMPONENT: button-icon -->
+        <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="جستجوی فنی" class="inline-flex items-center justify-center w-10 h-10 bg-surface text-on-surface border border-outline-subtle hover:border-primary hover:text-primary rounded-none transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-title-md">search</span>
+        </button>
+        <!-- COMPONENT: button-primary -->
+        <a href="#workshop-rfq" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-gutter-sm bg-primary text-on-primary hover:bg-primary-hover px-gutter-lg py-gutter-sm h-10 rounded-none font-label transition-colors duration-state-change ease-state-change">
+          <span data-design-text-token="label-lg" class="font-label text-label-lg">ثبت استعلام فنی</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- CLEAN CORPORATE BREADCRUMB BAR -->
+    <div class="bg-surface-mist border-b border-outline">
+      <div class="max-w-[1440px] mx-auto px-gutter-xl py-gutter-md flex items-center gap-gutter-sm font-body text-body-sm text-on-surface-variant">
+        <a href="../01-home-trumpf/HomeTrumpf.html" class="hover:text-primary">ماشین دیزاین</a>
+        <span>/</span>
+        <span>تیم مهندسی</span>
+        <span>/</span>
+        <span class="text-on-surface font-label">عضو تیم</span>
+      </div>
+    </div>
+
+    <!-- 2-COLUMN EXECUTIVE PORTRAIT + BIOGRAPHY -->
+    <section class="bg-surface py-section-lg">
+      <div class="max-w-[1440px] mx-auto px-gutter-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+          <div class="lg:col-span-4 bg-surface-mist border border-outline-subtle aspect-[3/4] overflow-hidden rounded-none">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDNAPqIiTUAJJQ1sfxCIkXv5pdnNiF4AFPzbFOkBLzOKttibHVO_o1_tNu6hhVo6xGI92Hm-eAqV3pJNWYWuMQxMcdrvEtPkswbOk7SPNKHRx-F8PNVZVb1PUkH0XT3T4mAjplhmtVZyzYwAu4SP_8_5OJNiuv_A9SEzcFspcAACAhSdhK0Jb3Kaw3o97ST9GbjPa8t3A_Q9VFm7TLDrI_ihMz9DaG4Q2MsAma6q9E8RLpjsDCT5j_Dk6tN" alt="مهندس آرش فرهادی — مدیر ارشد طراحی مکانیک و DFMA" class="w-full h-full object-cover rounded-none">
+          </div>
+
+          <div class="lg:col-span-8 flex flex-col gap-gutter-xl">
+            <div class="border-b border-outline pb-gutter-lg">
+              <span class="font-mono text-mono-sm text-primary block mb-gutter-sm" dir="ltr">LEAD MECHANICAL ARCHITECT // DFMA &amp; ROBOTICS</span>
+              <h1 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-on-surface mb-gutter-sm">
+                مهندس آرش فرهادی
+              </h1>
+              <p class="font-title text-title-md text-on-surface-variant">
+                مدیر دپارتمان طراحی ماشین‌آلات دقیق، تحلیل ارتعاشات و اتوماسیون خطوط تولید
+              </p>
+            </div>
+
+            <p class="font-body text-body-lg text-on-surface-variant text-pretty max-w-[68ch]">
+              با بیش از ۱۵ سال سابقه راهبری پروژه‌های طراحی و ساخت ماشین‌آلات ویژه در صنایع غذایی، دارویی کلین‌روم و خطوط مونتاژ رباتیک. تمرکز تخصصی بر معماری سیستم‌های سروو-سینکرون، تلرانس‌گذاری هندسی ASME Y14.5 و بهینه‌سازی ساختار مکانیکی پیش از تولید.
+            </p>
+
+            <!-- 4 OPEN HAIRLINE KPI COLUMNS (NO BOXED CARDS) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-x-reverse divide-outline border-y border-outline py-gutter-lg">
+              <div class="pl-gutter-md">
+                <div class="font-headline text-headline-md text-on-surface tabular-nums">15+ سال</div>
+                <div class="font-body text-body-sm text-on-surface-muted">سابقه طراحی صنعتی</div>
+              </div>
+              <div class="px-gutter-md">
+                <div class="font-headline text-headline-md text-on-surface tabular-nums">84 ماشین</div>
+                <div class="font-body text-body-sm text-on-surface-muted">سرپرستی طراحی</div>
+              </div>
+              <div class="px-gutter-md">
+                <div class="font-headline text-headline-md text-on-surface tabular-nums">19 خط</div>
+                <div class="font-body text-body-sm text-on-surface-muted">راه‌اندازی کلید در دست</div>
+              </div>
+              <div class="pr-gutter-md">
+                <div class="font-headline text-headline-md text-primary tabular-nums">±0.0015</div>
+                <div class="font-body text-body-sm text-on-surface-muted">دقت ابعادی (mm)</div>
+              </div>
+            </div>
+
+            <!-- CLEAN HORIZONTAL SKILL PROGRESS BARS IN #0033CC -->
+            <div class="flex flex-col gap-gutter-md max-w-2xl">
+              <h2 class="font-headline text-title-md text-on-surface mb-gutter-xs">صلاحیت‌های تخصصی مهندسی</h2>
+
+              <div class="flex flex-col gap-gutter-xs">
+                <div class="flex justify-between font-label text-label-md">
+                  <span>طراحی ماشین‌آلات ویژه و DFMA</span>
+                  <span class="font-mono text-mono-sm text-primary tabular-nums" dir="ltr">96%</span>
+                </div>
+                <div class="w-full h-1.5 bg-surface-mist">
+                  <div class="h-full bg-primary w-[96%]"></div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-gutter-xs">
+                <div class="flex justify-between font-label text-label-md">
+                  <span>تحلیل ارتعاشات و اجزای محدود (FEM / ISO 20816-3)</span>
+                  <span class="font-mono text-mono-sm text-primary tabular-nums" dir="ltr">92%</span>
+                </div>
+                <div class="w-full h-1.5 bg-surface-mist">
+                  <div class="h-full bg-primary w-[92%]"></div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-gutter-xs">
+                <div class="flex justify-between font-label text-label-md">
+                  <span>رباتیک دلتا و خطوط بسته‌بندی سروو (DIN EN 415)</span>
+                  <span class="font-mono text-mono-sm text-primary tabular-nums" dir="ltr">94%</span>
+                </div>
+                <div class="w-full h-1.5 bg-surface-mist">
+                  <div class="h-full bg-primary w-[94%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHARP 0px PROJECT SHOWCASE SLIDER -->
+    <section class="bg-surface-mist border-y border-outline py-section-lg">
+      <div class="max-w-[1440px] mx-auto px-gutter-xl">
+        <div class="flex items-center justify-between mb-gutter-xl">
+          <div>
+            <span class="font-mono text-mono-sm text-primary block mb-gutter-xs" dir="ltr">SELECTED WORKS // PORTFOLIO</span>
+            <h2 class="font-headline text-headline-md text-on-surface">پروژه‌های شاخص تحت سرپرستی</h2>
+          </div>
+          <div class="flex items-center gap-gutter-sm">
+            <button id="slide-prev" type="button" aria-label="پروژه قبلی" class="w-10 h-10 bg-surface border border-outline hover:border-primary hover:text-primary flex items-center justify-center rounded-none font-label text-label-lg transition-colors">→</button>
+            <button id="slide-next" type="button" aria-label="پروژه بعدی" class="w-10 h-10 bg-surface border border-outline hover:border-primary hover:text-primary flex items-center justify-center rounded-none font-label text-label-lg transition-colors">←</button>
+          </div>
+        </div>
+
+        <div id="portfolio-slider" class="grid grid-cols-1 lg:grid-cols-12 bg-surface border border-outline">
+          <div class="lg:col-span-7 aspect-[16/10] bg-surface-mist overflow-hidden">
+            <img id="slider-img" src="https://lh3.googleusercontent.com/aida/ALJJyrA6V4ux85lab9Nz5dAvxcN519_je5pXxwg8VDjh3TSj9iR6hD5uzo1REhlYwjh18NpjoMIPpJUibxGcXOJd5ub8mCIBjvjAng9f9oqc8wI2_eW1D32uruKWh_jqBcE7wsOsiLLB8bPM8TT_IYa_Rt_oXOqOEWv0854dmnbjuGb8nEGW8m2XFteIpz-rw15UTnB7kC1kfZEW_zFwm3f8SJEn7zTJio63RlYRLlkdIYPttvG2r0uKVYZylUA" alt="پروژه شاخص مهندسی" class="w-full h-full object-cover rounded-none">
+          </div>
+          <div class="lg:col-span-5 p-gutter-xl flex flex-col justify-between">
+            <div>
+              <span id="slider-code" class="font-mono text-mono-sm text-primary block mb-gutter-sm" dir="ltr">PRJ-2025-01 · ISO 10218</span>
+              <h3 id="slider-title" class="font-headline text-title-lg text-on-surface mb-gutter-md">سلول رباتیک دلتای پرسرعت خطوط بسته‌بندی</h3>
+              <p id="slider-desc" class="font-body text-body-md text-on-surface-variant text-pretty">
+                طراحی مکانیزم فیبر کربن و بازوهای تیتانیومی با سرعت ۱۱۰ سیکل در دقیقه و هماهنگی کامل با نوار نقاله بینایی ماشین.
+              </p>
+            </div>
+            <div class="pt-gutter-lg border-t border-outline mt-gutter-lg flex items-center justify-between">
+              <a href="../04-editorial-single/EditorialSingle.html" class="inline-flex items-center gap-gutter-sm font-label text-label-lg text-primary hover:text-primary-hover">
+                <span>مشاهده مطالعه موردی</span>
+                <span>←</span>
+              </a>
+              <span id="slider-index" class="font-mono text-mono-sm text-on-surface-muted" dir="ltr">01 / 03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINIMALIST DIRECT RFQ & WORKSHOP CONTACT GRID -->
+    <section id="workshop-rfq" class="bg-surface py-section-lg">
+      <div class="max-w-[1440px] mx-auto px-gutter-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl border border-outline p-gutter-xl lg:p-12">
+          <div class="lg:col-span-5 flex flex-col justify-between border-b lg:border-b-0 lg:border-l border-outline pb-gutter-xl lg:pb-0 lg:pl-gutter-xl">
+            <div>
+              <span class="font-mono text-mono-sm text-primary block mb-gutter-sm" dir="ltr">WORKSHOPS &amp; ENGINEERING HUBS</span>
+              <h2 class="font-headline text-headline-md text-on-surface mb-gutter-md">دفاتر مهندسی و کارگاه‌های ساخت</h2>
+              <p class="font-body text-body-md text-on-surface-variant mb-gutter-xl">
+                هماهنگی مستقیم برای بازدید فنی کارگاه، کنترل متروولوژی CMM یا جلسات محرمانه عقد قرارداد (NDA).
+              </p>
+            </div>
+            <div class="flex flex-col gap-gutter-md divide-y divide-outline-subtle border-t border-outline-subtle pt-gutter-md">
+              <div class="pt-gutter-sm flex justify-between items-center">
+                <span class="font-label text-label-md text-on-surface">تهران (دفتر مرکزی و R&amp;D)</span>
+                <span class="font-mono text-mono-sm text-on-surface-variant" dir="ltr">+98 21 8874 2910</span>
+              </div>
+              <div class="pt-gutter-sm flex justify-between items-center">
+                <span class="font-label text-label-md text-on-surface">مشهد (خطوط غذایی و بسته‌بندی)</span>
+                <span class="font-mono text-mono-sm text-on-surface-variant" dir="ltr">+98 51 3541 8820</span>
+              </div>
+              <div class="pt-gutter-sm flex justify-between items-center">
+                <span class="font-label text-label-md text-on-surface">شانگهای و دبی (تامین قطعات)</span>
+                <span class="font-mono text-mono-sm text-on-surface-variant" dir="ltr">rfq@machinedesign.ir</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <h3 class="font-headline text-title-lg text-on-surface mb-gutter-lg">رزرو جلسه مستقیم با مدیر پروژه</h3>
+            <form class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+              <label class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-on-surface">نام و سمت سازمانی</span>
+                <input type="text" placeholder="مدیر فنی / مدیر کارخانه" class="w-full bg-surface border border-outline focus:border-primary focus:ring-0 rounded-none px-gutter-md py-gutter-sm font-body text-body-md">
+              </label>
+              <label class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-on-surface">شماره تماس مستقیم</span>
+                <input type="tel" dir="ltr" placeholder="+98 912 000 0000" class="w-full bg-surface border border-outline focus:border-primary focus:ring-0 rounded-none px-gutter-md py-gutter-sm font-mono text-mono-md text-left">
+              </label>
+              <label class="sm:col-span-2 flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-on-surface">موضوع جلسه فنی</span>
+                <textarea rows="3" placeholder="بررسی امکان‌سنجی خط تولید، مهندسی معکوس یا قرارداد NDA..." class="w-full bg-surface border border-outline focus:border-primary focus:ring-0 rounded-none px-gutter-md py-gutter-sm font-body text-body-md"></textarea>
+              </label>
+              <div class="sm:col-span-2 pt-gutter-sm">
+                <button data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="submit" class="inline-flex items-center justify-center gap-gutter-sm bg-primary text-on-primary hover:bg-primary-hover px-gutter-xl py-gutter-md rounded-none font-label transition-colors duration-state-change">
+                  <span data-design-text-token="label-lg" class="font-label text-label-lg">ثبت درخواست جلسه مهندسی</span>
+                  <span aria-hidden="true" class="font-label text-label-lg">←</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MINIMALIST GERMAN CORPORATE FOOTER (#111318) -->
+  <footer class="bg-surface-dark text-on-surface-dark border-t border-outline">
+    <div class="max-w-[1440px] mx-auto px-gutter-xl py-section-md">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-xl pb-gutter-xl border-b border-on-surface-variant">
+        <div>
+          <div class="flex items-center gap-gutter-md mb-gutter-md">
+            <div class="w-9 h-9 bg-surface text-on-surface flex items-center justify-center font-mono text-mono-md font-semibold" dir="ltr">MD</div>
+            <span class="font-headline text-title-md">ماشین دیزاین</span>
+          </div>
+          <p class="font-body text-body-sm text-outline mb-gutter-md">
+            دفتر مهندسی طراحی و ساخت ماشین‌آلات دقیق صنعتی بر پایه استانداردهای آلمانی DIN و ISO.
+          </p>
+          <span class="font-mono text-mono-sm text-outline" dir="ltr">تهران · مشهد · شانگهای · دبی</span>
+        </div>
+        <div>
+          <h4 class="font-label text-label-lg mb-gutter-md">محورهای مهندسی</h4>
+          <ul class="flex flex-col gap-gutter-sm font-body text-body-sm text-outline">
+            <li><a href="../02-service-pillar/ServicePillar.html" class="hover:text-on-surface-dark transition-colors">طراحی DFMA ماشین‌آلات</a></li>
+            <li><a href="../03-projects-hub/ProjectsHub.html" class="hover:text-on-surface-dark transition-colors">خطوط بسته‌بندی و پیلوپک</a></li>
+            <li><a href="../03-projects-hub/ProjectsHub.html" class="hover:text-on-surface-dark transition-colors">مهندسی معکوس و متروولوژی</a></li>
+            <li><a href="../04-editorial-single/EditorialSingle.html" class="hover:text-on-surface-dark transition-colors">تحلیل FEM و کنترل ارتعاش</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label text-label-lg mb-gutter-md">دسترسی فنی</h4>
+          <ul class="flex flex-col gap-gutter-sm font-body text-body-sm text-outline">
+            <li><a href="../03-projects-hub/ProjectsHub.html" class="hover:text-on-surface-dark transition-colors">کاتالوگ دیجیتال حرکتی</a></li>
+            <li><a href="../04-editorial-single/EditorialSingle.html" class="hover:text-on-surface-dark transition-colors">مقالات پایگاه دانش</a></li>
+            <li><a href="../05-about-team-rfq/AboutTeamRfq.html" class="hover:text-on-surface-dark transition-colors">تیم مهندسی و مدیران</a></li>
+            <li><a href="#workshop-rfq" class="hover:text-on-surface-dark transition-colors">پروتکل محرمانگی NDA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label text-label-lg mb-gutter-md">تماس مستقیم مهندسی</h4>
+          <div class="flex flex-col gap-gutter-sm font-mono text-mono-md text-outline" dir="ltr">
+            <span>+98 21 8874 2910</span>
+            <span>rfq@machinedesign.ir</span>
+          </div>
+          <p class="font-body text-body-sm text-outline mt-gutter-md">
+            دفتر مرکزی: تهران، منطقه ویژه علم و فناوری
+          </p>
+        </div>
+      </div>
+      <div class="pt-gutter-lg flex flex-col sm:flex-row items-center justify-between gap-gutter-md font-mono text-mono-sm text-outline" dir="ltr">
+        <span>© 2026 MachineDesign.ir — All Rights Reserved</span>
+        <span>ISO 9001:2015 · ASME Y14.5 · DIN EN 415</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-stitch-original-script="716e32b10344b355===../../images/hero_delta_stage.jpg|||6ebf5f4aac986117===../../images/pillar_packaging.jpg|||8332a7a8eae98957===../../images/pillar_reverse_eng.jpg">
+    const slides = [
+      {
+        img: 'https://lh3.googleusercontent.com/aida/ALJJyrA6V4ux85lab9Nz5dAvxcN519_je5pXxwg8VDjh3TSj9iR6hD5uzo1REhlYwjh18NpjoMIPpJUibxGcXOJd5ub8mCIBjvjAng9f9oqc8wI2_eW1D32uruKWh_jqBcE7wsOsiLLB8bPM8TT_IYa_Rt_oXOqOEWv0854dmnbjuGb8nEGW8m2XFteIpz-rw15UTnB7kC1kfZEW_zFwm3f8SJEn7zTJio63RlYRLlkdIYPttvG2r0uKVYZylUA',
+        code: 'PRJ-2025-01 · ISO 10218',
+        title: 'سلول رباتیک دلتای پرسرعت خطوط بسته‌بندی',
+        desc: 'طراحی مکانیزم فیبر کربن و بازوهای تیتانیومی با سرعت ۱۱۰ سیکل در دقیقه و هماهنگی کامل با نوار نقاله بینایی ماشین.'
+      },
+      {
+        img: 'https://lh3.googleusercontent.com/aida/ALJJyrB1C_M46AmDqpiHagcqUkWCEMR9A2BGKpetzeV47yd3iGfNuShKmJEyzmND_JWhTO-bzeNYTulfPYKI1Gx8UB9KhJ5XnimmiCUja4nUGR-64ikH9anpQkoZnqAT8H8bCQ86mk3ex4pRr-dWCcNZ-u3oaX4lI45688DERToWaF-WZCwKdfs8V-O1vX4cwmeq2l3nV2-Hx8urqCrxFaIk1ifqetQ95nE_zx16COfPaTvri6whcqnCNyB-nak',
+        code: 'PRJ-2025-08 · DIN EN 415',
+        title: 'ماشین پیلوپک سروو تمام‌اتوماتیک ۲۴۰ بسته',
+        desc: 'بازطراحی فک دوار دوخت حرارتی و کاهش ۲۸ درصدی ضایعات فیلم در خطوط تولید صنایع غذایی.'
+      },
+      {
+        img: 'https://lh3.googleusercontent.com/aida/ALJJyrB70B3d0EobryDhFbFx3LZNuFLuoGdTSYtNG_Su-ZRvWxZyh5cDkBpJ1Dh90YUgDgitrQ5i0AtjRz6eIJwsst2FlSV_kZMLAUy-z36HCTjgaZqPfkdbjybo9a9dWxdtAyAPwH9dV2MPA_uwcc5LWGz2Qphz2LPSnE0ZzD-Bm3NkWKCJc2WiRZwRURngCNjcotEYMkThrBYD2pYpuj3GA5cD8MYoR1uO0MNA0vt4JBvns3Y5oJbP23_2-SgOig',
+        code: 'PRJ-2026-03 · ASME Y14.5',
+        title: 'مهندسی معکوس هوزینگ توربین و کمپرسور',
+        desc: 'اسکن اپتیکال لیزری، استخراج مدل CAD و صدور نقشه‌های ساخت ۵ محور با تلرانس میکرونی.'
+      }
+    ];
+    let currentSlide = 0;
+    const imgEl = document.getElementById('slider-img');
+    const codeEl = document.getElementById('slider-code');
+    const titleEl = document.getElementById('slider-title');
+    const descEl = document.getElementById('slider-desc');
+    const idxEl = document.getElementById('slider-index');
+
+    function renderSlide() {
+      const s = slides[currentSlide];
+      imgEl.src = s.img;
+      codeEl.textContent = s.code;
+      titleEl.textContent = s.title;
+      descEl.textContent = s.desc;
+      idxEl.textContent = `0${currentSlide + 1} / 0${slides.length}`;
+    }
+    document.getElementById('slide-prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      renderSlide();
+    });
+    document.getElementById('slide-next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      renderSlide();
+    });
+  </script>
+
+
+</body></html>
