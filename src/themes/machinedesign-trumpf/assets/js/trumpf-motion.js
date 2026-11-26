@@ -64,4 +64,53 @@
       });
     });
   });
+
+  // 4. Interactive Module Tabs ([data-md-tabs])
+  document.querySelectorAll('[data-md-tabs]').forEach(function (wrap) {
+    var btns = wrap.querySelectorAll('[data-tab-target]');
+    var panes = wrap.querySelectorAll('[data-tab-pane]');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab-target');
+        btns.forEach(function (b) { b.classList.remove('is-active'); b.setAttribute('aria-selected', 'false'); });
+        panes.forEach(function (p) { p.classList.toggle('is-active', p.getAttribute('data-tab-pane') === target); });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+      });
+    });
+  });
+
+  // 5. FAQ Accordion ([data-md-accordion])
+  document.querySelectorAll('[data-md-accordion]').forEach(function (acc) {
+    acc.querySelectorAll('.md-tr-acc-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = btn.closest('.md-tr-acc-item');
+        if (!item) return;
+        var isOpen = item.classList.contains('is-open');
+        acc.querySelectorAll('.md-tr-acc-item').forEach(function (el) {
+          el.classList.remove('is-open');
+          var ic = el.querySelector('.md-tr-acc-icon');
+          if (ic) ic.textContent = '+';
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          var ic = item.querySelector('.md-tr-acc-icon');
+          if (ic) ic.textContent = '−';
+        }
+      });
+    });
+  });
+
+  // 6. Team Directory Live Search ([data-team-search])
+  var teamSearch = document.querySelector('[data-team-search]');
+  if (teamSearch) {
+    var teamCards = document.querySelectorAll('#md-team-roster [data-keywords]');
+    teamSearch.addEventListener('input', function () {
+      var q = teamSearch.value.trim().toLowerCase();
+      teamCards.forEach(function (card) {
+        var kw = (card.getAttribute('data-keywords') || '').toLowerCase();
+        card.style.display = (!q || kw.indexOf(q) !== -1) ? '' : 'none';
+      });
+    });
+  }
 })();
