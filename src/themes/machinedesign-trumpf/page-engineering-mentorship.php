@@ -133,11 +133,11 @@ while ( have_posts() ) : the_post();
   <div class="md-container" style="max-width:980px;">
     <div class="md-tr-callout-box" style="margin-bottom:48px;">
       <div>
-        <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">LEAD MENTOR PROFILE // ۱۵+ YEARS EXPERIENCE</span>
+        <span class="md-tr-kicker mono" dir="ltr">LEAD MENTOR PROFILE // ۱۵+ YEARS EXPERIENCE</span>
         <h3>منتور شما در این مسیر: مهندس حسین وطن‌دوست</h3>
         <p>طراح ارشد ماشین‌آلات صنعتی با بیش از ۱۵ سال سابقه طراحی، مهندسی معکوس، شبیه‌سازی FEA و اجرای بیش از ۱۵۰ پروژه و ۴۰ خط تولید فعال در صنایع غذایی، دارویی و بسته‌بندی.</p>
       </div>
-      <a href="<?php echo esc_url( home_url( '/hossein-vatandoust/' ) ); ?>" class="md-tr-btn md-tr-btn-amber"><span>مشاهده رزومه و سوابق کامل</span><span class="md-tr-arrow">←</span></a>
+      <a href="<?php echo esc_url( home_url( '/hossein-vatandoust/' ) ); ?>" class="md-tr-btn md-tr-btn-primary"><span>مشاهده رزومه و سوابق کامل</span><span class="md-tr-arrow">←</span></a>
     </div>
 
     <div class="md-tr-sec-head">

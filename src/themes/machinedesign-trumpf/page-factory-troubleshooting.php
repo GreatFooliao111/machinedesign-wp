@@ -51,13 +51,13 @@ $phone_clean   = preg_replace( '/[^0-9+]/', '', strtr( $phone_display, array( '�
 
     <div class="md-tr-callout-box" style="margin-top:36px;">
       <div>
-        <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">EMERGENCY LINE-STOP PROTOCOL // اعزام اورژانسی</span>
+        <span class="md-tr-kicker mono" dir="ltr">EMERGENCY LINE-STOP PROTOCOL // اعزام اورژانسی</span>
         <h3>خط تولید شما متوقف شده یا دستگاه دچار لرزش و صدای غیرعادی است؟</h3>
         <p>دپارتمان حل مسئله با تجهیزات پرتابل آنالایزر ارتعاشات FFT در محل کارخانه شما حاضر می‌شود تا عیب ریشه‌ای را بدون حدس و گمان تشخیص داده و خط را به مدار تولید بازگرداند.</p>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="tel:<?php echo esc_attr( $phone_clean ?: '05137600000' ); ?>" class="md-tr-btn md-tr-btn-amber"><span>تماس اضطراری (<?php echo esc_html( $phone_display ); ?>)</span></a>
-        <a href="https://t.me/machinedesign_ir" target="_blank" rel="noopener noreferrer" class="md-tr-btn md-tr-btn-outline" style="color:#FFF;border-color:#FFF;"><span>ارسال ویدیو در تلگرام</span></a>
+        <a href="tel:<?php echo esc_attr( $phone_clean ?: '05137600000' ); ?>" class="md-tr-btn md-tr-btn-primary"><span>تماس اضطراری (<?php echo esc_html( $phone_display ); ?>)</span></a>
+        <a href="https://t.me/machinedesign_ir" target="_blank" rel="noopener noreferrer" class="md-tr-btn md-tr-btn-outline"><span>ارسال ویدیو در تلگرام</span></a>
       </div>
     </div>
   </div>

@@ -27,7 +27,7 @@ while ( have_posts() ) : the_post();
     </div>
     <div class="md-tr-card-grid-2">
       <div class="md-tr-arch-card">
-        <span class="md-tr-step-num" style="color:#B91C1C;" dir="ltr">GENERIC COURSES // LIMITATION</span>
+        <span class="md-tr-step-num" style="color:var(--tr-mute);" dir="ltr">GENERIC COURSES // LIMITATION</span>
         <h3>دوره‌های پکیجی و آموزشگاهی متفرقه</h3>
         <p>فایل‌های تمرینی فانتزی اینترنتی، تلرانس‌گذاری کتابی و غیراقتصادی بدون توجه به تلرانس قابل دسترس ماشین‌های CNC کارخانه، و عدم هم‌سویی میان واحد طراحی و کنترل کیفیت (QC).</p>
       </div>
@@ -131,8 +131,8 @@ while ( have_posts() ) : the_post();
       </div>
     </div>
     <div class="md-tr-card-grid-2">
-      <div class="md-tr-arch-card" style="border-top-color:#B91C1C;">
-        <span class="md-tr-step-num" style="color:#B91C1C;" dir="ltr">BEFORE // نقشه اولیه پرخطا</span>
+      <div class="md-tr-arch-card">
+        <span class="md-tr-step-num" style="color:var(--tr-mute);" dir="ltr">BEFORE // نقشه اولیه پرخطا</span>
         <h3>محاسبه ذهنی ضریب K-Factor و دیتوم‌گذاری ناممکن</h3>
         <p>نادیده گرفتن ابزار خم‌کن کارگاه (خطای ۱.۸ میلی‌متر در فلنج ورق ۲ میل)، تعریف دیتوم روی سطح ریخته‌گری ناهموار و عدم محاسبه Stack-up منجر به ۲۴۰ قطعه ضایعات و ۴۸ ساعت توقف خط مونتاژ شد.</p>
       </div>

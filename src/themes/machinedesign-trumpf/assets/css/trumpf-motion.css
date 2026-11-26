@@ -199,7 +199,7 @@ a:hover { color: var(--tr-blue-dark); }
 .md-tr-footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; color: var(--tr-mute); }
 
 /* --- 11. SCROLL REVEAL ANIMATION --- */
-.md-reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms var(--tr-ease-zoom), transform 600ms var(--tr-ease-zoom); }
+.md-reveal { opacity: 1; transform: translateY(0); transition: opacity 420ms var(--tr-ease-zoom), transform 420ms var(--tr-ease-zoom); }
 .md-reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 /* --- 12. REUSABLE ARCHITECTURAL PATTERNS (SUBPAGES & SERVICES) --- */
@@ -237,8 +237,10 @@ a:hover { color: var(--tr-blue-dark); }
 .md-tr-legal-card ul { margin: 10px 0 0; padding-right: 20px; }
 
 .md-tr-callout-box {
-  background: var(--tr-dark);
-  color: #FFFFFF;
+  background: var(--tr-white);
+  border: 1px solid var(--tr-line);
+  border-right: 4px solid var(--tr-blue);
+  color: var(--tr-ink);
   padding: 36px 40px;
   display: flex;
   align-items: center;
@@ -246,8 +248,8 @@ a:hover { color: var(--tr-blue-dark); }
   gap: 28px;
   flex-wrap: wrap;
 }
-.md-tr-callout-box h3 { margin: 6px 0 8px; font-size: 1.3rem; font-weight: 800; color: #FFFFFF; }
-.md-tr-callout-box p { margin: 0; font-size: 0.95rem; color: #CBD5E1; max-width: 60ch; line-height: 1.8; }
+.md-tr-callout-box h3 { margin: 6px 0 8px; font-size: 1.3rem; font-weight: 800; color: var(--tr-ink); }
+.md-tr-callout-box p { margin: 0; font-size: 0.95rem; color: var(--tr-ink2); max-width: 60ch; line-height: 1.8; }
 
 .md-tr-checklist-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .md-tr-checklist-item {

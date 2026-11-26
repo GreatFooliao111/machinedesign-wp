@@ -7,7 +7,7 @@
 - **Subpage Content Restoration (Phases 1–5):** [x] Restored full engineering depth, interactive 4-module tabs + v2.4 CAD schematics (`assets/images/schematics/`), FAQ accordions, comparison tables, 16-member team roster (`/team/`), founder profile (`/hossein-vatandoust/`), legal/NDA pages (`/nda-protocol/`, `/privacy-policy/`), core hubs (`/services/`, `/about/`, `/contact/`), and all 10 dedicated `/services/*/` pillar templates.
 - **Database Backup:** [x] `D:\Machinedesign.ir\database-backups\machinedesign_local_backup_2026_11_27_011019.sql` (0.56 MB)
 - **Brownfield Preservation:** [x] Existing database preserved (external backup at `C:\xampp\htdocs\machinedesign_backup_pre_v3.sql`, 954,934 bytes); verified `pages=20`, `posts=5`, `project=8`, `team_member=16`; active plugins preserved (`machinedesign-core/machinedesign-core.php`, `machinedesign-rfq-manager/machinedesign-rfq-manager.php`, `novamira/novamira.php`, `seo-by-rank-math/rank-math.php`); active theme switched to `machinedesign-trumpf` with rewrite rules flushed and page templates assigned.
-- **Visual QA:** [ ] Automated HTTP/RTL/Zero-Static smoke tests passed (`PASS [200]` on all 8 routes); interactive browser visual inspection pending manual review on `http://localhost/machinedesign/`.
+- **Visual QA:** [x] Full-page Chrome DevTools screenshots verified on `/`, `/services/`, and `/services/corporate-training/`; removed `.md-reveal` `opacity: 0` trap and unified all subpage callout boxes, legal cards, and border accents with TRUMPF Gallery White (`#FFFFFF`), Steel Mist (`#F2F4F7`), and Cobalt Blue (`#0033CC`).
 
 ## Smoke Test Output (`python scripts/smoke-test.py http://localhost/machinedesign`)
 

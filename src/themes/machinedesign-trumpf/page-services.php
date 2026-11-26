@@ -102,11 +102,11 @@ get_header();
 
     <div class="md-tr-callout-box" style="margin-top:36px;">
       <div>
-        <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">BILATERAL NDA // ZERO IP RISK</span>
+        <span class="md-tr-kicker mono" dir="ltr">BILATERAL NDA // ZERO IP RISK</span>
         <h3>شروع همکاری مهندسی تحت قرارداد محرمانگی (NDA)</h3>
         <p>پیش از ارسال هرگونه نقشه، نمونه قطعه یا مستندات خط تولید، قرارداد رسمی عدم افشا و حفظ مالکیت فکری میان طرفین امضا می‌گردد.</p>
       </div>
-      <a href="<?php echo esc_url( home_url( '/nda-protocol/' ) ); ?>" class="md-tr-btn md-tr-btn-amber">
+      <a href="<?php echo esc_url( home_url( '/nda-protocol/' ) ); ?>" class="md-tr-btn md-tr-btn-primary">
         <span>مطالعه پروتکل محرمانگی NDA</span><span class="md-tr-arrow">←</span>
       </a>
     </div>

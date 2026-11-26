@@ -12,15 +12,15 @@ get_header();
         تیم مهندسی ماشین دیزاین متعهد است تمامی مدل‌های سه‌بعدی CAD، نقشه‌های ساخت، مکانیزم‌های خط تولید، فرمول‌های فرآیندی و اطلاعات تجاری کارخانجات همکار را تحت قوی‌ترین پروتکل‌های حقوقی عدم افشا (NDA) و استاندارد ایزولاسیون اطلاعات حفاظت نماید.
       </p>
     </div>
-    <div class="md-tr-arch-card" style="background:var(--tr-dark);color:#FFF;border-top-color:var(--tr-amber);">
-      <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">LEGAL IP FRAMEWORK // 100% ENFORCEABLE</span>
-      <ul style="list-style:none;margin:14px 0 22px;padding:0;display:flex;flex-direction:column;gap:12px;font-size:0.94rem;color:#E2E8F0;">
+    <div class="md-tr-arch-card" style="background:var(--tr-mist);border-top:2px solid var(--tr-blue);">
+      <span class="md-tr-kicker mono" dir="ltr">LEGAL IP FRAMEWORK // 100% ENFORCEABLE</span>
+      <ul style="list-style:none;margin:14px 0 22px;padding:0;display:flex;flex-direction:column;gap:12px;font-size:0.94rem;color:var(--tr-ink2);">
         <li>● امضای رسمی قرارداد فیزیکی پیش از دریافت هرگونه نقشه</li>
         <li>● سرورهای ایزوله و رمزنگاری‌شده آفلاین بدون دسترسی خارجی</li>
         <li>● تست زنده محرمانه در کارگاه مشهد با ورود اختصاصی کارفرما</li>
         <li>● امحای رسمی و عودت فایل‌ها پس از اتمام دوره پروژه</li>
       </ul>
-      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-amber" style="width:100%;">
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-primary" style="width:100%;">
         <span>درخواست تبادل قرارداد رسمی NDA</span><span class="md-tr-arrow">←</span>
       </a>
     </div>
@@ -67,11 +67,11 @@ get_header();
 
     <div class="md-tr-callout-box" style="margin-top:32px;">
       <div>
-        <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">LEGAL DISPATCH // RESPONSE WITHIN 2 HOURS</span>
+        <span class="md-tr-kicker mono" dir="ltr">LEGAL DISPATCH // RESPONSE WITHIN 2 HOURS</span>
         <h3>نیاز به انعقاد قرارداد رسمی محرمانگی با مهر و سربرگ دارید؟</h3>
         <p>پیش از ارسال فایل‌ها یا نمونه قطعه، مشخصات شرکت خود را ارسال فرمایید تا نسخه رسمی دوجانبه NDA ظرف ۲ ساعت کاری برای امضا تقدیم گردد.</p>
       </div>
-      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-amber">
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-primary">
         <span>درخواست تبادل قرارداد رسمی NDA</span><span class="md-tr-arrow">←</span>
       </a>
     </div>

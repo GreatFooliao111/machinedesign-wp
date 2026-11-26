@@ -12,14 +12,14 @@ get_header();
         ماشین دیزاین برای حریم خصوصی کاربران، اطلاعات تماس مدیران صنایع و داده‌های استعلام فنی ارزش بنیادین قائل است. این سند شفاف تشریح می‌کند که چه اطلاعاتی جمع‌آوری شده، چگونه حفاظت می‌شوند و حقوق شما در خصوص مدیریت آن‌ها چیست.
       </p>
     </div>
-    <div class="md-tr-arch-card" style="background:var(--tr-dark);color:#FFF;border-top-color:var(--tr-amber);">
-      <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">PRIVACY DIRECTIVES // ZERO SPAM GUARANTEE</span>
-      <ul style="list-style:none;margin:14px 0 22px;padding:0;display:flex;flex-direction:column;gap:12px;font-size:0.94rem;color:#E2E8F0;">
+    <div class="md-tr-arch-card" style="background:var(--tr-mist);border-top:2px solid var(--tr-blue);">
+      <span class="md-tr-kicker mono" dir="ltr">PRIVACY DIRECTIVES // ZERO SPAM GUARANTEE</span>
+      <ul style="list-style:none;margin:14px 0 22px;padding:0;display:flex;flex-direction:column;gap:12px;font-size:0.94rem;color:var(--tr-ink2);">
         <li>● عدم واگذاری اطلاعات تماس به شرکت‌های تبلیغاتی یا اشخاص ثالث</li>
         <li>● استفاده از پروتکل‌های رمزنگاری شده برای انتقال امن اطلاعات فرم‌ها</li>
         <li>● حذف کامل سوابق مکاتبات و داده‌ها به درخواست کتبی کاربر</li>
       </ul>
-      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-amber" style="width:100%;">
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-primary" style="width:100%;">
         <span>ارتباط مستقیم با واحد پشتیبانی و حریم خصوصی</span><span class="md-tr-arrow">←</span>
       </a>
     </div>
@@ -72,11 +72,11 @@ get_header();
 
     <div class="md-tr-callout-box" style="margin-top:32px;">
       <div>
-        <span class="md-tr-kicker mono" style="color:var(--tr-amber);" dir="ltr">DATA INTEGRITY // MASHHAD HQ</span>
+        <span class="md-tr-kicker mono" dir="ltr">DATA INTEGRITY // MASHHAD HQ</span>
         <h3>پرسشی درباره حریم خصوصی یا نحوه مدیریت داده‌های خود دارید؟</h3>
         <p>تیم پشتیبانی ماشین دیزاین همواره پاسخگوی پرسش‌های حقوقی و فنی شما در خصوص پروتکل‌های حریم خصوصی است.</p>
       </div>
-      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-amber">
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="md-tr-btn md-tr-btn-primary">
         <span>ارسال پیام به واحد پشتیبانی</span><span class="md-tr-arrow">←</span>
       </a>
     </div>

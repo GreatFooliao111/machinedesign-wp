@@ -26,8 +26,8 @@ while ( have_posts() ) : the_post();
       </div>
     </div>
     <div class="md-tr-card-grid-2">
-      <div class="md-tr-arch-card" style="border-top-color:#B91C1C;">
-        <span class="md-tr-step-num" style="color:#B91C1C;" dir="ltr">HIGH RISK // رویه پرخطر بازار تجاری</span>
+      <div class="md-tr-arch-card">
+        <span class="md-tr-step-num" style="color:var(--tr-mute);" dir="ltr">HIGH RISK // رویه پرخطر بازار تجاری</span>
         <h3>اعتماد به کاتالوگ، فیلم‌های بدون بار و قرارداد بازرگانی ساده</h3>
         <p>فریب فیلم‌های ادیت‌شده No-load، نصب قطعات الکتریکال و PLC کپی یا ریبرند شده، استهلاک شدید بال‌اسکروها در خطوط استوک و قراردادهای یک‌طرفه فاقد ضمانت عملکرد و تلرانس قطعه خروجی.</p>
       </div>
@@ -131,8 +131,8 @@ while ( have_posts() ) : the_post();
       </div>
     </div>
     <div class="md-tr-card-grid-2">
-      <div class="md-tr-arch-card" style="border-top-color:#B91C1C;">
-        <span class="md-tr-step-num" style="color:#B91C1C;" dir="ltr">BEFORE // ریسک پیش از تسویه حساب</span>
+      <div class="md-tr-arch-card">
+        <span class="md-tr-step-num" style="color:var(--tr-mute);" dir="ltr">BEFORE // ریسک پیش از تسویه حساب</span>
         <h3>خط بسته‌بندی بلیستر: ظاهر نو، باطن پر از خطای ساخت</h3>
         <p>در بازرسی قبل از تسویه حساب مشخص شد فروشنده به جای استیل ۳۱۶L دارویی از ورق گرید ۲۰۱ خورنده استفاده کرده، سنبه دوخت فویل در دمای ۱۴۰ درجه ۱۲۰ میکرون لقی دارد و PLC نصب‌شده استوک با سورس‌کد قفل‌شده است (خطر ۲.۵ میلیارد تومان خسارت).</p>
       </div>
